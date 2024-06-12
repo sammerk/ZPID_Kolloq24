@@ -1,0 +1,73 @@
+---
+title: "Kurzer Titel"
+subtitle: "Etwas längerer Untertitel"
+author: Samuel Merk
+footer: "Autorin | Pädagogische Hochschule Karlsruhe"
+institute: Institut für Rocket Science
+logo: img/PH_logo.png
+picture: img/KA.jpeg
+date: today
+lang: de
+date-format: "dddd, [den] D. MMMM, YYYY"
+embed-resources: false
+format: rlille-revealjs
+lightbox: true
+bibliography: references.bib
+csl: apa.csl
+---
+
+
+## Übersicht
+
+
+```{r }
+#| label: libraries
+#| echo: false
+
+# z.B. library(tidyverse)
+
+```
+
+
+| {{< iconify fa6-solid diagram-project >}}  | Das Ausgangsproblem             |
+|-------------------------------------------:|:---------------------------------
+| {{< iconify fa6-solid scale-unbalanced >}} | Bla                             |
+| {{< iconify fa6-solid bolt-lightning >}}   | Blub                            |
+| {{< iconify fa6-solid scale-unbalanced >}} | Blub                            |
+| {{< iconify fa6-solid sun >}}              | Bla                             |
+             
+: {#tbl-agenda tbl-colwidths="[10,90]"}
+
+<!-- style the agenda table -->
+<style>
+#tbl-agenda table th {
+font-weight: normal !important;
+border: none !important;
+}
+
+#tbl-agenda table td {
+font-weight: normal !important;
+border: none !important;
+}
+</style>
+
+
+::: footer
+{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://superkurzlink](https://superkurzlink)
+:::
+
+
+# Ausgangsproblem {.center .center-x}
+
+## Ausgangsproblem
+Ausgangproblem mit Zitat [@nickerson1998]
+
+## Literatur
+::: footer
+<!-- Leerer footer - sonst überlagern nsich floating refernces und der footer  -->
+:::
+
+<!-- nicht in das scss integrierbares css -->
+<style>
+div.callout-tip {border-left-color: #267326 !important;}
+</style>
