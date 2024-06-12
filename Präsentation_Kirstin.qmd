@@ -1,0 +1,303 @@
+---
+title: "Successful <br> Science Communication"
+subtitle: "Communicating inferential uncertainty and effect sizes to laypeople"
+author: Samuel Merk und Kirstin Schmidt
+footer: "Samuel Merk und Kirstin Schmidt | <br> Pädagogische Hochschule Karlsruhe"
+institute: Institut für Schul- und Unterrichtsentwicklung
+logo: img/PH_logo.png
+picture: img/KA.jpeg
+date: today
+lang: de
+date-format: "dddd, [den] D. MMMM, YYYY"
+embed-resources: false
+format: rlille-revealjs
+lightbox: true
+bibliography: references.bib
+csl: apa.csl
+---
+
+
+## Übersicht
+
+
+```{r }
+#| label: libraries
+#| echo: false
+
+# z.B. library(tidyverse)
+
+```
+
+
+| {{< iconify fa6-solid diagram-project >}}  | Evidenzinformiertes Handeln            |
+|-------------------------------------------:|:---------------------------------
+| {{< iconify fa6-solid mdi:text-box-outline >}} | Studie 1                             |
+| {{< iconify fa6-solid mdi:graph-box-outline >}}   | Studie 2                           |
+
+: {#tbl-agenda tbl-colwidths="[10,90]"}
+
+<!-- style the agenda table -->
+<style>
+#tbl-agenda table th {
+font-weight: normal !important;
+border: none !important;
+}
+
+#tbl-agenda table td {
+font-weight: normal !important;
+border: none !important;
+}
+</style>
+
+<!-- @Samuel: bekommt man "Tabelle 1" irgendwie weg? --> 
+
+
+::: footer
+{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://superkurzlink](https://superkurzlink)
+:::
+
+
+# Evidenzinformiertes Handeln {.center .center-x}
+
+## Evidenzinformiertes Handeln
+
+- Berücksichtigen von Forschungsergebnissen im professionellen Handeln 
+- Anforderung an verschiedene Berufsfelder/Berufgsgruppen wie Mediziner:innen, Politiker:innen, Lehrpersonen [@sackett1996]
+  - Evidenzinformierte Medizin: XXX
+  - Evidenzinformierte Schulpraxis: Bildungswissenschaftliche Forschungsergebnisse in der Praxis berücksichtigen, um die Professionalisierung der Lehrpersonen, die Schul- und Unterrichtsqualität sowie die Schüler:innenleistung zu steigern [@bauer2023]
+  
+  
+# Studie 1: <br> Statistische Formulierungen {{< iconify fa6-solid mdi:text-box-outline >}} {.center .center-x}
+
+<br>
+<br>
+<center> 
+gemeinsam mit <br> Peter Edelsbrunner<sup>2</sup>, Tom Rosman<sup>3</sup> und Colin Cramer <sup>4</sup> 
+</center>
+
+<sup>2</sup> ETH Zürich
+<sup>3</sup> ZPID Trier
+<sup>4</sup> Eberhard Karls Universität Tübingen
+
+## Theoretischer Hintergrund {.smaller}
+
+
+Forschungsergebnisse werden überwiegend als "statistisch (nicht) signifikante" Ergebnisse kommuniziert (Hanel & Mehler, 2019)
+
+- zahlreiche empirisch belegte Fehlkonzepte bezüglich statistischer Signifikanz und p Werten (z.B. Haller & Krauss, 2002; Sotos et al.,2007) 
+- ergänzende oder alternative Maße wie Effektstärken um Fehlkonzepten entgegenzuwirken (z.B. Coe, 2002; Cumming, 2014) 
+
+
+{{< iconify fa6-solid nimbus:exclamation-triangle >}} inkonsistente Ergebnisse, welche statistischen Formulierungen sich für eine informative und verständliche Wissenschaftskommunikation eignen
+
+  - wissenschaftliche Laien schätzen die gängige Signifikanz-Aussage und Cohen's *U<sub>3</sub>* informativer ein als andere Statistiken wie Cohen's *d* oder Bayes Faktoren (Hanel & Mehler, 2019)
+  - Lehrpersonen schätzen u.a. die Effektstärke Month of Progress informativer und verständlicher ein als Cohen's *U<sub>3</sub>* (Lortie-Forgues et al., 2021) <br>
+
+
+## Forschungsfragen <!-- {{< iconify fa6-solid mingcute:question-line >}} --> 
+
+
+1) Nehmen Lehrpersonen unterschiedliche statistische Beschreibungen unterschiedlich informativ wahr?
+<br>
+<br>
+<br>
+2) Wie interpretieren Lehrpersonen unterschiedliche statistische Beschreibungen? Unterscheiden sie bei ihrer Interpretation zwischen Inferenzstatistik und Effektstärke?
+
+
+::: notes
+- wie informativ Lehrpersonen verschiedene generische statistische Beschreibungen einschätzen
+- erweiternd untersuchen, wie diese interpretiert werden und zwischen Inf und Eff unterscheiden, da Zweifel bestehen, ob wissenschaftliche Laien hierzu in der Lage sind (vgl. Goodman, 2008; Sotos et al., 2007)
+- verschiedene Hypothesen präregistriert, erst bei den Ergebnissdarstellung näher benennen
+::: 
+
+
+## Stichprobe <!-- {{< iconify fa6-solid fa-solid:users>}} --> {.smaller}
+
+* Stichprobenziehung via Random Digit Dialing durch forsa
+* *N* = 414 Lehrpersonen in Deutschland (66,91% weiblich; 94,93% ohne Migrationshintergrund) 
+* *M<sub>Alter</sub>* = 47,70 Jahre (*SD* = 10,82)
+* *M<sub>Lehrerfahrung</sub>* = 17,37 Jahre (*SD* = 11,13)
+* verschiedene Schularten (z.B. 27,29 % Gymnasiallehrpersonen; 26,09% Grundschullehrpersonen; 18,60 % Gesamtschullehrpersonen)
+* verschiedene Unterrichtsfächer (z.B. 58,45 % unterrichten ein Geistes- oder Sozialwissenschaftliches Fach; 54,83 % mind. eine Sprache; 43,72 % ein mathematisches oder naturwissenschaftliches Fach)
+
+[&rarr; Stichprobe kann als annähernd repräsentativ gewertet werden(vgl. Statistisches Bundesamt [Destatis], 2019)]{.imp2} 
+
+
+::: notes
+- hierfür haben wir 414 aktive Lehrpersonen in DE
+- ausführliche Infos zur Stichprobenbeschreibung hier entnehmen
+- zentrale Message: Stichprobe kann als annähernd repräsentativ für DE gewertet werden 
+:::
+
+
+## Design und Materialien <!-- {{< iconify fa6-solid mdi:text-box-outline >}} --> 
+
+![](img/Figure_materials.png)
+
+
+::: notes
+- diesen Lehrpersonen zufällig zwei aus fünf unterschiedliche und manipulierte PM zu bildungswissenschaftlichen Themen präsentiert, die auch statistische Beschreibungen beinhalteten
+- hier ein Beispiel rechts sehen sie alle Beschreibungen z.B. zu statistischer Signifikanz; Kombination "klein aber statistisch abgesichert"
+- für jede PM erhielten die Lehrpersonen zufällig eine aus sechs statistischen Beschreibungen 
+- anschließend 4 Fragen zu diesen Beschreibungen 
+::: 
+
+
+## Design und Materialien <!-- {{< iconify fa6-solid mdi:text-box-outline >}} --> 
+
+![](img/Figure_survey.png)
+
+::: notes
+- für uns interessant ist vor allem die Frage wie informativ Beschreibungen wahrgenommen werden (hier oben) und …
+- …die Fragen, ob die präsentierte Beschreibung über die Sicherheit und Größe des Unterschieds informiert
+  - ersteres war unser Operationalisierung der Interpretation als Inferenzstatistik 
+  - letzteres die Operationalisierung der Interpretation als Effektstärke
+  
+ergänzend:
+- nicht erhoben, wie sicher und wie groß der Effekt, sondern ob das Statement Aussagen darüber erlaubt
+
+::: 
+
+
+## Ergebnisse: Wahrgenommene Informativität 
+
+<center> ![Adaptiert von Schmidt et al. (2023)](img/study1_informativity_product_plot.svg) </center>
+
+
+::: notes
+- deskriptiv gut erkennbar,
+  - Statistiken in erster Reihe werden informativer eingeschätzt als Statistiken in zweiter Reihe 
+  - durchschnittlich die erste Reihe aber dennoch nur etwas informativ
+- Bayesianische messwiederholte ANOVA Modelle bieten starke Evidenz dafür, dass Lehrpersonen Sig, Cohens U3 + Kombi tatsächlich informativer einschätzen, was unserer Hypothese entsprach
+
+:::
+
+## Ergebnisse: Verständnis
+
+<center> ![Adaptiert von Schmidt et al. (2023)](img/study1_interpretation_product_plot.svg) </center>
+
+
+# Studie 2: Effektstärken- <br> visualisierungen {{< iconify fa6-solid mdi:graph-box-outline >}} {.center .center-x}
+
+<br>
+<br>
+<center> 
+gemeinsam mit <br> Jürgen Schneider<sup>2</sup> und Kristina Bohrer<sup>1</sup>
+</center>
+
+<sup>1</sup> Pädagogische Hochschule Karlsruhe
+<sup>2</sup> DIPF Frankfurt
+
+
+## Theoretischer Hintergrund
+
+- verschiedene Formulierungen von statistischen Maße werden von Lehrpersonen fehlinterpretiert (Schmidt et al., 2023)
+- intuitive __visuelle__ Darstellungen von Effekstärken als alternative Kommunikationsstrategie (vgl. Franconeri et al., 2021)
+&rarr; Lehrpersonen interpretieren Effektstärkenvisualisierungen mit hoher Akkuratheit (Merk et al., 2023)
+- identische Effektstärken werden in Abhängigkeit der Darstellung rezipiert (Merk et al., 2023)
+- Entscheidungsfindungen varrieren in Abhängigkeit der Darstellung (Albers et al., 2014; Kale et al., 2020; Pierce & Chick, 2013) 
+
+
+::: notes
+- statistische Formulierungen fehlinterpretiert und inkonsistente Studienergebnisse zur Informativität 
+- visuelle Darstellungen könnten für die Kommunikation wissenschaftlicher Ergebnisse eine gute alternative sein
+  - 1) grundsätzlich zeigt sich, dass das visuelle Wahrnehmungssystem als leistungsfähig hinsichtlich der akkuraten Schätzung statistischer Informationen gilt  
+  - 2) und erste empirische Studien zeigen, dass Lehrpersonen die Informationen aus Effektstärkevisualisierungen sehr akkurat einschätzen
+- Gleichzeitig variiert die Akkuratheit je nach Visualisierung aber d.h. unterschiedliche Visualisierungen werden unterschiedlich akkurat eingeschätzt
+- und auch die Entschiedungsfindung ist abhängig von der verwendeten Visualisierung
+  - z.B. haben Lehrpersonen Schwierigkeiten datengestütze Entscheidungnen anhand von Boxplots zu treffen (Pierce & Chick, 2013)
+
+- Daher in der vorliegenden explorativen Studie den Fragen nachgehen...
+:::
+
+
+## Forschungsfragen <!-- {{< iconify fa6-solid mingcute:question-line >}} --> 
+
+1) Beeinflusst die Visualisierung die wahrgenommene Informativität der Ergebnisse und die Interpretation der Effektstärke?
+<br>
+<br>
+<br>
+2) Welche Visualisierung wird am informativisten wahrgenommen und am akkuratesten eingeschätzt?
+
+
+::: notes
+- Wenn es um das Erstellen von Visualisierungen geht, viele Freiheitsgrade
+- welchen Visualisierungstyp  und wie man wiederum das Design dieser Visualisierung festlegt (z.B. Gruppen überlappend, nicht überlappend darstellen)
+- bisher wenig systematisch erforscht, daher Delphi-Studie mit Visualisierungs- und Clearinghouse-Experten durchgeführt
+- nicht näher drauf eingehen, gerne später Rückfragen dazu stellen; 
+- aber Ergebnisse sind für den weiteren Verlauf wichtig
+
+:::
+
+## Studien 
+
+
+## Stichprobe
+
+* Stichprobenziehung via Panel Provider Prolific
+* *N* = 220 englischsprachige Lehrpersonen (64,5% weiblich, 55% mit Wohnsitz im Vereinigten Königreich) 
+* *M<sub>Alter</sub>* = 41,80 Jahre (*SD* = 11,40)
+* *M<sub>Lehrerfahrung</sub>* = 13,58 Jahre (*SD* = 9,22)
+* verschiedene Schularten (z.B. 38,64% Grundschullehrpersonen; 31,36% Lehrpersonen aus Sekundarschulen)
+* verschiedene Unterrichtsfächer (z.B. 22,27% unterrichten ein Geistes- oder Sozialwissenschaftliches Fach)
+
+
+::: notes
+- und 40 englischsprachige Lehrpersonen via panel provider prolific befragt
+- ausführliche Infos zur Stichprobenbeschreibung hier aufgelistet
+- wie sind wir dann vorgegangen?
+:::
+
+
+## Design
+
+
+::: notes
+- Lehrpersonen erhielten zunächst eine Studienvignette zu einem bildungswissenschaftlichen Thema, zufällig ausgewählt aus 4 verschiedenen Themen
+  - hier Beispiel: Lesen auf Papier vs. Lesen auf Tablet 
+- diese Studienvignette kontextualisierte insgesamt 24 Effektstärke-Visualisierungen
+  - zusätzlich wurde die Größe des Effekts (within-person Faktor; d ∈ {−.80 - .80}) 
+  - Darstellung (within-person Faktor) randomisiert
+- nach jeder Visualisierung verschiedene Fragen gestellt
+  - Verständnis wurde zufällig nach den ersten 12 oder letzten 12 Visualisierung mit folgenden Fragen erfasst:
+    - wie stark sich die Gruppen auf einer Skala von -1 bis +1 unterscheiden (abstrakte Metrik)
+    - wie viel Prozent der einen Gruppe über dem Mittelwert der anderen Gruppe liegt (U3-Metrik)
+    - zu wieviel Prozent sich beide Gruppen überschneiden (Overlap-Metrik)
+  - Informativität wurde nach allen 24 Visulisierungen mit dieser Frage erfasst
+  
+ergänzend:
+
+  - Thema variierte zwischen den Personen, um zusätzlichen kognitiven Load zu verringern
+  
+:::
+
+
+## Ergebnisse: Wahrgenommene Informativität
+
+<center> ![](img/study2_plot_informativity.svg) </center>
+
+## Ergebnisse: Verständnis
+
+<center> ![](img/study2_plot_diff_am.svg) </center>
+
+Achsen anpassen
+
+## Ergebnisse: Verständnis
+
+<center> ![](img/study2_plot_diff_u3.svg) </center>
+
+Achsen anpassen
+
+## Ergebnisse: Verständnis
+
+FEHLKONZEPTLER ANPASSEN
+
+## Literatur
+::: footer
+<!-- Leerer footer - sonst überlagern nsich floating refernces und der footer  -->
+:::
+
+<!-- nicht in das scss integrierbares css -->
+<style>
+div.callout-tip {border-left-color: #267326 !important;}
+</style>
