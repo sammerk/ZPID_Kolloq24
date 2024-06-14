@@ -1,0 +1,520 @@
+---
+title: "Reproducible_Report_Study_II - Update 2"
+subtitle: "Including Only School Teachers Who Passed the Attention Check"
+format: 
+  html:
+    fontsize: 0.85em
+    toc: true
+    toc-location: left
+    toc-depth: 4
+    code-fold: true
+    code-tools: true
+    theme: flatly 
+    embed-resources: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Data import
+
+
+```{r}
+library(modelsummary)
+library(broom.mixed)
+library(skimr)
+library(GGally)
+library(ggforce)
+library(hrbrthemes)
+library(tidyverse)
+library(effectsize)
+library(lubridate)
+
+# set cores depending on your machine
+options(mc.cores = parallel::detectCores())
+set.seed("250582")
+
+# Import item data from .csv
+study2_data_imported <-
+   read_csv(here::here("data/teachers_study2_update01.csv")) 
+
+nrow(study2_data_imported)    
+
+study2_data_ended <-
+    study2_data_imported |> 
+    filter(!is.na(ended))
+
+nrow(study2_data_ended)
+
+study2_data_ended_and_passedattentioncheck <-
+    study2_data_ended |> 
+    filter(is.na(attention_check))
+           
+nrow(study2_data_ended_and_passedattentioncheck)
+
+study2_data_ended_and_passedattentioncheck_and_schoolteachers <-
+    study2_data_ended_and_passedattentioncheck |> 
+    filter(!(mcsto %in%  
+                 c('University', 
+                  'private tutor college',
+                  'university',
+                  'Higher education',
+                  'private language school',
+                  'Alternative provision school',
+                  'Pompeu Fabra University',
+                  'Adult learners',
+                  'language school',
+                  'Private Tutor',
+                  'Nursery',
+                  'Private tutor',
+                  'none',
+                  'A language school',
+                  'FE',
+                  'Tutoring high school and bachelor students',
+                  'college of further education',
+                  'university and special business school',
+                  'Language school',
+                  'Higher education (university)',
+                  'Online Tutoring',
+                  'Language School',
+                  'ESL/Study abroad university class',
+                  'Adult education college',
+                  'Kindergarten',
+                  'University of Colorado',
+                  'indepedent school for languages',
+                  '1:1 learning for children with SEN/SEMH',
+                  'TEFL',
+                  'Private tutoring company',
+                  'higher ed',
+                  'USF',
+                  'Realise Training',
+                  'FE College',
+                  'English as a foreign language institution',
+                  'higher education',
+                  'Higher Ed',
+                  'Higher education -University',
+                  'University students',
+                  'English courses',
+                  'various',
+                  'Prep school')
+    ))
+
+nrow(study2_data_ended_and_passedattentioncheck_and_schoolteachers)
+
+study2_data <- study2_data_ended_and_passedattentioncheck_and_schoolteachers
+
+# Import detailed data .json
+study2_data_detailed <-
+    as.data.frame(
+        jsonlite::fromJSON(here::here("data/teachers_study2_update01_detailed.json"))) |> 
+    filter(session %in% study2_data$session)
+```
+
+
+## Data wrangling
+
+### Wrangling item data
+
+First we create a specific dataframe which contains the information about effect size, plottype ...
+
+
+```{r}
+plot_info <- study2_data  |> 
+    # we only need the rows with info on plots
+    select(session, contains("plot")) |> 
+    # make a long df
+    pivot_longer(2:21, names_to = "variables", values_to = "values", 
+                 values_transform = as.character) %>% 
+    # separate the info into three columns
+    separate(col = values, into = c("type", "axis", "effsize"),
+             sep = "_", remove = F) %>%
+    mutate(plot = variables,       # rename variables for later join
+           type = paste(type, axis, sep = "_"))  |> 
+    select(-variables, -axis)
+```
+
+
+Next we wrangle a separate dataframe which contains just the answers of the participants to the items, their identifier and the plotorder.
+
+
+```{r}
+#| label: item_datawrangling
+item_values <- study2_data %>%
+    dplyr::select(session, contains(c("sensi_", "acccl_", "accov_", "accu3_", "value_", "infor_", "diffi_"))) %>% 
+    pivot_longer(-session, names_to = "variables", values_to = "values", 
+                 values_transform = as.character) %>%
+    # create variable for later join
+    mutate(plot = paste0("plotx_", str_sub(variables, -2, -1)), 
+           variables = str_sub(variables, 1, -4)) %>%    
+    # rename variable names to get a data set 
+    # with one line per participant per page
+    pivot_wider(id_cols = c(session, plot), names_from = "variables", 
+                values_from = "values")
+```
+
+
+Then we join these two data sets and recode/calculate some of the dependet variables like accuracy...
+
+
+```{r}
+#| label: item_datajoining
+data_w <- full_join(plot_info, 
+                    item_values,
+                    by = c("session", "plot")) %>% 
+    select(-values) %>%
+    mutate(rating_am = as.numeric(acccl), # some var need to be defined as
+           rating_u3 = as.numeric(accu3), # numeric again
+           rating_ov = as.numeric(accov),
+           diffi = as.numeric(diffi),
+           infor = as.numeric(infor),
+           value = as.numeric(value),
+           effsize = as.numeric(effsize),
+           effsize_f = as.factor(effsize),
+           effsize_am = case_when( 
+           # there is no negative Cliff's Delta, so we have to compute 
+           # two transformations
+               effsize > 0 ~   (((2*pnorm(effsize/2))-1)/pnorm(effsize/2)),
+           # transform the actual effect size Cohen's d to Cliff's Delta
+               effsize < 0 ~ (- (((2*pnorm(abs(effsize)/2))-1)/pnorm(abs(effsize)/2))) 
+           # transform the actual effect size Cohen's d to Cliff's Delta 
+           # and make it negative as in the item
+           ),
+           effsize_u3 = 1-pnorm(effsize), # reverse so that it fits the direction of the U3 item
+           # transform the actual effect size Cohen's d to Cohen's U3
+           effsize_ov = 2 * pnorm(-abs(effsize) / 2), 
+           # actual difference of rating relative to depicted effectsize
+           rating_am_in_d = r_to_d(rating_am),
+           rating_u3_in_d = qnorm(rating_u3/100), 
+           rating_ov_in_d = -2*qnorm(0.5*rating_ov/100),
+           diff_am = ifelse(effsize < 0,
+                            (rating_am_in_d - effsize)*(-1),
+                            rating_am_in_d - effsize),
+           diff_u3 = ifelse(effsize < 0,
+                            (rating_u3_in_d - effsize)*(-1),
+                            rating_u3_in_d - effsize),
+           diff_ov = ifelse(effsize < 0,
+                            (rating_ov_in_d - effsize)*(-1),
+                            rating_ov_in_d - effsize))  %>%
+    group_by(session) %>% 
+    mutate(rating_ov_misconcept = median(rating_ov, na.rm = T) < 68.9,
+           rating_u3_misconcept = median(rating_u3, na.rm = T) < 21.2) %>% 
+    ungroup() %>% 
+    mutate(rating_u3_filtered = ifelse(rating_u3_misconcept == T, 
+                                       NA, rating_u3_in_d),
+           rating_ov_filtered = ifelse(rating_ov_misconcept == T,
+                                       NA, rating_ov_in_d),
+           sensi_binary = ifelse(is.na(sensi), # 1 if NOT "equal"
+                                        NA,
+                                        as.numeric(!grepl("equal", sensi))),
+           sensi_ordinal = ordered(factor(substr(sensi, 55, 100)),
+                                   levels = c("inferior",
+                                              "equal",
+                                              "superior")),
+           sensi_binary_filtered = case_when(sensi_ordinal == "equal" ~ 0, 
+                                             (sensi_ordinal == "inferior" & 
+                                                  effsize < 0) | 
+                                                  (sensi_ordinal == "superior" & 
+                                                  effsize > 0) ~ as.numeric(NA),
+                                             (sensi_ordinal == "inferior" & # was not there
+                                                  effsize > 0) | 
+                                                  (sensi_ordinal == "superior" & 
+                                                  effsize < 0) ~ 1, 
+                                             TRUE ~ as.numeric(NA)), # was 1
+           sensi_correct = case_when(sensi_ordinal == "equal" ~ "judged equal", 
+                                     (sensi_ordinal == "inferior" & 
+                                                  effsize < 0) | 
+                                                  (sensi_ordinal == "superior" & 
+                                                  effsize > 0) ~ "wrong direction",
+                                             (sensi_ordinal == "inferior" & # was not there
+                                                  effsize > 0) | 
+                                                  (sensi_ordinal == "superior" & 
+                                                  effsize < 0) ~ "right direction", 
+                                             TRUE ~ NA_character_),
+           effsize_abs = abs(effsize)) |> 
+    # add the between-person conditions group and topic
+    left_join(study2_data |> select(session, group, topic)) |> 
+    # create binary variables for the presence of a benchmark or signaling
+    mutate(gr_benchmark = ifelse(grepl("benchmark", group), "benchmark", "nobenchmark"),
+           gr_signaling = ifelse(grepl("signaling", group), "signaling", "nosignaling")) |> 
+    # add the between-person conditions group and topic
+    left_join(study2_data |> select(session, group, topic,
+                                    umean_1x, umean_1y, umean_2x, 
+                                    umean_2y, uvary_2x, uvary_2y)) |> 
+    # create binary variables for the presence of a benchmark or signaling
+    mutate(gr_benchmark = ifelse(grepl("benchmark", group), "benchmark", "nobenchmark"),
+           gr_signaling = ifelse(grepl("signaling", group), "signaling", "nosignaling"),
+           umean_1x_cor = ifelse(umean_1x == 5, 1, 0),
+           umean_1y_cor = ifelse(umean_1y == 2, 1, 0),
+           umean_2x_cor = ifelse(umean_2x == 3, 1, 0),
+           umean_2y_cor = ifelse(umean_2y == 5, 1, 0),
+           uvary_2x_cor = ifelse(uvary_2x == 1, 1, 0),
+           uvary_2y_cor = ifelse(uvary_2y == 1, 1, 0))
+
+```
+
+
+Show descriptive results of accuracy variables, perceived difficulty, sensitivity, 
+perceived informativity, perceived value, and misconceptualizers per experimental condition
+
+
+```{r}
+table(study2_data$group)
+
+skim(
+  data_w |>
+  select(diff_am, diff_u3, diff_ov, plot, session, group) |>
+    filter (!diff_u3 == "-Inf",
+            !diff_u3 == "Inf",
+            !diff_ov == "-Inf",
+            !diff_ov == "Inf",
+            !diff_am == "-Inf",
+            !diff_am == "Inf") |>
+    gather(variable, value, 1:3) |>
+    mutate(var = paste(variable, group, sep = "_")) |>
+    select(-group, -variable) |>
+    # group_by(session, plot) |>
+    spread(var, value) # |>
+    # ungroup()
+    )
+
+skim(
+  data_w |>
+  select(diffi, infor, value, rating_u3, 
+         rating_ov, rating_am, sensi_binary_filtered, plot, session, group) |>
+    gather(variable, value, 1:7) |>
+    mutate(var = paste(variable, group, sep = "_")) |>
+    select(-group, -variable) |>
+    # group_by(session, plot) |>
+    spread(var, value) # |>
+    # ungroup()
+    )
+
+skim(
+  data_w |>
+  select(rating_ov_misconcept, rating_u3_misconcept, session, group) |>
+      mutate(rating_ov_misconcept = case_when(rating_ov_misconcept == "TRUE" ~ 1,
+                                              TRUE ~ 0),
+             rating_u3_misconcept = case_when(rating_u3_misconcept == "TRUE" ~ 1,
+                                              TRUE ~ 0))  |>
+      unique() |>
+      gather(variable, value, 1:2) |>
+      mutate(var = paste(variable, group, sep = "_")) |>
+      select(-group, -variable) |>
+      spread(var, value)
+    )
+```
+
+
+### Wrangling time data
+
+
+```{r}
+#| label: timestamp_datawrangling
+
+study_w_timestamp <- 
+    study2_data_detailed |> 
+    as_tibble() |> 
+    # filter participants from study2_w only
+    filter(session %in% study2_data$session) %>% 
+    # we only need vars sensitivity or accuracy
+    dplyr::filter(str_detect(item_name, "sensi|acccl|accu3|accov")) %>%  
+    # create var with plot number
+    mutate(plot = paste0("plotx_", str_sub(item_name, -2, -1))) %>% 
+    relocate(session, plot) %>% 
+    # delete the page number in item name
+    mutate(item_name = str_sub(item_name, 1, 5)) %>%  
+    pivot_wider(id_cols = c(session, plot), names_from = item_name, 
+                values_from = answered_relative) %>% 
+    rowwise() %>%
+    # what was the time of the first item to be clicked?
+    mutate(effic = min(sensi, acccl, accu3, accov, na.rm=T)) %>%
+    ungroup() %>% 
+    dplyr::select(session, plot, effic, sensi, acccl, accu3, accov) %>% 
+    left_join(., data_w %>% 
+                  select(session, plot, type), by=c("session", "plot")) %>% 
+    # generate data set so that the six plots from the same type are ordered
+    # one after the other (and not 1-24)
+    group_by(session, type) %>% 
+    arrange(plot) %>% 
+    mutate(plotNrWithin = 1:n()) %>%
+    ungroup() %>% 
+    group_by(plotNrWithin, type) %>% 
+    mutate(effic_10righttrunc = ifelse(effic > quantile(effic, .9), NA, effic),
+           effic_05righttrunc = ifelse(effic > quantile(effic, .95), NA, effic),
+           log_effic_05righttrunc =log(effic_05righttrunc),
+           log_effic_10righttrunc = log(effic_10righttrunc),
+           plotNrWithin0 = plotNrWithin - 1,
+           plotNrWithin_factor = as.factor(plotNrWithin)) %>% 
+    ungroup() |> 
+    left_join(data_w |> select(session, group, effsize_f, plot)) |> 
+    mutate(gr_benchmark = ifelse(grepl("benchmark", group), 
+                                 "benchmark", "nobenchmark"),
+           gr_signaling = ifelse(grepl("signaling", group), 
+                                 "signaling", "nosignaling"))
+
+
+```
+
+
+Show descriptive results of efficiency per experimental condition
+
+
+```{r}
+skim(
+  study_w_timestamp |>
+  select(effic, plot, session, group) |>
+    gather(variable, value, effic) |>
+    mutate(var = paste(variable, group, sep = "_")) |>
+    select(-group, -variable) |>
+    #group_by(session, plot) |>
+    spread(var, value) #|>
+    #ungroup()
+    )
+```
+
+
+
+## Demographics
+
+
+```{r}
+#| label: demographics
+sociodemographics <- 
+    read_delim(here::here("data/teachers_study2_update01.csv")) %>%
+    select(session, mcstu, texpe, mcsub) %>% 
+    mutate(reply = session %in% c(study2_data$session)) %>%
+    filter(!reply == "FALSE") %>%
+    select(-reply) %>%
+    mutate(
+        mcstu = as.factor(mcstu),
+        texpe = as.numeric(texpe),
+        mcsub = as.factor(mcsub),
+        subject_stem = grepl("1", mcsub),
+        subject_languages = grepl("2", mcsub),
+        subject_humanities_socialscience = grepl("3", mcsub),
+        subject_asthetic = grepl("4", mcsub)
+    ) 
+
+skim(sociodemographics) 
+```
+
+
+## Wahrgenommene Informativität
+
+```{r}
+plot_informativity <- data_w |> 
+    mutate(group = recode_factor(group,
+                  `cg` = "Kontrollgruppe\nN=55",
+                  `eg_benchmark` = "Benchmark\nN=55",
+                  `eg_signaling_overlap` = "Signaling Overlap\nN=57",
+                  `eg_signaling_u3` = "Signaling Cohen's U3\nN=53")) |> 
+ ggplot(aes(infor, group)) +
+    geom_violin() +
+    geom_jitter(alpha = .05,
+                color = "#8CD000") +
+    stat_summary(fun.data = mean_sdl, 
+                 fun.args = list(mult = 1)) +
+    theme_minimal() +
+    labs(title = "Wahrgenommene Informativität",
+         subtitle = "per Experimentalbedingung",
+         caption = "Mittelwert ± 1*SD") + 
+    xlab("Experimetal Bedingungen") +
+    ylab("Wahrgenommene Informativität")
+
+plot_informativity
+
+ggsave("study2_plot_informativity.svg",
+      width = 8,
+      height = 8,
+      dpi = 1200)
+```
+
+
+
+## Verständnis 
+
+```{r}
+plot_diff_am <- data_w  |> 
+    mutate(group = recode_factor(group,
+                  `cg` = "Kontrollgruppe\nN=55",
+                  `eg_benchmark` = "Benchmark\nN=55",
+                  `eg_signaling_overlap` = "Signaling Overlap\nN=57",
+                  `eg_signaling_u3` = "Signaling Cohen's U3\nN=53")) |>  
+  ggplot(aes(diff_am, group)) +
+    geom_violin() +
+    geom_jitter(alpha = .05,
+                color = "#8CD000") +
+    stat_summary(fun.data = mean_sdl, 
+                 fun.args = list(mult = 1)) +
+    theme_minimal() +
+    labs(title = "Akkuratheit (Abstrakte Metrik)",
+         subtitle = "per Experimentalbedingung",
+         caption = "Mittelwert ± 1*SD") + 
+    xlab("Experimetal Bedingungen") +
+    ylab("Differenzvariable: Interpretation (in abstrakter Metrik)")
+
+plot_diff_am 
+
+ggsave("study2_plot_diff_am.svg",
+      width = 8,
+      height = 8,
+      dpi = 1200)
+```
+
+```{r}
+plot_diff_u3 <- data_w  |> 
+    mutate(group = recode_factor(group,
+                  `cg` = "Kontrollgruppe\nN=55",
+                  `eg_benchmark` = "Benchmark\nN=55",
+                  `eg_signaling_overlap` = "Signaling Overlap\nN=57",
+                  `eg_signaling_u3` = "Signaling Cohen's U3\nN=53")) |>  
+  ggplot(aes(diff_u3, group)) +
+    geom_violin() +
+    geom_jitter(alpha = .05,
+                color = "#8CD000") +
+    stat_summary(fun.data = mean_sdl, 
+                 fun.args = list(mult = 1)) +
+    theme_minimal() +
+    labs(title = "Akkuratheit (Cohen's U3)",
+         subtitle = "per Experimentalbedingung",
+         caption = "Mittelwert ± 1*SD") + 
+    xlab("Experimetal Bedingungen") +
+    ylab("Differenzvariable: Interpretationen (in Cohen's U3)")
+
+plot_diff_u3 
+
+ggsave("study2_plot_diff_u3.svg",
+      width = 8,
+      height = 8,
+      dpi = 1200)
+```
+
+```{r}
+plot_u3_misconceptions <- data_w |> 
+    select(group, rating_u3_misconcept, session) |> 
+    mutate(group = recode_factor(group,
+                  `cg` = "Kontrollgruppe\nN=55",
+                  `eg_benchmark` = "Benchmark\nN=55",
+                  `eg_signaling_overlap` = "Signaling Overlap\nN=57",
+                  `eg_signaling_u3` = "Signaling Cohen's U3\nN=53")) |>  
+    na.omit() |> 
+    distinct() |> 
+    ggplot(aes(group, 
+               fill = rating_u3_misconcept
+               )) +
+    geom_bar() +
+    theme_minimal() +
+    scale_fill_manual(values = c("#267326", "#8cd000")) +
+    labs(title = "Häufigkeit an Cohen's U3-Fehlkonzepten",
+         subtitle = "per Experimentalbedingung") + 
+    xlab("Experimetal Bedingungen") +
+    ylab("Anzahl an (nicht) vorhanden Cohen's U3-Fehlkonzepten")
+
+plot_u3_misconceptions
+
+ggsave("study2_plot_u3_misconceptions.svg",
+      width = 8,
+      height = 8,
+      dpi = 1200)
+```
+

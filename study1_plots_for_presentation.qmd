@@ -1,0 +1,222 @@
+---
+title: "Study 1 - plots for presentation"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(psych)
+library(ggplot2)
+library(skimr)
+library(hrbrthemes)
+
+data_disentangle<- readr::read_csv("data/dataset_disentangling.csv")%>% 
+  mutate(topc1 = as.character(zz6), 
+         topc2 = as.character(zz7),
+         word1 = as.character(zz8),
+         word2 = as.character(zz9),
+         info1 = as.character(pm1a),
+         info2 = as.character(pm2a),
+         conf1 = as.character(pm1b),
+         conf2 = as.character(pm2b),
+         iinf1 = as.character(pm1c_1),
+         iinf2 = as.character(pm2c_1),
+         ieff1 = as.character(pm1c_2),
+         ieff2 = as.character(pm2c_2),
+         sex = as.factor(d1),
+         mig_background = as.factor(d4),
+         age = as.numeric(altq),
+         practical_exp = as.numeric(berj),
+         school_types = as.factor(d8),
+         subject_science = as.factor(d5_1),
+         subject_language = as.factor(d5_2),
+         subject_humanities_social_science = as.factor(d5_3),
+         subject_artistic = as.factor(d5_4))
+
+data_disentangle_long <- pivot_longer(data_disentangle, 
+                                      cols = c(topc1, topc2, word1, 
+                                               word2, info1, info2, 
+                                               conf1, conf2, iinf1, 
+                                               iinf2, ieff1, ieff2),
+                                      names_to = "var", 
+                                      values_to = "val",
+                                      values_ptypes = list(val = 'character'))%>%
+                         mutate(var2 = substr(var, 1,4),
+                                pos = substr(var, 5,5))%>%
+                         select(-var)%>%
+                         pivot_wider(names_from = var2, values_from = val)
+data_disentangle_long_selected <- data_disentangle_long %>%
+  select(topc, word, info, conf, iinf, ieff, lfdn) %>%
+  mutate(iinf = as.factor(iinf),
+         ieff = as.factor(ieff),
+         info = as.factor(info),
+         conf = as.factor(conf),
+         topc = as.factor(topc),
+         word = as.factor(word),
+         lfdn = as.factor(lfdn)) %>%  
+  mutate(statistical_statement = recode_factor(word,
+                   `'signifikant'-Formulierung` = "sign",
+                    `Cohen's U3`="cou3",
+                    `'signifikant'-Formulierung + Cohens U3`="comb",
+                    `Bayes Faktor` = "bafa",
+                    `p-Wert` = "pval",
+                    `Cohen's d`="cohd"),
+        conf = recode(conf, `sehr unsicher` = 1,
+              `4` = 2,
+              `3` = 3,
+              `2` = 4,
+              `sehr sicher` = 5,
+              `weiß nicht / keine Angabe` = NA_real_),
+        informativity = recode(info, `sehr uninformativ` = 1,
+              `4` = 2,
+              `3` = 3,
+              `2` = 4,
+              `sehr informativ` = 5,
+              `weiß nicht / keine Angabe` = NA_real_),
+        iinf = recode(iinf, `stimme nicht zu` = 1,
+                      `stimme eher nicht zu` = 2,
+                      `unentschieden` = 3,
+                      `stimme eher zu` = 4,
+                      `stimme voll und ganz zu` = 5,
+                      `weiß nicht / keine Angabe` = NA_real_),
+        ieff = recode(ieff,`stimme nicht zu` = 1,
+                      `stimme eher nicht zu` = 2,
+                      `unentschieden` = 3,
+                      `stimme eher zu` = 4,
+                      `stimme voll und ganz zu` = 5,
+                      `weiß nicht / keine Angabe` = NA_real_)) %>%
+        mutate(disentangling = abs(iinf-ieff)) %>%
+  select(-topc, -word)
+
+
+data_informativity_product_plot <- 
+  data_disentangle_long_selected %>% 
+         select(informativity, statistical_statement) %>%
+         rename("Informativität" = informativity) %>%
+        mutate(statistical_statement = recode_factor(statistical_statement, 
+                         `sign` = "Signifikanz-Aussage",
+                         `cou3`= "Beschreibung Cohen's U3",
+                         `comb`= "Kombination aus Inferenzstatistik \nund Effektstärke",
+                         `pval` = "Definition p-Wert",
+                         `bafa` = "Beschreibung Bayes Faktor",
+                         `cohd`= "Beschreibung Cohen's d"))%>%
+         gather(var, val, -statistical_statement) %>%
+         mutate(var = fct_relevel(var,
+                "Informativität")) %>%
+         group_by(statistical_statement, var, val) %>%
+         dplyr::summarize(freq = n()) %>%
+         mutate(Häufigkeit = freq,
+                val =  fct_explicit_na(as.factor(val), 
+                                       na_level="weiß nicht/ \n keine Angabe"))
+ 
+informativity_product_plot <- ggplot(data = 
+                              data_informativity_product_plot,
+                              aes(var, val)) + 
+  geom_point(aes(size = Häufigkeit, color = Häufigkeit),
+             shape = 15) +
+  scale_size_continuous(range = c(3,15)) + 
+  scale_color_gradient(low = "#66ff0d", high = "#006d00") + 
+  stat_summary(data = data_disentangle_long_selected %>% 
+                 select(informativity, statistical_statement) %>%
+                 rename("Informativität" = informativity) %>%
+                 mutate(statistical_statement = recode_factor(statistical_statement, 
+                                `sign` = "Signifikanz-Aussage",
+                                `cou3`= "Beschreibung Cohen's U3",
+                                `comb`= "Kombination aus Inferenzstatistik \nund Effektstärke",
+                                `pval` = "Definition p-Wert",
+                                `bafa` = "Beschreibung Bayes Faktor",
+                                `cohd`= "Beschreibung Cohen's d"))%>%
+                 gather(var, val, -statistical_statement) %>% 
+                 mutate(var = fct_relevel(var,
+                                         "Informativität")),
+                 aes(var, val),
+                 fun.data = "mean_sdl", fun.args = list(mult = 1),
+               color = "black") + 
+  theme_ipsum_ps(axis_text_size = "12") + 
+  theme(panel.grid.major.x = element_blank(), panel.grid.minor.y =  element_blank()) + 
+  guides(color=guide_legend(), size = guide_legend()) +
+  facet_wrap(~statistical_statement) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+        strip.text = element_text (lineheight=.8)) +
+  ggtitle("Graphischer Überblick", 
+          "Wahrgenommene Informativität der verschiedenen statistischen Beschreibungen") + 
+  labs(caption = "Bayesian repeated measurement ANOVA: BF10 > 100,
+         0,74 ≤ U3 ≤ 0,92") +
+  ylab("") + 
+  xlab("") 
+
+ggsave("images/study1_informativity_product_plot.svg", 
+       informativity_product_plot, 
+       width = 35,
+       height = 25,
+       units = "cm",
+       dpi = 400)
+
+data_interpretation_product_plot <- 
+  data_disentangle_long_selected %>% 
+         select(iinf, ieff, statistical_statement) %>%
+         rename("Inferenzstatistik" = iinf,
+                "Effektstärke" = ieff) %>%
+        mutate(statistical_statement = recode_factor(statistical_statement, 
+                         `sign` = "Signifikanz-Aussage",
+                         `cou3`= "Beschreibung Cohen's U3",
+                         `comb`= "Kombination aus Inferenzstatistik \nund Effektstärke",
+                         `pval` = "Definition p-Wert",
+                         `bafa` = "Beschreibung Bayes Faktor",
+                         `cohd`= "Beschreibung Cohen's d"))%>%
+         gather(var, val, -statistical_statement) %>%
+         mutate(var = fct_relevel(var,
+                "Inferenzstatistik", 
+                "Effektstärke")) %>%
+         group_by(statistical_statement, var, val) %>%
+         dplyr::summarize(freq = n()) %>%
+         mutate(Häufigkeit = freq,
+                val =  fct_explicit_na(as.factor(val), 
+                                       na_level="weiß nicht/ \n keine Angabe"))
+ 
+interpretation_product_plot <- ggplot(data = 
+                              data_interpretation_product_plot,
+                              aes(var, val)) + 
+  geom_point(aes(size = Häufigkeit, color = Häufigkeit),
+             shape = 15) +
+  scale_size_continuous(range = c(3,15)) + 
+  scale_color_gradient(low = "#66ff0d", high = "#006d00") + 
+  stat_summary(data = data_disentangle_long_selected %>% 
+                 select(iinf, ieff, statistical_statement) %>%
+                 rename("Inferenzstatistik" = iinf,
+                "Effektstärke" = ieff) %>%
+                 mutate(statistical_statement = recode_factor(statistical_statement, 
+                                  `sign` = "Signifikanz-Aussage",
+                                  `cou3`= "Beschreibung Cohen's U3",
+                                  `comb`= "Kombination aus Inferenzstatistik \nund Effektstärke",
+                                  `pval` = "Definition p-Wert",
+                                  `bafa` = "Beschreibung Bayes Faktor",
+                                  `cohd`= "Beschreibung Cohen's d"))%>%
+                 gather(var, val, -statistical_statement) %>% 
+                 mutate(var = fct_relevel(var,
+                                         "Inferenzstatistik", 
+                                         "Effektstärke")),
+                 aes(var, val),
+                 fun.data = "mean_sdl", fun.args = list(mult = 1),
+               color = "black") + 
+  theme_ipsum_ps(axis_text_size = "12") + 
+  theme(panel.grid.major.x = element_blank(), panel.grid.minor.y =  element_blank()) +
+  guides(color=guide_legend(), size = guide_legend()) +
+  facet_wrap(~statistical_statement) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+        strip.text = element_text (lineheight=.8)) +
+  ggtitle("Graphischer Überblick", 
+          "Häufigkeit je Item und statistischer Beschreibung") + 
+    labs(caption = "Bayesian repeated measurement ANOVA: BF01 = 67,15,
+         0,46 ≤ U3 ≤ 0,56") +
+  ylab("") + 
+  xlab("") 
+
+ggsave("images/study1_interpretation_product_plot.svg", 
+       interpretation_product_plot, 
+       width = 35,
+       height = 25,
+       units = "cm",
+       dpi = 400)
+```

@@ -1,5 +1,5 @@
 ---
-title: "Successful <br> Science Communication"
+title: "User-friendly <br> science communication"
 subtitle: "Communicating inferential uncertainty and effect sizes to laypeople"
 author: Samuel Merk und Kirstin Schmidt
 footer: "Samuel Merk und Kirstin Schmidt | <br> Pädagogische Hochschule Karlsruhe"
@@ -66,21 +66,9 @@ border: none !important;
   - Evidenzinformierte Medizin: XXX
   - Evidenzinformierte Schulpraxis: Bildungswissenschaftliche Forschungsergebnisse in der Praxis berücksichtigen, um die Professionalisierung der Lehrpersonen, die Schul- und Unterrichtsqualität sowie die Schüler:innenleistung zu steigern [@bauer2023]
   
-  
-# Studie 1: <br> Statistische Formulierungen {{< iconify fa6-solid mdi:text-box-outline >}} {.center .center-x}
+## Wissenschaftskommunikation {.smaller}
 
-<br>
-<br>
-<center> 
-gemeinsam mit <br> Peter Edelsbrunner<sup>2</sup>, Tom Rosman<sup>3</sup> und Colin Cramer <sup>4</sup> 
-</center>
-
-<sup>2</sup> ETH Zürich
-<sup>3</sup> ZPID Trier
-<sup>4</sup> Eberhard Karls Universität Tübingen
-
-## Theoretischer Hintergrund {.smaller}
-
+Kommunikation von Effektstärken
 
 Forschungsergebnisse werden überwiegend als "statistisch (nicht) signifikante" Ergebnisse kommuniziert (Hanel & Mehler, 2019)
 
@@ -92,6 +80,42 @@ Forschungsergebnisse werden überwiegend als "statistisch (nicht) signifikante" 
 
   - wissenschaftliche Laien schätzen die gängige Signifikanz-Aussage und Cohen's *U<sub>3</sub>* informativer ein als andere Statistiken wie Cohen's *d* oder Bayes Faktoren (Hanel & Mehler, 2019)
   - Lehrpersonen schätzen u.a. die Effektstärke Month of Progress informativer und verständlicher ein als Cohen's *U<sub>3</sub>* (Lortie-Forgues et al., 2021) <br>
+  
+  
+## Wissenschaftskommunikation {.smaller}
+
+- verschiedene Formulierungen statistischer Maße werden von Lehrpersonen fehlinterpretiert (Schmidt et al., 2023)
+- intuitive __visuelle__ Darstellungen von Effekstärken als alternative Kommunikationsstrategie (vgl. Franconeri et al., 2021)
+&rarr; Lehrpersonen interpretieren Effektstärkenvisualisierungen mit hoher Akkuratheit (Merk et al., 2023)
+- identische Effektstärken werden in Abhängigkeit der Darstellung rezipiert (Merk et al., 2023)
+- Entscheidungsfindungen varrieren in Abhängigkeit der Darstellung (Albers et al., 2014; Kale et al., 2020; Pierce & Chick, 2013) 
+
+
+::: notes
+- statistische Formulierungen fehlinterpretiert und inkonsistente Studienergebnisse zur Informativität 
+- visuelle Darstellungen könnten für die Kommunikation wissenschaftlicher Ergebnisse eine gute alternative sein
+  - 1) grundsätzlich zeigt sich, dass das visuelle Wahrnehmungssystem als leistungsfähig hinsichtlich der akkuraten Schätzung statistischer Informationen gilt  
+  - 2) und erste empirische Studien zeigen, dass Lehrpersonen die Informationen aus Effektstärkevisualisierungen sehr akkurat einschätzen
+- Gleichzeitig variiert die Akkuratheit je nach Visualisierung aber d.h. unterschiedliche Visualisierungen werden unterschiedlich akkurat eingeschätzt
+- und auch die Entschiedungsfindung ist abhängig von der verwendeten Visualisierung
+  - z.B. haben Lehrpersonen Schwierigkeiten datengestütze Entscheidungnen anhand von Boxplots zu treffen (Pierce & Chick, 2013)
+
+- Daher in der vorliegenden explorativen Studie den Fragen nachgehen...
+:::
+
+
+
+# Studie 1: <br> Statistische Formulierungen {{< iconify fa6-solid mdi:text-box-outline >}} {.center .center-x}
+
+<br>
+<br>
+<center> 
+gemeinsam mit <br> Peter Edelsbrunner<sup>2</sup>, Tom Rosman<sup>3</sup> und Colin Cramer <sup>4</sup> 
+</center>
+
+<sup>2</sup> ETH Zürich
+<sup>3</sup> ZPID Trier
+<sup>4</sup> Eberhard Karls Universität Tübingen
 
 
 ## Forschungsfragen <!-- {{< iconify fa6-solid mingcute:question-line >}} --> 
@@ -118,9 +142,9 @@ Forschungsergebnisse werden überwiegend als "statistisch (nicht) signifikante" 
 * *M<sub>Alter</sub>* = 47,70 Jahre (*SD* = 10,82)
 * *M<sub>Lehrerfahrung</sub>* = 17,37 Jahre (*SD* = 11,13)
 * verschiedene Schularten (z.B. 27,29 % Gymnasiallehrpersonen; 26,09% Grundschullehrpersonen; 18,60 % Gesamtschullehrpersonen)
-* verschiedene Unterrichtsfächer (z.B. 58,45 % unterrichten ein Geistes- oder Sozialwissenschaftliches Fach; 54,83 % mind. eine Sprache; 43,72 % ein mathematisches oder naturwissenschaftliches Fach)
+* verschiedene Unterrichtsfächer (z.B. 58,45 % unterrichten ein geistes- oder sozialwissenschaftliches Fach; 54,83 % mind. eine Sprache; 43,72 % ein mathematisches oder naturwissenschaftliches Fach)
 
-[&rarr; Stichprobe kann als annähernd repräsentativ gewertet werden(vgl. Statistisches Bundesamt [Destatis], 2019)]{.imp2} 
+[&rarr; Stichprobe kann als annähernd repräsentativ gewertet werden (vgl. Statistisches Bundesamt [Destatis], 2019)]{.imp2} 
 
 
 ::: notes
@@ -176,6 +200,11 @@ ergänzend:
 
 <center> ![Adaptiert von Schmidt et al. (2023)](img/study1_interpretation_product_plot.svg) </center>
 
+## Ergebnisse: Verständnis
+
+<center> ![](img/LatentProfiles.png) </center>
+
+
 
 # Studie 2: Effektstärken- <br> visualisierungen {{< iconify fa6-solid mdi:graph-box-outline >}} {.center .center-x}
 
@@ -187,28 +216,6 @@ gemeinsam mit <br> Jürgen Schneider<sup>2</sup> und Kristina Bohrer<sup>1</sup>
 
 <sup>1</sup> Pädagogische Hochschule Karlsruhe
 <sup>2</sup> DIPF Frankfurt
-
-
-## Theoretischer Hintergrund
-
-- verschiedene Formulierungen von statistischen Maße werden von Lehrpersonen fehlinterpretiert (Schmidt et al., 2023)
-- intuitive __visuelle__ Darstellungen von Effekstärken als alternative Kommunikationsstrategie (vgl. Franconeri et al., 2021)
-&rarr; Lehrpersonen interpretieren Effektstärkenvisualisierungen mit hoher Akkuratheit (Merk et al., 2023)
-- identische Effektstärken werden in Abhängigkeit der Darstellung rezipiert (Merk et al., 2023)
-- Entscheidungsfindungen varrieren in Abhängigkeit der Darstellung (Albers et al., 2014; Kale et al., 2020; Pierce & Chick, 2013) 
-
-
-::: notes
-- statistische Formulierungen fehlinterpretiert und inkonsistente Studienergebnisse zur Informativität 
-- visuelle Darstellungen könnten für die Kommunikation wissenschaftlicher Ergebnisse eine gute alternative sein
-  - 1) grundsätzlich zeigt sich, dass das visuelle Wahrnehmungssystem als leistungsfähig hinsichtlich der akkuraten Schätzung statistischer Informationen gilt  
-  - 2) und erste empirische Studien zeigen, dass Lehrpersonen die Informationen aus Effektstärkevisualisierungen sehr akkurat einschätzen
-- Gleichzeitig variiert die Akkuratheit je nach Visualisierung aber d.h. unterschiedliche Visualisierungen werden unterschiedlich akkurat eingeschätzt
-- und auch die Entschiedungsfindung ist abhängig von der verwendeten Visualisierung
-  - z.B. haben Lehrpersonen Schwierigkeiten datengestütze Entscheidungnen anhand von Boxplots zu treffen (Pierce & Chick, 2013)
-
-- Daher in der vorliegenden explorativen Studie den Fragen nachgehen...
-:::
 
 
 ## Forschungsfragen <!-- {{< iconify fa6-solid mingcute:question-line >}} --> 
@@ -239,7 +246,7 @@ gemeinsam mit <br> Jürgen Schneider<sup>2</sup> und Kristina Bohrer<sup>1</sup>
 * *M<sub>Alter</sub>* = 41,80 Jahre (*SD* = 11,40)
 * *M<sub>Lehrerfahrung</sub>* = 13,58 Jahre (*SD* = 9,22)
 * verschiedene Schularten (z.B. 38,64% Grundschullehrpersonen; 31,36% Lehrpersonen aus Sekundarschulen)
-* verschiedene Unterrichtsfächer (z.B. 22,27% unterrichten ein Geistes- oder Sozialwissenschaftliches Fach)
+* verschiedene Unterrichtsfächer (z.B. 22,27% unterrichten ein geistes- oder sozialwissenschaftliches Fach)
 
 
 ::: notes
@@ -280,17 +287,14 @@ ergänzend:
 
 <center> ![](img/study2_plot_diff_am.svg) </center>
 
-Achsen anpassen
-
 ## Ergebnisse: Verständnis
 
 <center> ![](img/study2_plot_diff_u3.svg) </center>
 
-Achsen anpassen
-
 ## Ergebnisse: Verständnis
 
-FEHLKONZEPTLER ANPASSEN
+<center> ![](img/study2_plot_u3_misconceptions.svg) </center>
+
 
 ## Literatur
 ::: footer
