@@ -29,8 +29,9 @@ csl: apa.csl
 ```
 
 
-| {{< iconify fa6-solid diagram-project >}}  | Evidenzinformiertes Handeln            |
+| {{< iconify fa6-solid diagram-project >}}  | Evidenzinformiertes Handeln    |
 |-------------------------------------------:|:---------------------------------
+| {{< iconify fa6-solid ant-design:comment-outlined >}}  | Wissenschaftskommunikation    |
 | {{< iconify fa6-solid mdi:text-box-outline >}} | Studie 1                             |
 | {{< iconify fa6-solid mdi:graph-box-outline >}}   | Studie 2                           |
 
@@ -57,16 +58,14 @@ border: none !important;
 :::
 
 
-# Evidenzinformiertes Handeln {.center .center-x}
-
-## Evidenzinformiertes Handeln
+## Evidenzinformiertes Handeln {{< iconify fa6-solid diagram-project >}} 
 
 - Berücksichtigen von Forschungsergebnissen im professionellen Handeln 
-- Anforderung an verschiedene Berufsfelder/Berufgsgruppen wie Mediziner:innen, Politiker:innen, Lehrpersonen [@sackett1996]
-  - Evidenzinformierte Medizin: XXX
+- Anforderung an verschiedene Berufsfelder/Berufgsgruppen wie Mediziner:innen, Politiker:innen, Psycholog:innen oder Lehrpersonen (z.B.[@sackett1996, @bauer2023, @APA2006])
+  - Evidenzbasierte Medizin: "The practice of evidence based medicine means integrating individual clinical expertise with the best available external clinical evidence from systematic research" [@sackett1996, p.71]
   - Evidenzinformierte Schulpraxis: Bildungswissenschaftliche Forschungsergebnisse in der Praxis berücksichtigen, um die Professionalisierung der Lehrpersonen, die Schul- und Unterrichtsqualität sowie die Schüler:innenleistung zu steigern [@bauer2023]
   
-## Wissenschaftskommunikation {.smaller}
+## Wissenschaftskommunikation {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
 
 Kommunikation von Effektstärken
 
@@ -82,7 +81,7 @@ Forschungsergebnisse werden überwiegend als "statistisch (nicht) signifikante" 
   - Lehrpersonen schätzen u.a. die Effektstärke Month of Progress informativer und verständlicher ein als Cohen's *U<sub>3</sub>* (Lortie-Forgues et al., 2021) <br>
   
   
-## Wissenschaftskommunikation {.smaller}
+## Wissenschaftskommunikation {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
 
 - verschiedene Formulierungen statistischer Maße werden von Lehrpersonen fehlinterpretiert (Schmidt et al., 2023)
 - intuitive __visuelle__ Darstellungen von Effekstärken als alternative Kommunikationsstrategie (vgl. Franconeri et al., 2021)
@@ -183,9 +182,9 @@ ergänzend:
 ::: 
 
 
-## Ergebnisse: Wahrgenommene Informativität 
+## Ergebnisse: Informativität 
 
-<center> ![Adaptiert von Schmidt et al. (2023)](img/study1_informativity_product_plot.svg) </center>
+<center> ![Adaptiert von Schmidt et al. (2023)](img/study1_informativity_product_plot.svg){width="750"} </center>
 
 
 ::: notes
@@ -198,7 +197,7 @@ ergänzend:
 
 ## Ergebnisse: Verständnis
 
-<center> ![Adaptiert von Schmidt et al. (2023)](img/study1_interpretation_product_plot.svg) </center>
+<center> ![Adaptiert von Schmidt et al. (2023)](img/study1_interpretation_product_plot.svg){width="750"} </center>
 
 ## Ergebnisse: Verständnis
 
@@ -236,10 +235,15 @@ gemeinsam mit <br> Jürgen Schneider<sup>2</sup> und Kristina Bohrer<sup>1</sup>
 
 :::
 
-## Studien 
+## Studien 1 - 3 
 
+<center> ![](img/Tüdibase_Studies_Delphi.png) </center>
 
-## Stichprobe
+## Studien 1 - 3 
+
+<center> ![](img/Tüdibase_explorativ_konfirmatorisch.png) </center>
+
+## Stichprobe {.smaller}
 
 * Stichprobenziehung via Panel Provider Prolific
 * *N* = 220 englischsprachige Lehrpersonen (64,5% weiblich, 55% mit Wohnsitz im Vereinigten Königreich) 
@@ -256,10 +260,31 @@ gemeinsam mit <br> Jürgen Schneider<sup>2</sup> und Kristina Bohrer<sup>1</sup>
 :::
 
 
-## Design
 
+## {.em08 background-iframe="https://graphs-2t-demo.formr.org" background-interactive="true"}
 
 ::: notes
+- Lehrpersonen erhielten zunächst eine Studienvignette zu einem bildungswissenschaftlichen Thema, zufällig aus 4 verschiedenen Themen ausgewählt
+  - hier Beispiel: Videoanleitung mit und ohne Untertitel
+- diese Studienvignette kontextualisierte insgesamt 24 Effektstärke-Visualisierungen
+  - zusätzlich wurde die Größe des Effekts (within-person Faktor; d ∈ {−.80 - .80}) 
+  - Darstellung (within-person Faktor) randomisiert
+- nach jeder Visualisierung verschiedene Fragen gestellt
+  - Verständnis wurde zufällig nach den ersten 12 oder letzten 12 Visualisierung mit folgenden drei Fragen operationalisiert. Aber heute nur zwei relevant:
+    - wie stark sich die Gruppen auf einer Skala von -1 bis +1 unterscheiden (abstrakte Metrik)
+      - 1 die Gruppe Video ohne Untertitel +1 Gruppe mit Untertitel komplett überlegen
+    - wie viel Prozent der einen Gruppe über dem Mittelwert der anderen Gruppe liegt
+    (U3-Metrik)
+    - inhaltlich an die Themen angepasst
+  
+
+ergänzende Info bei Rückfragen:
+
+  - Thema variierte zwischen den Personen, um zusätzlichen kognitiven Load zu verringern
+  - zu wieviel Prozent sich beide Gruppen überschneiden (Overlap-Metrik)
+ 
+ZÜRICH: 
+
 - Lehrpersonen erhielten zunächst eine Studienvignette zu einem bildungswissenschaftlichen Thema, zufällig ausgewählt aus 4 verschiedenen Themen
   - hier Beispiel: Lesen auf Papier vs. Lesen auf Tablet 
 - diese Studienvignette kontextualisierte insgesamt 24 Effektstärke-Visualisierungen
@@ -279,21 +304,21 @@ ergänzend:
 :::
 
 
-## Ergebnisse: Wahrgenommene Informativität
+## Ergebnisse: Informativität
 
-<center> ![](img/study2_plot_informativity.svg) </center>
-
-## Ergebnisse: Verständnis
-
-<center> ![](img/study2_plot_diff_am.svg) </center>
+<center> ![](img/study2_plot_informativity.svg){width="600"} </center>
 
 ## Ergebnisse: Verständnis
 
-<center> ![](img/study2_plot_diff_u3.svg) </center>
+<center> ![](img/study2_plot_diff_am.svg){width="600"} </center>
 
 ## Ergebnisse: Verständnis
 
-<center> ![](img/study2_plot_u3_misconceptions.svg) </center>
+<center> ![](img/study2_plot_diff_u3.svg){width="600"} </center>
+
+## Ergebnisse: Verständnis
+
+<center> ![](img/study2_plot_u3_misconceptions.svg){width="600"} </center>
 
 
 ## Literatur
