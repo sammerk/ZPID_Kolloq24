@@ -338,19 +338,20 @@ skim(
 #
 ```
 
-Show descriptive results of efficiency per experimental condition
+
+<!-- Show descriptive results of efficiency per experimental condition --> 
 
 ```{r}
-skim(
-  study_w_timestamp |>
-  select(effic, plot, session, group) |>
-    gather(variable, value, effic) |>
-    mutate(var = paste(variable, group, sep = "_")) |>
-    select(-group, -variable) |>
-    #group_by(session, plot) |>
-    spread(var, value) #|>
-    #ungroup()
-    )
+#skim(
+#  study_w_timestamp |>
+#  select(effic, plot, session, group) |>
+#    gather(variable, value, effic) |>
+#    mutate(var = paste(variable, group, sep = "_")) |>
+#    select(-group, -variable) |>
+#    #group_by(session, plot) |>
+#    spread(var, value) #|>
+#    #ungroup()
+#    )
 ```
 
 
@@ -472,11 +473,15 @@ plot_u3_misconceptions <- data_w |>
                   `cg` = "Kontrollgruppe\nN=55",
                   `eg_benchmark` = "Benchmark\nN=55",
                   `eg_signaling_overlap` = "Signaling Overlap\nN=57",
-                  `eg_signaling_u3` = "Signaling Cohen's U3\nN=53")) |>  
+                  `eg_signaling_u3` = "Signaling Cohen's U3\nN=53"),
+           rating_u3_misconcept = as.factor(rating_u3_misconcept),
+           'U3 Fehlkonzept' = recode(rating_u3_misconcept,
+                                            `FALSE` = "kein U3-Fehlkonzept",
+                                            `TRUE` = "U3-Fehlkonzept vorhanden")) |>  
     na.omit() |> 
     distinct() |> 
     ggplot(aes(group, 
-               fill = rating_u3_misconcept
+               fill = 'U3 Fehlkonzept'
                )) +
     geom_bar() +
     theme_minimal() +
