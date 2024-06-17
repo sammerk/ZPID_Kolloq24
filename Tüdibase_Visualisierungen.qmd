@@ -101,11 +101,6 @@ nrow(study2_data_ended_and_passedattentioncheck_and_schoolteachers)
 
 study2_data <- study2_data_ended_and_passedattentioncheck_and_schoolteachers
 
-# Import detailed data .json
-study2_data_detailed <-
-    as.data.frame(
-        jsonlite::fromJSON(here::here("data/teachers_study2_update01_detailed.json"))) |> 
-    filter(session %in% study2_data$session)
 ```
 
 ## Data wrangling
@@ -299,48 +294,48 @@ skim(
 ```{r}
 #| label: timestamp_datawrangling
 
-study_w_timestamp <- 
-    study2_data_detailed |> 
-    as_tibble() |> 
-    # filter participants from study2_w only
-    filter(session %in% study2_data$session) %>% 
-    # we only need vars sensitivity or accuracy
-    dplyr::filter(str_detect(item_name, "sensi|acccl|accu3|accov")) %>%  
-    # create var with plot number
-    mutate(plot = paste0("plotx_", str_sub(item_name, -2, -1))) %>% 
-    relocate(session, plot) %>% 
-    # delete the page number in item name
-    mutate(item_name = str_sub(item_name, 1, 5)) %>%  
-    pivot_wider(id_cols = c(session, plot), names_from = item_name, 
-                values_from = answered_relative) %>% 
-    rowwise() %>%
-    # what was the time of the first item to be clicked?
-    mutate(effic = min(sensi, acccl, accu3, accov, na.rm=T)) %>%
-    ungroup() %>% 
-    dplyr::select(session, plot, effic, sensi, acccl, accu3, accov) %>% 
-    left_join(., data_w %>% 
-                  select(session, plot, type), by=c("session", "plot")) %>% 
-    # generate data set so that the six plots from the same type are ordered
-    # one after the other (and not 1-24)
-    group_by(session, type) %>% 
-    arrange(plot) %>% 
-    mutate(plotNrWithin = 1:n()) %>%
-    ungroup() %>% 
-    group_by(plotNrWithin, type) %>% 
-    mutate(effic_10righttrunc = ifelse(effic > quantile(effic, .9), NA, effic),
-           effic_05righttrunc = ifelse(effic > quantile(effic, .95), NA, effic),
-           log_effic_05righttrunc =log(effic_05righttrunc),
-           log_effic_10righttrunc = log(effic_10righttrunc),
-           plotNrWithin0 = plotNrWithin - 1,
-           plotNrWithin_factor = as.factor(plotNrWithin)) %>% 
-    ungroup() |> 
-    left_join(data_w |> select(session, group, effsize_f, plot)) |> 
-    mutate(gr_benchmark = ifelse(grepl("benchmark", group), 
-                                 "benchmark", "nobenchmark"),
-           gr_signaling = ifelse(grepl("signaling", group), 
-                                 "signaling", "nosignaling"))
-
-
+#study_w_timestamp <- 
+#    study2_data_detailed |> 
+#    as_tibble() |> 
+#    # filter participants from study2_w only
+#    filter(session %in% study2_data$session) %>% 
+#    # we only need vars sensitivity or accuracy
+#    dplyr::filter(str_detect(item_name, "sensi|acccl|accu3|accov")) %>%  
+#    # create var with plot number
+#    mutate(plot = paste0("plotx_", str_sub(item_name, -2, -1))) %>% 
+#    relocate(session, plot) %>% 
+#    # delete the page number in item name
+#    mutate(item_name = str_sub(item_name, 1, 5)) %>%  
+#    pivot_wider(id_cols = c(session, plot), names_from = item_name, 
+#                values_from = answered_relative) %>% 
+#    rowwise() %>%
+#    # what was the time of the first item to be clicked?
+#    mutate(effic = min(sensi, acccl, accu3, accov, na.rm=T)) %>%
+#    ungroup() %>% 
+#    dplyr::select(session, plot, effic, sensi, acccl, accu3, accov) %>% 
+#    left_join(., data_w %>% 
+#                  select(session, plot, type), by=c("session", "plot")) %>% 
+#    # generate data set so that the six plots from the same type are ordered
+#    # one after the other (and not 1-24)
+#    group_by(session, type) %>% 
+#    arrange(plot) %>% 
+#    mutate(plotNrWithin = 1:n()) %>%
+#    ungroup() %>% 
+#    group_by(plotNrWithin, type) %>% 
+#    mutate(effic_10righttrunc = ifelse(effic > quantile(effic, .9), NA, #effic),
+#           effic_05righttrunc = ifelse(effic > quantile(effic, .95), NA, #effic),
+#           log_effic_05righttrunc =log(effic_05righttrunc),
+#           log_effic_10righttrunc = log(effic_10righttrunc),
+#           plotNrWithin0 = plotNrWithin - 1,
+#           plotNrWithin_factor = as.factor(plotNrWithin)) %>% 
+#    ungroup() |> 
+#    left_join(data_w |> select(session, group, effsize_f, plot)) |> 
+#    mutate(gr_benchmark = ifelse(grepl("benchmark", group), 
+#                                 "benchmark", "nobenchmark"),
+#           gr_signaling = ifelse(grepl("signaling", group), 
+#                                 "signaling", "nosignaling"))
+#
+#
 ```
 
 Show descriptive results of efficiency per experimental condition

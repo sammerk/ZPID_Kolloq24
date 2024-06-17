@@ -58,39 +58,58 @@ border: none !important;
 :::
 
 
-## Evidenzinformiertes Handeln {{< iconify fa6-solid diagram-project >}} 
+## Evidenzinformiertes Handeln {{< iconify fa6-solid diagram-project >}} {.smaller} 
 
-- Berücksichtigen von Forschungsergebnissen im professionellen Handeln 
-- Anforderung an verschiedene Berufsfelder/Berufgsgruppen wie Mediziner:innen, Politiker:innen, Psycholog:innen oder Lehrpersonen (z.B.[@sackett1996, @bauer2023, @APA2006])
+- Berücksichtigen von Forschungsergebnissen im professionellen Handeln als Anforderung an verschiedene Berufsfelder/Berufgsgruppen wie Mediziner:innen, Politiker:innen, Psycholog:innen oder Lehrpersonen [z.B. @sackett1996; @bauer2023; @APA2006]
   - Evidenzbasierte Medizin: "The practice of evidence based medicine means integrating individual clinical expertise with the best available external clinical evidence from systematic research" [@sackett1996, p.71]
-  - Evidenzinformierte Schulpraxis: Bildungswissenschaftliche Forschungsergebnisse in der Praxis berücksichtigen, um die Professionalisierung der Lehrpersonen, die Schul- und Unterrichtsqualität sowie die Schüler:innenleistung zu steigern [@bauer2023]
+  - Evidenzinformierte Schulpraxis: Bildungswissenschaftliche Forschungsergebnisse zusätzlich zu anderen Informationsquellen (z.B. praktische Expertise) in der Praxis berücksichtigen, um die Professionalisierung der Lehrpersonen, die Schul- und Unterrichtsqualität sowie die Schüler:innenleistung zu steigern [z.B. @nelson2017; @shavelson2021; @ferguson2021]
+  - ...
   
+
 ## Wissenschaftskommunikation {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
 
-Kommunikation von Effektstärken
+- nutzerfreundliche Aufbereitung von Evidenz (z.B. clearing houses, plain language summaries), um den Umgang mit Evidenz zu erleichern [@wadhwa2024; @higgins2022; @kerwer2021]
+- häufig quantitative Studien, die verschiedene quantitativ-methodische Informationen (z.B. Studiendesign, Inferenzstatistik, Effektstärken) enthalten
+Studiendesign
+- Effektstärken informieren über die Größe eines Effekts
+  - ergänzendes oder alternative Maßes zu statistischer Signifikanz und p Werten, um zahlreichen empirisch belegte Fehlkonzepte bezüglich statistischer Signifikanz und p Werten [@haller2002; @kühberger2015; @sotos2009] entgegen zu wirken [@coe2002; @kelley2012; @cumming2014]
+  - Grundlage, um die praktische Relevanz wissenschaftlicher Ergebnisse abzuleiten [@baird2019; @kelley2012; @kraft2020] 
 
-Forschungsergebnisse werden überwiegend als "statistisch (nicht) signifikante" Ergebnisse kommuniziert (Hanel & Mehler, 2019)
-
-- zahlreiche empirisch belegte Fehlkonzepte bezüglich statistischer Signifikanz und p Werten (z.B. Haller & Krauss, 2002; Sotos et al.,2007) 
-- ergänzende oder alternative Maße wie Effektstärken um Fehlkonzepten entgegenzuwirken (z.B. Coe, 2002; Cumming, 2014) 
 
 
-{{< iconify fa6-solid nimbus:exclamation-triangle >}} inkonsistente Ergebnisse, welche statistischen Formulierungen sich für eine informative und verständliche Wissenschaftskommunikation eignen
 
-  - wissenschaftliche Laien schätzen die gängige Signifikanz-Aussage und Cohen's *U<sub>3</sub>* informativer ein als andere Statistiken wie Cohen's *d* oder Bayes Faktoren (Hanel & Mehler, 2019)
-  - Lehrpersonen schätzen u.a. die Effektstärke Month of Progress informativer und verständlicher ein als Cohen's *U<sub>3</sub>* (Lortie-Forgues et al., 2021) <br>
+## Kommunikation von Effektstärken {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
+
+
+<center> {{< iconify fa6-solid nimbus:exclamation-triangle >}} inkonsistente Ergebnisse, welche statistischen Formulierungen und Effektstärkenvisualisierungen sich für eine informative und verständliche Wissenschaftskommunikation eignen {{< iconify fa6-solid nimbus:exclamation-triangle >}} </center>
+
+- grundsätzlich zeigen empirische Belege, dass die Interpretation und Wahrnehumg von wissenschaftlichen Laien beeinflusst werden kann
+- experimentelle Studien verwenden unterschiedliche textliche und visuelle Darstellungen --> Vergleichbarkeit der Ergebnisse erschwert 
+
+__textliche Aufbereitung von Effektstärken:__
+
+- wissenschaftliche Laien schätzen die gängige Signifikanz-Aussage und Cohen's *U<sub>3</sub>* informativer ein als andere Statistiken wie Cohen's *d* oder Bayes Faktoren [@hanel2019]
+
+
+- Lehrpersonen schätzen u.a. die Effektstärke Month of Progress informativer und verständlicher ein als Cohen's *U<sub>3</sub>* (Lortie-Forgues et al., 2021) <br>
+- wissenschaftliche Laien interpretieren Effektstärken akkurater, wenn probability of superiority and Effektstäken Analogien verwendet wurden im Vergleich zu Mittelwertsdifferenzen oder Konfidenzintervalle
   
+__visuelle Aufbereitung von Effektstärken:__
   
-## Wissenschaftskommunikation {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
+- Lehrpersonen interpretieren Effektstärkenvisualisierungen (z.B. stacked bar plots) mit hoher Akkuratheit, wenn eine Vergleichsgrafik mit einer Information wie Statistiker:innen den präsentierten Effekt beschreiben würden [@merk2023]
+- identische Effektstärken werden in Abhängigkeit der Darstellung unterschiedlich rezipiert (Merk et al., 2023)
+- outcome uncertainty/variability wirkt sich positiv auf die Interpretation aus, wohingegen die Darstellung von Mittelwerten zu Fehlinterpretationen führen kann
+- Diskrepanz ziwschen Visualisierungen die die akkurate Interpretation und die korrekte Entscheidungsfindung fördern (Kale et al. 2021)
 
-- verschiedene Formulierungen statistischer Maße werden von Lehrpersonen fehlinterpretiert (Schmidt et al., 2023)
-- intuitive __visuelle__ Darstellungen von Effekstärken als alternative Kommunikationsstrategie (vgl. Franconeri et al., 2021)
-&rarr; Lehrpersonen interpretieren Effektstärkenvisualisierungen mit hoher Akkuratheit (Merk et al., 2023)
-- identische Effektstärken werden in Abhängigkeit der Darstellung rezipiert (Merk et al., 2023)
 - Entscheidungsfindungen varrieren in Abhängigkeit der Darstellung (Albers et al., 2014; Kale et al., 2020; Pierce & Chick, 2013) 
 
 
 ::: notes
+
+- intuitive __visuelle__ Darstellungen von Effekstärken als alternative Kommunikationsstrategie (vgl. Franconeri et al., 2021)
+
+
+
 - statistische Formulierungen fehlinterpretiert und inkonsistente Studienergebnisse zur Informativität 
 - visuelle Darstellungen könnten für die Kommunikation wissenschaftlicher Ergebnisse eine gute alternative sein
   - 1) grundsätzlich zeigt sich, dass das visuelle Wahrnehmungssystem als leistungsfähig hinsichtlich der akkuraten Schätzung statistischer Informationen gilt  
@@ -98,8 +117,10 @@ Forschungsergebnisse werden überwiegend als "statistisch (nicht) signifikante" 
 - Gleichzeitig variiert die Akkuratheit je nach Visualisierung aber d.h. unterschiedliche Visualisierungen werden unterschiedlich akkurat eingeschätzt
 - und auch die Entschiedungsfindung ist abhängig von der verwendeten Visualisierung
   - z.B. haben Lehrpersonen Schwierigkeiten datengestütze Entscheidungnen anhand von Boxplots zu treffen (Pierce & Chick, 2013)
+  
+  
+- Daher in den folgenden Studien sowohl Formulierungen als auch Visualisierungen in den Blick genommen
 
-- Daher in der vorliegenden explorativen Studie den Fragen nachgehen...
 :::
 
 
@@ -128,9 +149,10 @@ gemeinsam mit <br> Peter Edelsbrunner<sup>2</sup>, Tom Rosman<sup>3</sup> und Co
 
 
 ::: notes
-- wie informativ Lehrpersonen verschiedene generische statistische Beschreibungen einschätzen
-- erweiternd untersuchen, wie diese interpretiert werden und zwischen Inf und Eff unterscheiden, da Zweifel bestehen, ob wissenschaftliche Laien hierzu in der Lage sind (vgl. Goodman, 2008; Sotos et al., 2007)
-- verschiedene Hypothesen präregistriert, erst bei den Ergebnissdarstellung näher benennen
+- in der ersten Studie den Fragen nachgegangen 
+  - wie informativ Lehrpersonen verschiedene generische statistische Beschreibungen einschätzen
+  - erweiternd untersuchen, wie diese interpretiert werden und zwischen Inf und Eff unterscheiden, da Zweifel bestehen, ob wissenschaftliche Laien hierzu in der Lage sind (vgl. Goodman, 2008; Sotos et al., 2007)
+  - verschiedene Hypothesen präregistriert, erst bei den Ergebnissdarstellung näher benennen
 ::: 
 
 
@@ -149,7 +171,7 @@ gemeinsam mit <br> Peter Edelsbrunner<sup>2</sup>, Tom Rosman<sup>3</sup> und Co
 ::: notes
 - hierfür haben wir 414 aktive Lehrpersonen in DE
 - ausführliche Infos zur Stichprobenbeschreibung hier entnehmen
-- zentrale Message: Stichprobe kann als annähernd repräsentativ für DE gewertet werden 
+- zentrale Message: Stichprobe der Lehrpersonen kann als annähernd repräsentativ für Lehrpersonen in DE gewertet werden 
 :::
 
 
