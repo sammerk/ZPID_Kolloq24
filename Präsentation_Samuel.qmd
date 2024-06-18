@@ -96,10 +96,32 @@ would have a higher score in the reading test than a randomly selected person fr
     * Konvergenz bei $\hat{R} < 1.05$ [@vehtari2021] und $ESS > 1000$ [@burkner2017]
 
 
-## Ergebnisse {{< iconify fa6-solid chart-line >}} 
-* Accuracy: ![](img/results_accuracy.png){.lightbox fig-width="50%"}
-![](img/results_relevance.png){group="results_study2"}
-![](img/results_informativeness.png){group="results_study2"}
+## Ergebnisse {{< iconify fa6-solid chart-line >}} {.smaller}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+* Akkuratheit: <br>
+![](img/results_accuracy.png){.lightbox width="80%"}
+
+* Relevanz:<br>
+![](img/results_relevance.png){.lightbox width="80%"}
+:::
+
+::: {.column width='50%'}
+* Informativität: <br>
+![](img/results_informativeness.png){.lightbox width="45%"}
+
+* Schwierigkeit: <br>
+![](img/results_difficulty.png){.lightbox width="40%"}
+:::
+
+::::
+
+Alle HDI lagen zu 100% außerhalb der ROPE bis auf den Dispersionseffekt der Akkuratheit (75%).
+
+
+## Diskussion {{< iconify fa6-solid comments >}} {.smaller}
 
 ## Literatur
 ::: footer

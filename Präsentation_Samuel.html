@@ -33,7 +33,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="Präsentation_Samuel_files/libs/revealjs/dist/theme/quarto.css">
   <link href="Präsentation_Samuel_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="Präsentation_Samuel_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -402,16 +422,16 @@
 <section id="measures" class="slide level2">
 <h2>Measures <iconify-icon inline="" icon="fa6-solid:ruler" aria-label="Icon ruler from fa6-solid Iconify.design set." title="Icon ruler from fa6-solid Iconify.design set."></iconify-icon></h2>
 <ul>
-<li>Wahrg. Effektstärke: <em>»How many times out of 100 do you estimate that a randomly selected member of the AI tutor group would have a higher score in the reading test than a randomly selected person from the teacher feedback group?«</em> <span class="citation" data-cites="kale2020 michal2024 hullman2015">(<a href="" role="doc-biblioref" onclick="return false;"><strong>kale2020?</strong></a>; <a href="" role="doc-biblioref" onclick="return false;"><strong>michal2024?</strong></a>; <a href="" role="doc-biblioref" onclick="return false;"><strong>hullman2015?</strong></a>)</span></li>
-<li>Relevanz: <em>»How much money are you willing to spend on an AI reading tutor license for a class of 30 students for one year?«</em> <span class="citation" data-cites="kim2019a">(<a href="" role="doc-biblioref" onclick="return false;"><strong>kim2019a?</strong></a>)</span></li>
-<li>Informativität <span class="citation" data-cites="schmidt2024">(<a href="" role="doc-biblioref" onclick="return false;"><strong>schmidt2024?</strong></a>)</span></li>
-<li>Schwierigkeit <span class="citation" data-cites="schmidt2024">(<a href="" role="doc-biblioref" onclick="return false;"><strong>schmidt2024?</strong></a>)</span></li>
+<li>Wahrg. Effektstärke: <em>»How many times out of 100 do you estimate that a randomly selected member of the AI tutor group would have a higher score in the reading test than a randomly selected person from the teacher feedback group?«</em> <span class="citation" data-cites="kale2020 michal2024 hullman2015">(<a href="#/literatur" role="doc-biblioref" onclick="">Hullman et al., 2015</a>; <a href="#/literatur" role="doc-biblioref" onclick="">Kale et al., 2020</a>; <a href="#/literatur" role="doc-biblioref" onclick="">Michal &amp; Shah, 2024</a>)</span></li>
+<li>Relevanz: <em>»How much money are you willing to spend on an AI reading tutor license for a class of 30 students for one year?«</em> <span class="citation" data-cites="kim2019a">(<a href="#/literatur" role="doc-biblioref" onclick="">Kim, 2019</a>)</span></li>
+<li>Informativität <span class="citation" data-cites="schmidt2024">(<a href="#/literatur" role="doc-biblioref" onclick=""><strong>schmidt2024?</strong></a>)</span></li>
+<li>Schwierigkeit <span class="citation" data-cites="schmidt2024">(<a href="#/literatur" role="doc-biblioref" onclick=""><strong>schmidt2024?</strong></a>)</span></li>
 </ul>
 </section>
 <section id="datenaufbereitung" class="slide level2">
 <h2>Datenaufbereitung <iconify-icon inline="" icon="fa6-solid:database" aria-label="Icon database from fa6-solid Iconify.design set." title="Icon database from fa6-solid Iconify.design set."></iconify-icon></h2>
 <ul>
-<li>Exklusionskriterien: Nichtbestehen beider Attentionchecks oder straightlining <span class="citation" data-cites="stosic2024">(<a href="" role="doc-biblioref" onclick="return false;"><strong>stosic2024?</strong></a>)</span></li>
+<li>Exklusionskriterien: Nichtbestehen beider Attentionchecks oder straightlining <span class="citation" data-cites="stosic2024">(<a href="#/literatur" role="doc-biblioref" onclick="">Stosic et al., 2024</a>)</span></li>
 <li>Transformationen: Wahrg. Effektstärke <span class="math inline">\(\Rightarrow \delta = qnorm(PoS) \cdot \sqrt{2}\)</span> (für Linearität)</li>
 <li>Abgeleitete Variablen:
 <ul>
@@ -427,24 +447,38 @@
 <ul>
 <li>Accuracy: Random-Intercept Model für heteroskedastische normalverteilte AV mit Dummyprädiktor</li>
 <li>Relevanz: Random-Intercept Model für normalverteilte AV mit Dummyprädiktor</li>
-<li>Likert-Items: Random-Intercept Cumulative Link Models <span class="citation" data-cites="burkner2019">(<a href="" role="doc-biblioref" onclick="return false;"><strong>burkner2019?</strong></a>)</span> mit Dummyprädiktor</li>
+<li>Likert-Items: Random-Intercept Cumulative Link Models <span class="citation" data-cites="burkner2019">(<a href="#/literatur" role="doc-biblioref" onclick="">Bürkner &amp; Vuorre, 2019</a>)</span> mit Dummyprädiktor</li>
 </ul></li>
-<li>Inferenzstatistik: HDI + ROPE Prozedur <span class="citation" data-cites="kruschke2018a">(<a href="" role="doc-biblioref" onclick="return false;"><strong>kruschke2018a?</strong></a>)</span>
+<li>Inferenzstatistik: HDI + ROPE Prozedur <span class="citation" data-cites="kruschke2018a">(<a href="#/literatur" role="doc-biblioref" onclick="">Kruschke, 2018</a>)</span>
 <ul>
 <li>ROPE: -.1 &lt; <em>d</em> &lt; .1</li>
 <li>HDI: 95% HDI</li>
 <li>HMCMC: 4 Chains, 1k Warm-Up, 2k Interationen, 4k post-warm-up draws</li>
-<li>Konvergenz bei <span class="math inline">\(\hat{R} &lt; 1.05\)</span> <span class="citation" data-cites="vehtari2021">(<a href="" role="doc-biblioref" onclick="return false;"><strong>vehtari2021?</strong></a>)</span> und <span class="math inline">\(ESS &gt; 1000\)</span> <span class="citation" data-cites="burkner2017">(<a href="" role="doc-biblioref" onclick="return false;"><strong>burkner2017?</strong></a>)</span></li>
+<li>Konvergenz bei <span class="math inline">\(\hat{R} &lt; 1.05\)</span> <span class="citation" data-cites="vehtari2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Vehtari et al., 2021</a>)</span> und <span class="math inline">\(ESS &gt; 1000\)</span> <span class="citation" data-cites="burkner2017">(<a href="#/literatur" role="doc-biblioref" onclick="">Bürkner, 2017</a>)</span></li>
 </ul></li>
 </ul>
 </section>
-<section id="ergebnisse" class="slide level2">
+<section id="ergebnisse" class="slide level2 smaller">
 <h2>Ergebnisse <iconify-icon inline="" icon="fa6-solid:chart-line" aria-label="Icon chart-line from fa6-solid Iconify.design set." title="Icon chart-line from fa6-solid Iconify.design set."></iconify-icon></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Accuracy: <a href="img/results_accuracy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="img/results_accuracy.png" data-fig-width="50%"></a> <img data-src="img/results_relevance.png" data-group="results_study2"> <img data-src="img/results_informativeness.png" data-group="results_study2"></li>
+<li><p>Akkuratheit: <br> <a href="img/results_accuracy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="img/results_accuracy.png" style="width:80.0%"></a></p></li>
+<li><p>Relevanz:<br> <a href="img/results_relevance.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="img/results_relevance.png" style="width:80.0%"></a></p></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>Informativität: <br> <a href="img/results_informativeness.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="img/results_informativeness.png" style="width:45.0%"></a></p></li>
+<li><p>Schwierigkeit: <br> <a href="img/results_difficulty.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="img/results_difficulty.png" style="width:40.0%"></a></p></li>
+</ul>
+</div>
+</div>
+<p>Alle HDI lagen zu 100% außerhalb der ROPE bis auf den Dispersionseffekt der Akkuratheit (75%).</p>
 </section>
-<section id="literatur" class="slide level2">
+<section id="diskussion" class="slide level2 smaller">
+<h2>Diskussion <iconify-icon inline="" icon="fa6-solid:comments" aria-label="Icon comments from fa6-solid Iconify.design set." title="Icon comments from fa6-solid Iconify.design set."></iconify-icon></h2>
+</section>
+<section id="literatur" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
 <div class="footer">
 <!-- Leerer footer - sonst überlagern nsich floating refernces und der footer  -->
@@ -457,6 +491,35 @@ div.callout-tip {border-left-color: #267326 !important;}
 <p><img src="img/PH_logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>S. Merk und K. Schmidt | PH Karlsruhe</p>
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-burkner2017" class="csl-entry" role="listitem">
+Bürkner, P.-C. (2017). Brms: An R Package for Bayesian Multilevel Models Using Stan. <em>Journal of Statistical Software</em>, <em>80</em>(1). https://doi.org/<a href="https://doi.org/10.18637/jss.v080.i01">https://doi.org/10.18637/jss.v080.i01</a>
+</div>
+<div id="ref-burkner2019" class="csl-entry" role="listitem">
+Bürkner, P.-C., &amp; Vuorre, M. (2019). Ordinal <span>Regression Models</span> in <span>Psychology</span>: <span>A Tutorial</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>2</em>(1), 77–101. <a href="https://doi.org/10.1177/2515245918823199">https://doi.org/10.1177/2515245918823199</a>
+</div>
+<div id="ref-hullman2015" class="csl-entry" role="listitem">
+Hullman, J., Resnick, P., &amp; Adar, E. (2015). Hypothetical Outcome Plots Outperform Error Bars and Violin Plots for Inferences about Reliability of Variable Ordering. <em>PLOS ONE</em>, <em>10</em>(11), e0142444. <a href="https://doi.org/10.1371/journal.pone.0142444">https://doi.org/10.1371/journal.pone.0142444</a>
+</div>
+<div id="ref-kale2020" class="csl-entry" role="listitem">
+Kale, A., Kay, M., &amp; Hullman, J. (2020). <em>Visual Reasoning Strategies for Effect Size Judgments and Decisions</em>. <a href="https://doi.org/10.48550/ARXIV.2007.14516">https://doi.org/10.48550/ARXIV.2007.14516</a>
+</div>
+<div id="ref-kim2019a" class="csl-entry" role="listitem">
+Kim, Y.-S. (2019). <em>Effectively Communicating Effect Sizes</em>.
+</div>
+<div id="ref-kruschke2018a" class="csl-entry" role="listitem">
+Kruschke, J. K. (2018). Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>1</em>(2), 270–280. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>
+</div>
+<div id="ref-michal2024" class="csl-entry" role="listitem">
+Michal, A. L., &amp; Shah, P. (2024). A <span>Practical Significance Bias</span> in <span>Laypeople</span>’s <span>Evaluation</span> of <span>Scientific Findings</span>. <em>Psychological Science</em>, 09567976241231506. <a href="https://doi.org/10.1177/09567976241231506">https://doi.org/10.1177/09567976241231506</a>
+</div>
+<div id="ref-stosic2024" class="csl-entry" role="listitem">
+Stosic, M. D., Murphy, B. A., Duong, F., Fultz, A. A., Harvey, S. E., &amp; Bernieri, F. (2024). Careless <span>Responding</span>: <span>Why Many Findings Are Spurious</span> or <span>Spuriously Inflated</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>7</em>(1), 25152459241231581. <a href="https://doi.org/10.1177/25152459241231581">https://doi.org/10.1177/25152459241231581</a>
+</div>
+<div id="ref-vehtari2021" class="csl-entry" role="listitem">
+Vehtari, A., Gelman, A., Simpson, D., Carpenter, B., &amp; Bürkner, P.-C. (2021). <span>Rank-normalization, folding, and localization: An improved R^ for assessing convergence of MCMC (with discussion)</span>. <em>Bayesian Analysis</em>, <em>16</em>(2). https://doi.org/<a href="https://doi.org/10.1214/20-BA1221">https://doi.org/10.1214/20-BA1221</a>
 </div>
 </div>
 </section></section>
@@ -857,7 +920,7 @@ div.callout-tip {border-left-color: #267326 !important;}
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
