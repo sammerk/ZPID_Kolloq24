@@ -1,0 +1,112 @@
+---
+title: "User-friendly <br> science communication"
+subtitle: "Communicating inferential uncertainty and effect sizes to laypeople"
+author: Samuel Merk und Kirstin Schmidt
+footer: "S. Merk und K. Schmidt | PH Karlsruhe"
+institute: Institut für Schul- und Unterrichtsentwicklung
+logo: img/PH_logo.png
+picture: img/KA.jpeg
+date: today
+lang: de
+date-format: "dddd, [den] D. MMMM, YYYY"
+embed-resources: false
+format: rlille-revealjs
+bibliography: references.bib
+csl: apa.csl
+lightbox: true
+---
+
+
+# [Studie 3: Cohen's $\operatorname{U}_3$ <br> Text {{< iconify fa6-solid mdi:text-box-outline >}} und Vis. {{< iconify fa6-solid chart-area >}} ]{style="font-size: .7em; display: block;"} {.center .center-x}
+
+<br>
+<center> 
+[gemeinsam mit <br> Florian Kühlwein<sup>2</sup> und Jürgen Schneider <sup>2</sup>]{style="font-size: .7em; display: block;"}
+</center>
+
+[<sup>1</sup> Pädagogische Hochschule Karlsruhe]{style="font-size: .7em; display: block;"}
+[<sup>3</sup> DIPF Frankfurt]{style="font-size: .7em; display: block;"}
+
+
+## Forschungsfragen {{< iconify fa6-solid circle-question >}} {.center}
+1) Wie genau (AV1), relevant (AV2), informativ (AV3), und wie schwierig
+(AV4) werden verbal und visuell dargestellte Effektgrößen von Lehrer:innen wahrgenommen?
+2) Gibt es Unterschiede zwischen den Präsentationsmodi bezüglich AV1-AV4?
+
+
+## Stichprobe  {{< iconify fa6-solid users>}} 
+
+* Geplant ist ein Registered Report mit Bayesian Updating
+* Stichprobe der Pilotierung:
+    * *N* = 20 englischsprachige Lehrerinnen aus UK und USA
+    * Rekrutiert via Prolific 
+    * *MW*~Alter~ = 42,3 Jahre
+
+
+## Materialien {{< iconify academicons:open-materials >}}
+
+![](img/OverviewAI.jpeg){.lightbox}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+![](img/CohensU3.jpeg){.lightbox}
+:::
+
+::: {.column width='50%'}
+![](img/Halfeyeplot.jpeg){.lightbox}
+:::
+
+::::
+
+## Design {{< iconify fa6-solid compass-drafting >}}
+* 2x6x4 within-within-between Design
+  * Faktor 1: Text vs. Visualisierung
+  * Faktor 2: Effektstärke Cohen's $d \in\{-.8,-.5,-.2, .2, .5, .8\}$
+  * Faktor 3: Thema 
+      * KI-Tutor Leseflüssigkeit
+      * 3D-Videos/2D-Videos
+      * Activity Tracker
+      * Experimentierkits
+
+
+## Measures {{< iconify fa6-solid ruler >}} 
+* Wahrg. Effektstärke: *»How many times out of 100 do you estimate that a randomly selected member of the AI tutor group
+would have a higher score in the reading test than a randomly selected person from the teacher feedback group?«* [@kale2020; @michal2024; @hullman2015]
+* Relevanz:  *»How much money are you willing to spend on an AI reading tutor license for a class of 30 students for one year?«* [@kim2019a]
+* Informativität [@schmidt2024]
+* Schwierigkeit [@schmidt2024]
+
+## Datenaufbereitung {{< iconify fa6-solid database >}}
+* Exklusionskriterien: Nichtbestehen beider Attentionchecks oder straightlining [@stosic2024]
+* Transformationen: Wahrg. Effektstärke  $\Rightarrow \delta = qnorm(PoS) \cdot \sqrt{2}$ (für Linearität)
+* Abgeleitete Variablen: 
+    * Genauigkeit (falls korrekte Effektrichtung: $\operatorname{Wahre\;Effektstärke} -  \operatorname{Wahrg.\;Effektstärke}$, sonst: `NA`)
+    * Relevanz: (Within-Person-Standardized Willingness to pay)
+    
+## Analyse {{< iconify fa6-solid laptop-code >}} {.smaller}
+* Modellparametrisierung:
+    * Accuracy: Random-Intercept Model für heteroskedastische normalverteilte AV mit Dummyprädiktor 
+    * Relevanz: Random-Intercept Model für normalverteilte AV mit Dummyprädiktor 
+    * Likert-Items: Random-Intercept Cumulative Link Models [@burkner2019] mit Dummyprädiktor
+* Inferenzstatistik: HDI + ROPE Prozedur [@kruschke2018a]
+    * ROPE: -.1 < *d* < .1
+    * HDI: 95% HDI
+    * HMCMC: 4 Chains, 1k Warm-Up, 2k Interationen, 4k post-warm-up draws
+    * Konvergenz bei $\hat{R} < 1.05$ [@vehtari2021] und $ESS > 1000$ [@burkner2017]
+
+
+## Ergebnisse {{< iconify fa6-solid chart-line >}} 
+* Accuracy: ![](img/results_accuracy.png){.lightbox fig-width="50%"}
+![](img/results_relevance.png){group="results_study2"}
+![](img/results_informativeness.png){group="results_study2"}
+
+## Literatur
+::: footer
+<!-- Leerer footer - sonst überlagern nsich floating refernces und der footer  -->
+:::
+
+<!-- nicht in das scss integrierbares css -->
+<style>
+div.callout-tip {border-left-color: #267326 !important;}
+</style>
