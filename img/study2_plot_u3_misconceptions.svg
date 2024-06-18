@@ -23,50 +23,51 @@
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA=)'>
 </g>
 <defs>
-  <clipPath id='cpMzMuMjd8NDQwLjk2fDM5LjE0fDUzNC43Ng=='>
-    <rect x='33.27' y='39.14' width='407.70' height='495.62' />
+  <clipPath id='cpMzMuMjd8NDQ1LjY0fDM5LjE0fDUyMS4wMg=='>
+    <rect x='33.27' y='39.14' width='412.37' height='481.88' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzMuMjd8NDQwLjk2fDM5LjE0fDUzNC43Ng==)'>
-<polyline points='33.27,433.19 440.96,433.19 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.27,275.09 440.96,275.09 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.27,117.00 440.96,117.00 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.27,512.23 440.96,512.23 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.27,354.14 440.96,354.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.27,196.05 440.96,196.05 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='91.51,534.76 91.51,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='188.58,534.76 188.58,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='285.65,534.76 285.65,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='382.72,534.76 382.72,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<rect x='47.83' y='77.48' width='87.36' height='308.28' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
-<rect x='47.83' y='385.76' width='87.36' height='126.47' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
-<rect x='144.90' y='77.48' width='87.36' height='284.57' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
-<rect x='144.90' y='362.05' width='87.36' height='150.19' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
-<rect x='241.97' y='61.67' width='87.36' height='284.57' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
-<rect x='241.97' y='346.24' width='87.36' height='166.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
-<rect x='339.04' y='93.29' width='87.36' height='379.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
-<rect x='339.04' y='472.71' width='87.36' height='39.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
+<g clip-path='url(#cpMzMuMjd8NDQ1LjY0fDM5LjE0fDUyMS4wMg==)'>
+<polyline points='33.27,422.26 445.64,422.26 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.27,268.55 445.64,268.55 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.27,114.84 445.64,114.84 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.27,499.12 445.64,499.12 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.27,345.41 445.64,345.41 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.27,191.70 445.64,191.70 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='92.18,521.02 92.18,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='190.36,521.02 190.36,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='288.54,521.02 288.54,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='386.73,521.02 386.73,39.14 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<rect x='47.99' y='76.41' width='88.36' height='299.74' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
+<rect x='47.99' y='376.15' width='88.36' height='122.97' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
+<rect x='146.18' y='76.41' width='88.36' height='276.68' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
+<rect x='146.18' y='353.09' width='88.36' height='146.03' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
+<rect x='244.36' y='61.04' width='88.36' height='276.68' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
+<rect x='244.36' y='337.72' width='88.36' height='161.40' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
+<rect x='342.54' y='91.79' width='88.36' height='368.91' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
+<rect x='342.54' y='460.69' width='88.36' height='38.43' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA=)'>
-<text x='28.34' y='515.39' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.90px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='28.34' y='357.29' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='28.34' y='199.20' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>40</text>
-<text x='91.51' y='546.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='57.24px' lengthAdjust='spacingAndGlyphs'>Kontrollgruppe</text>
-<text x='91.51' y='555.50' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=55</text>
-<text x='188.58' y='546.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='44.51px' lengthAdjust='spacingAndGlyphs'>Benchmark</text>
-<text x='188.58' y='555.50' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=55</text>
-<text x='285.65' y='546.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='69.45px' lengthAdjust='spacingAndGlyphs'>Signaling Overlap</text>
-<text x='285.65' y='555.50' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=57</text>
-<text x='382.72' y='546.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='84.34px' lengthAdjust='spacingAndGlyphs'>Signaling Cohen's U3</text>
-<text x='382.72' y='555.50' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=53</text>
-<text x='237.12' y='568.09' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='125.99px' lengthAdjust='spacingAndGlyphs'>Experimetal Bedingungen</text>
-<text transform='translate(13.37,286.95) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='273.64px' lengthAdjust='spacingAndGlyphs'>Anzahl an (nicht) vorhanden Cohen's U3-Fehlkonzepten</text>
-<text x='457.40' y='270.88' style='font-size: 11.00px; font-family: "Arial";' textLength='107.64px' lengthAdjust='spacingAndGlyphs'>rating_u3_misconcept</text>
-<rect x='458.11' y='278.28' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
-<rect x='458.11' y='295.56' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
-<text x='480.16' y='289.37' style='font-size: 8.80px; font-family: "Arial";' textLength='27.87px' lengthAdjust='spacingAndGlyphs'>FALSE</text>
-<text x='480.16' y='306.65' style='font-size: 8.80px; font-family: "Arial";' textLength='23.94px' lengthAdjust='spacingAndGlyphs'>TRUE</text>
+<text x='28.34' y='502.27' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.90px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='28.34' y='348.56' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='28.34' y='194.85' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='92.18' y='532.26' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='57.24px' lengthAdjust='spacingAndGlyphs'>Kontrollgruppe</text>
+<text x='92.18' y='541.77' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=55</text>
+<text x='190.36' y='532.26' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='44.51px' lengthAdjust='spacingAndGlyphs'>Benchmark</text>
+<text x='190.36' y='541.77' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=55</text>
+<text x='288.54' y='532.26' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='69.45px' lengthAdjust='spacingAndGlyphs'>Signaling Overlap</text>
+<text x='288.54' y='541.77' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=57</text>
+<text x='386.73' y='532.26' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='84.34px' lengthAdjust='spacingAndGlyphs'>Signaling Cohen's U3</text>
+<text x='386.73' y='541.77' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.28px' lengthAdjust='spacingAndGlyphs'>N=53</text>
+<text x='239.45' y='554.35' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='121.72px' lengthAdjust='spacingAndGlyphs'>Experimetalbedingungen</text>
+<text transform='translate(13.37,280.08) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='285.88px' lengthAdjust='spacingAndGlyphs'>Anzahl an (nicht) vorhandenen Cohen's U3-Fehlkonzepten</text>
+<text x='462.07' y='264.01' style='font-size: 11.00px; font-family: "Arial";' textLength='77.05px' lengthAdjust='spacingAndGlyphs'>U3 Fehlkonzept</text>
+<rect x='462.78' y='271.41' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #267326;' />
+<rect x='462.78' y='288.69' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #8CD000;' />
+<text x='484.83' y='282.50' style='font-size: 8.80px; font-family: "Arial";' textLength='80.21px' lengthAdjust='spacingAndGlyphs'>kein U3 Fehlkonzept</text>
+<text x='484.83' y='299.78' style='font-size: 8.80px; font-family: "Arial";' textLength='61.62px' lengthAdjust='spacingAndGlyphs'>U3 Fehlkonzept</text>
 <text x='33.27' y='31.23' style='font-size: 11.00px; font-family: "Arial";' textLength='134.56px' lengthAdjust='spacingAndGlyphs'>per Experimentalbedingung</text>
 <text x='33.27' y='14.94' style='font-size: 13.20px; font-family: "Arial";' textLength='240.11px' lengthAdjust='spacingAndGlyphs'>Häufigkeit an Cohen's U3-Fehlkonzepten</text>
+<text x='445.64' y='568.57' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='99.53px' lengthAdjust='spacingAndGlyphs'>BFsignaling/control &gt; 100</text>
 </g>
 </svg>

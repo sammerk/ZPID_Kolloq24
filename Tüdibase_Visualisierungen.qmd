@@ -395,9 +395,11 @@ plot_informativity <- data_w |>
     theme_minimal() +
     labs(title = "Wahrgenommene Informativität",
          subtitle = "per Experimentalbedingung",
-         caption = "Mittelwert ± 1*SD") + 
-    xlab("Experimetal Bedingungen") +
-    ylab("Wahrgenommene Informativität")
+         caption = "Mittelwert ± 1*SD;
+         BFsignaling/control = 0.20; 
+         BFbenchmarks/control = 0.45") + 
+    xlab("Wahrgenommene Informativität") +
+    ylab("Experimetalbedingungen")
 
 plot_informativity
 
@@ -425,9 +427,12 @@ plot_diff_am <- data_w  |>
     theme_minimal() +
     labs(title = "Akkuratheit (Abstrakte Metrik)",
          subtitle = "per Experimentalbedingung",
-         caption = "Mittelwert ± 1*SD") + 
-    xlab("Experimetal Bedingungen") +
-    ylab("Differenzvariable: Interpretation (in abstrakter Metrik)")
+         caption = "Mittelwert ± 1*SD;   
+         BFsignaling/control = 0.04; 
+         BFbenchmarks/control = 0.23
+         ") + 
+    xlab("Differenzvariable: Interpretation (in abstrakter Metrik)") +
+    ylab("Experimetalbedingungen")
 
 plot_diff_am 
 
@@ -454,9 +459,12 @@ plot_diff_u3 <- data_w  |>
     theme_minimal() +
     labs(title = "Akkuratheit (Cohen's U3)",
          subtitle = "per Experimentalbedingung",
-         caption = "Mittelwert ± 1*SD") + 
-    xlab("Experimetal Bedingungen") +
-    ylab("Differenzvariable: Interpretationen (in Cohen's U3)")
+         caption = "Mittelwert ± 1*SD;  
+         BFsignaling/control = 0.03; 
+         BFbenchmarks/control = 0.10
+         ") + 
+    xlab("Differenzvariable: Interpretationen (in Cohen's U3)") +
+    ylab("Experimetalbedingungen")
 
 plot_diff_u3 
 
@@ -474,22 +482,20 @@ plot_u3_misconceptions <- data_w |>
                   `eg_benchmark` = "Benchmark\nN=55",
                   `eg_signaling_overlap` = "Signaling Overlap\nN=57",
                   `eg_signaling_u3` = "Signaling Cohen's U3\nN=53"),
-           rating_u3_misconcept = as.factor(rating_u3_misconcept),
-           'U3 Fehlkonzept' = recode(rating_u3_misconcept,
-                                            `FALSE` = "kein U3-Fehlkonzept",
-                                            `TRUE` = "U3-Fehlkonzept vorhanden")) |>  
+           'U3 Fehlkonzept' = if_else(rating_u3_misconcept == FALSE, "kein U3 Fehlkonzept", "U3 Fehlkonzept")) |>  
     na.omit() |> 
     distinct() |> 
     ggplot(aes(group, 
-               fill = 'U3 Fehlkonzept'
+               fill = `U3 Fehlkonzept`
                )) +
     geom_bar() +
     theme_minimal() +
     scale_fill_manual(values = c("#267326", "#8cd000")) +
     labs(title = "Häufigkeit an Cohen's U3-Fehlkonzepten",
-         subtitle = "per Experimentalbedingung") + 
-    xlab("Experimetal Bedingungen") +
-    ylab("Anzahl an (nicht) vorhanden Cohen's U3-Fehlkonzepten")
+         subtitle = "per Experimentalbedingung", 
+         caption = "BFsignaling/control > 100") + 
+    xlab("Experimetalbedingungen") +
+    ylab("Anzahl an (nicht) vorhandenen Cohen's U3-Fehlkonzepten")
 
 plot_u3_misconceptions
 
@@ -498,4 +504,3 @@ ggsave("study2_plot_u3_misconceptions.svg",
       height = 8,
       dpi = 1200)
 ```
-
