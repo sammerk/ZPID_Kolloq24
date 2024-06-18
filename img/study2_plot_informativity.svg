@@ -4470,6 +4470,6 @@
 <text x='107.82' y='14.94' style='font-size: 13.20px; font-family: "Arial";' textLength='184.02px' lengthAdjust='spacingAndGlyphs'>Wahrgenommene Informativität</text>
 <text x='570.52' y='549.56' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='70.32px' lengthAdjust='spacingAndGlyphs'>Mittelwert ± 1*SD;</text>
 <text x='570.52' y='559.07' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='128.82px' lengthAdjust='spacingAndGlyphs'>         BFsignaling/control = 0.20; </text>
-<text x='570.52' y='568.57' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='137.15px' lengthAdjust='spacingAndGlyphs'>         BFbenchmarks/control = 0.45</text>
+<text x='570.52' y='568.57' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='132.75px' lengthAdjust='spacingAndGlyphs'>         BFbenchmark/control = 0.45</text>
 </g>
 </svg>

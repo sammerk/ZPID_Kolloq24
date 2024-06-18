@@ -2275,7 +2275,7 @@
 <text x='107.82' y='14.94' style='font-size: 13.20px; font-family: "Arial";' textLength='146.95px' lengthAdjust='spacingAndGlyphs'>Akkuratheit (Cohen's U3)</text>
 <text x='570.52' y='540.06' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='75.20px' lengthAdjust='spacingAndGlyphs'>Mittelwert ± 1*SD;  </text>
 <text x='570.52' y='549.56' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='128.82px' lengthAdjust='spacingAndGlyphs'>         BFsignaling/control = 0.03; </text>
-<text x='570.52' y='559.07' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='137.15px' lengthAdjust='spacingAndGlyphs'>         BFbenchmarks/control = 0.10</text>
+<text x='570.52' y='559.07' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='132.75px' lengthAdjust='spacingAndGlyphs'>         BFbenchmark/control = 0.10</text>
 <text x='570.52' y='568.57' text-anchor='end' style='font-size: 8.80px; font-family: "Arial";' textLength='21.97px' lengthAdjust='spacingAndGlyphs'>         </text>
 </g>
 </svg>

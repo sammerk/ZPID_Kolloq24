@@ -1,0 +1,659 @@
+Mplus VERSION 8.5
+MUTHEN & MUTHEN
+03/29/2024  11:18 AM
+
+INPUT INSTRUCTIONS
+
+  data: file is dataset_significance_sample_mplus.csv;
+
+  variable: names are
+  lfdn int_sci int_edu tru_sci tru_edus sci_com edu_com
+  thepr_tr thepr_se thepr_en thepr_re
+  sex age pra_exp sub_sci sub_lan sub_oth
+  stu_uni gym policy eng_edu pos word conf iinf ieff;
+
+  usevariables are iinf ieff;
+
+  auxiliary = int_sci (BCH)
+  int_edu (BCH)
+  tru_sci (BCH)
+  tru_edus (BCH)
+  sci_com (BCH)
+  edu_com (BCH)
+  thepr_tr (BCH)
+  thepr_se (BCH)
+  thepr_en (BCH)
+  thepr_re (BCH)
+  age (BCH)
+  pra_exp (BCH)
+  eng_edu (BCH)
+  conf (BCH)
+  lfdn
+  ;
+
+  missing = all(999);
+
+  classes = profile (4);
+
+  analysis:
+  type = mixture;
+  starts = 1000 400;
+  process = 8;
+
+  model:
+
+  %profile#1%
+
+  [iinf*];
+  iinf (a);
+
+  [ieff*];
+  ieff (b);
+
+  %profile#2%
+
+  [iinf*];
+  iinf (a);
+
+  [ieff*];
+  ieff (b);
+
+  %profile#3%
+
+  [iinf*];
+  iinf (c);
+
+  [ieff*];
+  ieff (d);
+
+  %profile#4%
+
+  [iinf*];
+  iinf (c);
+
+  [ieff*];
+  ieff (e);
+
+  plot:
+  type is plot1 plot2 plot3;
+  series is iinf (1) ieff (2);
+
+  !save:
+  !save = cprob;
+  !file = "LPA_4_mod_cprobs.dat";
+
+  OUTPUT: tech11;
+
+
+
+*** WARNING in MODEL command
+  All variables are uncorrelated with all other variables within class.
+  Check that this is what is intended.
+*** WARNING
+  Data set contains cases with missing on all variables except
+  x-variables.  These cases were not included in the analysis.
+  Number of cases with missing on all variables except x-variables:  1
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         138
+
+Number of dependent variables                                    2
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+Number of categorical latent variables                           1
+
+Observed dependent variables
+
+  Continuous
+   IINF        IEFF
+
+Observed auxiliary variables
+   INT_SCI     INT_EDU     TRU_SCI     TRU_EDUS    SCI_COM     EDU_COM
+   THEPR_TR    THEPR_SE    THEPR_EN    THEPR_RE    AGE         PRA_EXP
+   ENG_EDU     CONF
+   LFDN
+
+Categorical latent variables
+   PROFILE
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-06
+    Relative loglikelihood change                        0.100D-06
+    Derivative                                           0.100D-05
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+Random Starts Specifications
+  Number of initial stage random starts                       1000
+  Number of final stage optimizations                          400
+  Number of initial stage iterations                            10
+  Initial stage convergence criterion                    0.100D+01
+  Random starts scale                                    0.500D+01
+  Random seed for generating random starts                       0
+
+Input data file(s)
+  dataset_significance_sample_mplus.csv
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             3
+     Number of y missing data patterns           3
+     Number of u missing data patterns           0
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR Y
+
+
+           Covariance Coverage
+              IINF          IEFF
+              ________      ________
+ IINF           0.993
+ IEFF           0.978         0.986
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     IINF                  3.854      -0.841       1.000    7.30%       3.000      4.000      4.000
+             137.000       1.672      -0.501       5.000   44.53%       5.000      5.000
+     IEFF                  2.956      -0.047       1.000   28.68%       1.000      2.000      3.000
+             136.000       2.366      -1.515       5.000   21.32%       4.000      5.000
+
+RANDOM STARTS RESULTS RANKED FROM THE BEST TO THE WORST LOGLIKELIHOOD VALUES
+
+
+696 perturbed starting value run(s) did not converge or were rejected in the third stage.
+Final stage loglikelihood values at local maxima, seeds, and initial stage start numbers:
+
+            -397.726  793035           187
+            -397.726  547702           767
+            -397.726  443442           380
+            -401.274  276696           676
+            -401.274  163110           584
+            -401.274  830570           369
+            -401.274  341960           685
+            -401.274  359578           458
+            -401.274  576220           115
+            -401.274  548673           732
+            -401.274  900631           774
+            -401.274  351622           551
+            -405.933  527050           948
+            -405.933  947714           573
+            -405.933  43523            297
+            -407.555  1548             384
+            -407.555  232226           235
+            -407.555  440395           917
+            -407.555  856536           144
+            -407.555  489927           520
+            -407.555  495490           990
+            -407.555  87586            871
+            -407.555  621542           375
+            -407.555  113138           585
+            -407.555  782821           272
+            -416.800  284109           82
+            -416.800  830392           35
+            -416.800  153394           429
+            -416.800  605565           404
+            -416.800  802644           874
+            -419.247  679615           942
+            -419.247  535804           111
+            -424.094  481835           57
+            -424.094  572637           989
+            -424.549  829540           324
+            -425.615  608460           244
+
+Unperturbed starting value run did not converge or was rejected in the third stage.
+
+363 perturbed starting value run(s) did not converge or were rejected in the third stage.
+
+
+
+THE BEST LOGLIKELIHOOD VALUE HAS BEEN REPLICATED.  RERUN WITH AT LEAST TWICE THE
+RANDOM STARTS TO CHECK THAT THE BEST LOGLIKELIHOOD IS STILL OBTAINED AND REPLICATED.
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       16
+
+Loglikelihood
+
+          H0 Value                        -397.726
+          H0 Scaling Correction Factor      0.9421
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                     827.452
+          Bayesian (BIC)                   874.288
+          Sample-Size Adjusted BIC         823.669
+            (n* = (n + 2) / 24)
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THE ESTIMATED MODEL
+
+    Latent
+   Classes
+
+       1         48.29820          0.34999
+       2         12.47900          0.09043
+       3         28.82780          0.20890
+       4         48.39501          0.35069
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON ESTIMATED POSTERIOR PROBABILITIES
+
+    Latent
+   Classes
+
+       1         48.29820          0.34999
+       2         12.47900          0.09043
+       3         28.82780          0.20890
+       4         48.39501          0.35069
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THEIR MOST LIKELY LATENT CLASS MEMBERSHIP
+
+Class Counts and Proportions
+
+    Latent
+   Classes
+
+       1               49          0.35507
+       2               12          0.08696
+       3               25          0.18116
+       4               52          0.37681
+
+
+CLASSIFICATION QUALITY
+
+     Entropy                         0.901
+
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4
+
+    1   0.985    0.002    0.001    0.012
+    2   0.000    0.869    0.101    0.030
+    3   0.000    0.006    0.991    0.003
+    4   0.000    0.035    0.053    0.911
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4
+
+    1   1.000    0.000    0.000    0.000
+    2   0.007    0.835    0.012    0.146
+    3   0.002    0.042    0.859    0.096
+    4   0.012    0.007    0.002    0.979
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4
+
+    1      8.350   -3.959   -5.465    0.000
+    2     -3.036    1.743   -2.537    0.000
+    3     -3.926   -0.826    2.187    0.000
+    4     -4.419   -4.884   -6.369    0.000
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Latent Class 1
+
+ Means
+    IINF               4.780      0.065     74.057      0.000
+    IEFF               1.244      0.068     18.175      0.000
+
+ Variances
+    IINF               0.149      0.039      3.836      0.000
+    IEFF               0.179      0.051      3.505      0.000
+
+Latent Class 2
+
+ Means
+    IINF               3.038      0.053     57.431      0.000
+    IEFF               3.061      0.227     13.512      0.000
+
+ Variances
+    IINF               0.149      0.039      3.836      0.000
+    IEFF               0.179      0.051      3.505      0.000
+
+Latent Class 3
+
+ Means
+    IINF               1.788      0.178     10.019      0.000
+    IEFF               3.627      0.288     12.615      0.000
+
+ Variances
+    IINF               0.467      0.102      4.599      0.000
+    IEFF               2.093      0.396      5.288      0.000
+
+Latent Class 4
+
+ Means
+    IINF               4.369      0.158     27.587      0.000
+    IEFF               4.234      0.127     33.339      0.000
+
+ Variances
+    IINF               0.467      0.102      4.599      0.000
+    IEFF               0.456      0.125      3.654      0.000
+
+Categorical Latent Variables
+
+ Means
+    PROFILE#1         -0.002      0.225     -0.009      0.993
+    PROFILE#2         -1.355      0.461     -2.938      0.003
+    PROFILE#3         -0.518      0.279     -1.855      0.064
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.863E-05
+       (ratio of smallest to largest eigenvalue)
+
+
+EQUALITY TESTS OF MEANS ACROSS CLASSES USING THE BCH PROCEDURE
+WITH 3 DEGREE(S) OF FREEDOM FOR THE OVERALL TEST
+
+INT_SCI
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                4.066      0.095  Class 2                3.157      0.150
+  Class 3                3.885      0.184  Class 4                3.786      0.136
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test          26.358      0.000  Class 1 vs. 2         26.265      0.000
+  Class 1 vs. 3          0.775      0.379  Class 1 vs. 4          2.811      0.094
+  Class 2 vs. 3          8.253      0.004  Class 2 vs. 4          9.176      0.002
+  Class 3 vs. 4          0.173      0.677
+
+INT_EDU
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                3.918      0.130  Class 2                3.804      0.267
+  Class 3                4.042      0.156  Class 4                3.984      0.145
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           0.697      0.874  Class 1 vs. 2          0.146      0.702
+  Class 1 vs. 3          0.370      0.543  Class 1 vs. 4          0.114      0.736
+  Class 2 vs. 3          0.553      0.457  Class 2 vs. 4          0.328      0.567
+  Class 3 vs. 4          0.068      0.794
+
+TRU_SCI
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                4.022      0.080  Class 2                3.636      0.209
+  Class 3                3.841      0.178  Class 4                3.960      0.082
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           3.651      0.302  Class 1 vs. 2          2.964      0.085
+  Class 1 vs. 3          0.863      0.353  Class 1 vs. 4          0.287      0.592
+  Class 2 vs. 3          0.504      0.478  Class 2 vs. 4          1.951      0.163
+  Class 3 vs. 4          0.340      0.560
+
+TRU_EDUS
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                3.637      0.100  Class 2                3.421      0.166
+  Class 3                3.400      0.198  Class 4                3.361      0.128
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           3.728      0.292  Class 1 vs. 2          1.241      0.265
+  Class 1 vs. 3          1.136      0.286  Class 1 vs. 4          2.842      0.092
+  Class 2 vs. 3          0.006      0.941  Class 2 vs. 4          0.076      0.783
+  Class 3 vs. 4          0.025      0.874
+
+SCI_COM
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                2.117      0.136  Class 2                2.333      0.315
+  Class 3                2.279      0.218  Class 4                2.541      0.158
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           4.128      0.248  Class 1 vs. 2          0.394      0.530
+  Class 1 vs. 3          0.397      0.529  Class 1 vs. 4          4.079      0.043
+  Class 2 vs. 3          0.018      0.893  Class 2 vs. 4          0.326      0.568
+  Class 3 vs. 4          0.884      0.347
+
+EDU_COM
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                1.668      0.107  Class 2                2.813      0.417
+  Class 3                1.575      0.132  Class 4                1.950      0.147
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test          10.946      0.012  Class 1 vs. 2          7.041      0.008
+  Class 1 vs. 3          0.303      0.582  Class 1 vs. 4          2.366      0.124
+  Class 2 vs. 3          7.776      0.005  Class 2 vs. 4          3.557      0.059
+  Class 3 vs. 4          3.449      0.063
+
+THEPR_TR
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                2.731      0.134  Class 2                3.144      0.320
+  Class 3                2.596      0.221  Class 4                2.976      0.162
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           3.268      0.352  Class 1 vs. 2          1.417      0.234
+  Class 1 vs. 3          0.275      0.600  Class 1 vs. 4          1.343      0.247
+  Class 2 vs. 3          1.840      0.175  Class 2 vs. 4          0.206      0.650
+  Class 3 vs. 4          1.796      0.180
+
+THEPR_SE
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                4.043      0.140  Class 2                3.691      0.242
+  Class 3                4.204      0.162  Class 4                3.915      0.158
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           3.361      0.339  Class 1 vs. 2          1.574      0.210
+  Class 1 vs. 3          0.567      0.452  Class 1 vs. 4          0.357      0.550
+  Class 2 vs. 3          2.876      0.090  Class 2 vs. 4          0.563      0.453
+  Class 3 vs. 4          1.537      0.215
+
+THEPR_EN
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                3.582      0.146  Class 2                3.697      0.210
+  Class 3                3.397      0.236  Class 4                3.709      0.169
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           1.234      0.745  Class 1 vs. 2          0.202      0.653
+  Class 1 vs. 3          0.443      0.506  Class 1 vs. 4          0.323      0.570
+  Class 2 vs. 3          0.795      0.373  Class 2 vs. 4          0.002      0.963
+  Class 3 vs. 4          1.082      0.298
+
+THEPR_RE
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                4.002      0.106  Class 2                4.047      0.139
+  Class 3                3.637      0.205  Class 4                3.869      0.153
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           3.074      0.380  Class 1 vs. 2          0.066      0.797
+  Class 1 vs. 3          2.503      0.114  Class 1 vs. 4          0.501      0.479
+  Class 2 vs. 3          2.359      0.125  Class 2 vs. 4          0.699      0.403
+  Class 3 vs. 4          0.766      0.381
+
+AGE
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1               45.980      1.577  Class 2               45.637      3.195
+  Class 3               48.661      2.023  Class 4               47.504      1.838
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           1.304      0.728  Class 1 vs. 2          0.009      0.923
+  Class 1 vs. 3          1.092      0.296  Class 1 vs. 4          0.391      0.532
+  Class 2 vs. 3          0.596      0.440  Class 2 vs. 4          0.240      0.624
+  Class 3 vs. 4          0.169      0.681
+
+PRA_EXP
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1               15.012      1.667  Class 2               17.734      3.798
+  Class 3               17.636      2.108  Class 4               18.602      1.821
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           2.386      0.496  Class 1 vs. 2          0.430      0.512
+  Class 1 vs. 3          0.954      0.329  Class 1 vs. 4          2.090      0.148
+  Class 2 vs. 3          0.000      0.983  Class 2 vs. 4          0.040      0.842
+  Class 3 vs. 4          0.113      0.737
+
+ENG_EDU
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                3.813      0.108  Class 2                3.564      0.215
+  Class 3                3.767      0.129  Class 4                3.528      0.112
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           4.052      0.256  Class 1 vs. 2          1.069      0.301
+  Class 1 vs. 3          0.076      0.783  Class 1 vs. 4          3.337      0.068
+  Class 2 vs. 3          0.611      0.435  Class 2 vs. 4          0.020      0.887
+  Class 3 vs. 4          1.835      0.176
+
+CONF
+                          Mean       S.E.                          Mean       S.E.
+
+  Class 1                3.961      0.194  Class 2                3.358      0.167
+  Class 3                3.794      0.245  Class 4                3.908      0.204
+
+                    Chi-Square     P-Value                   Chi-Square     P-Value
+
+  Overall test           6.853      0.077  Class 1 vs. 2          5.539      0.019
+  Class 1 vs. 3          0.285      0.593  Class 1 vs. 4          0.035      0.852
+  Class 2 vs. 3          1.870      0.171  Class 2 vs. 4          4.114      0.043
+  Class 3 vs. 4          0.120      0.729
+
+
+
+TECHNICAL 11 OUTPUT
+
+     Random Starts Specifications for the k-1 Class Analysis Model
+        Number of initial stage random starts                1000
+        Number of final stage optimizations                   400
+
+
+
+     VUONG-LO-MENDELL-RUBIN LIKELIHOOD RATIO TEST FOR 3 (H0) VERSUS 4 CLASSES
+
+          H0 Loglikelihood Value                         -414.121
+          2 Times the Loglikelihood Difference             32.790
+          Difference in the Number of Parameters                3
+          Mean                                              8.997
+          Standard Deviation                               13.091
+          P-Value                                          0.0532
+
+     LO-MENDELL-RUBIN ADJUSTED LRT TEST
+
+          Value                                            30.712
+          P-Value                                          0.0625
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms (sample values)
+  Scatterplots (sample values)
+  Sample means
+  Estimated means, medians, modes, and percentiles
+  Sample and estimated means
+  Observed individual values
+  Estimated means and observed individual values
+  Estimated overall and class-specific distributions
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for Mixture analysis.
+  No diagram output was produced.
+
+
+     Beginning Time:  11:18:33
+        Ending Time:  11:19:34
+       Elapsed Time:  00:01:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2020 Muthen & Muthen

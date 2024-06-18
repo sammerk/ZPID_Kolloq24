@@ -1,0 +1,157 @@
+---
+title: "Study 1b"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r mplus_output, warning = FALSE, message = FALSE}
+library(MplusAutomation)
+library(relimp)
+library(Hmisc)
+library(tidyverse)
+
+mplus_output_sig <- MplusAutomation::readModels(
+  "data/lpa_sign_4_mod.out")
+
+mplus_output_cou3 <- MplusAutomation::readModels(
+  "data/lpa_cou3_4_mod.out")
+```
+
+## 4.2 Graphical Overview
+
+### 4.2.1 Graphical Overview of the Profiles for Significance Sample
+
+```{r profiles significance sample }
+sign_profiles <- mplus_output_sig$parameters$unstandardized %>% 
+  mutate(Profile = fct_recode(LatentClass,
+                              'Disentanglers (35%)' = "1",
+                              'Indecisives (9%)' = "2",
+                              'Misconceptualizers (21%)' = "3",
+                              'Entanglers (35%)' = "4"),
+         Variable = fct_recode(param,
+                               'Effect Certainty' = "IINF",
+                               'Effect Size' = "IEFF")) %>%
+  mutate(Profile = fct_relevel(Profile,
+                               'Entanglers (35%)',
+                               'Misconceptualizers (21%)',
+                               'Indecisives (9%)',
+                               'Disentanglers (35%)'),
+         Variable = fct_relevel(Variable,
+                                'Effect Certainty',
+                                'Effect Size')) %>%
+  filter(paramHeader == "Means" & (param == "IINF" | param == "IEFF")) %>%
+  ggplot(aes(x = Variable, y = est, group = Profile)) +
+  geom_errorbar(aes(ymin = est - se, ymax = est + se),
+                position = position_dodge(width = 0.2),
+                width = 0.2,
+                size = 1.1) +
+    geom_point(position = position_dodge(width = 0.2),
+             size = 2.5) +
+    geom_line(position = position_dodge(width = 0.2),
+            size = 1.1,
+            aes(linetype=Profile, color = Profile)) +
+        theme(panel.background = element_blank(),
+              axis.line = element_line(),
+              axis.text = element_text(color = "black")
+        ) +
+  scale_y_continuous(breaks = (c(1:5)),
+                     labels = c(1, 2, 3, 4, 5),
+                     limits = c(0.8, 5.1)) +
+  xlab("") +
+  ylab("Profile Mean") +
+  scale_linetype_manual(values=c("dotted", "dotdash", "dashed", "solid"))+
+  scale_color_manual(values = c("#006d00",
+                                "#8cd000",
+                                "#2b961f",                                 
+                                "#88ff00"
+                                )) +
+  theme(legend.position = "bottom",
+        legend.title = element_blank(),
+        legend.margin = margin(0, 0, 0, 0),
+        legend.box.margin = margin(-20, 0, 0, 0),
+        plot.title = element_text(hjust = 0.5)) +
+  ggtitle("Significance Sample ") +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE),
+         group = guide_legend(nrow = 2, byrow = TRUE),
+         shape = guide_legend(nrow = 2, byrow = TRUE),
+         linetype = guide_legend(nrow = 2, byrow = TRUE))
+
+# sign_profiles
+```
+
+
+### 4.2.2 Graphical Overview of the Profiles for Cohen's U<sub>3</sub> Profiles 
+
+```{r profiles cou3-sample}
+cou3_profiles <- mplus_output_cou3$parameters$unstandardized %>% 
+  mutate(Profile = fct_recode(LatentClass,
+                              'Entanglers (30%)' = "1",
+                              'Misconceptualizers (36%)' = "2",
+                              'Refuters (7%)' = "3",
+                              'Disentanglers (28%)' = "4"),
+         Variable = fct_recode(param,
+                               'Effect Certainty' = "IINF",
+                               'Effect Size' = "IEFF")) %>%
+  mutate(Profile = fct_relevel(Profile,
+                               'Entanglers (30%)',
+                               'Misconceptualizers (36%)',
+                               'Refuters (7%)',
+                               'Disentanglers (28%)'),
+         Variable = fct_relevel(Variable,
+                                'Effect Certainty',
+                                'Effect Size')) %>%
+  filter(paramHeader == "Means" & (param == "IINF" | param == "IEFF")) %>%
+  ggplot(aes(x = Variable, y = est, group = Profile)) +
+  geom_errorbar(aes(ymin = est - se, ymax = est + se),
+                position = position_dodge(width = 0.2),
+                width = 0.2,
+                size = 1.1) +
+    geom_point(position = position_dodge(width = 0.2),
+             size = 2.5) +
+    geom_line(position = position_dodge(width = 0.2),
+            size = 1.1,
+            aes(linetype=Profile, color = Profile)) +
+        theme(panel.background = element_blank(),
+              axis.line = element_line(),
+              axis.text = element_text(color = "black")
+        ) +
+  scale_y_continuous(breaks = (c(1:5)),
+                     labels = c(1, 2, 3, 4, 5),
+                     limits = c(0.8, 5.1)) +
+  xlab("") +
+  ylab("Profile Mean") +
+  scale_linetype_manual(values=c("dotted", "dotdash", "dashed", "solid"))+
+  scale_color_manual(values = c("#006d00",
+                                "#8cd000",
+                                "#2b961f",                                 
+                                "#88ff00"
+                                )) +
+  theme(legend.position = "bottom",
+        legend.title = element_blank(),
+        legend.margin = margin(0, 0, 0, 0),
+        legend.box.margin = margin(-20, 0, 0, 0),
+        plot.title = element_text(hjust = 0.5),
+        legend.box = "vertical") +
+  ggtitle("Cohen's "~U[3]~" Sample") +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE),
+         group = guide_legend(nrow = 2, byrow = TRUE),
+         shape = guide_legend(nrow = 2, byrow = TRUE),
+         linetype = guide_legend(nrow = 2, byrow = TRUE))
+
+# cou3_profiles
+```
+
+### 4.2.3 Graphical Overview of the Profiles of Both Subsamples
+
+```{r profiles of both subsamples}
+
+combined_profiles <- cowplot::ggdraw() +
+   cowplot::draw_plot(sign_profiles, x = 0, y = 0, width = .50, height = 1) +
+   cowplot::draw_plot(cou3_profiles, x = .50, y = 0, width = .50, height = 1)
+
+combined_profiles
+
+ggsave("LatentProfiles.jpeg", width = 8, height = 3.5, dpi = 500)
+```

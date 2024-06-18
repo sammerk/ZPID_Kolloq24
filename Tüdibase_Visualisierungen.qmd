@@ -397,7 +397,7 @@ plot_informativity <- data_w |>
          subtitle = "per Experimentalbedingung",
          caption = "Mittelwert ± 1*SD;
          BFsignaling/control = 0.20; 
-         BFbenchmarks/control = 0.45") + 
+         BFbenchmark/control = 0.45") + 
     xlab("Wahrgenommene Informativität") +
     ylab("Experimetalbedingungen")
 
@@ -429,7 +429,7 @@ plot_diff_am <- data_w  |>
          subtitle = "per Experimentalbedingung",
          caption = "Mittelwert ± 1*SD;   
          BFsignaling/control = 0.04; 
-         BFbenchmarks/control = 0.23
+         BFbenchmark/control = 0.23
          ") + 
     xlab("Differenzvariable: Interpretation (in abstrakter Metrik)") +
     ylab("Experimetalbedingungen")
@@ -461,7 +461,7 @@ plot_diff_u3 <- data_w  |>
          subtitle = "per Experimentalbedingung",
          caption = "Mittelwert ± 1*SD;  
          BFsignaling/control = 0.03; 
-         BFbenchmarks/control = 0.10
+         BFbenchmark/control = 0.10
          ") + 
     xlab("Differenzvariable: Interpretationen (in Cohen's U3)") +
     ylab("Experimetalbedingungen")
