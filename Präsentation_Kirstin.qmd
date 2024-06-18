@@ -65,6 +65,8 @@ border: none !important;
 
 ::: 
 
+# Evidenzinformiertes Handeln {{< iconify fa6-solid diagram-project >}}
+
 ## Evidenzinformiertes Handeln {{< iconify fa6-solid diagram-project >}} {.smaller} 
 
 - Das Berücksichtigen von Forschungsergebnissen im professionellen Handeln ist eine Anforderung an verschiedene Berufsgruppen wie Mediziner:innen, Politiker:innen, Psycholog:innen oder Lehrpersonen [z.B. @sackett1996; @bauer2023; @APA2006]
@@ -73,16 +75,18 @@ border: none !important;
   - ...
   
 ::: notes
-- grundsätzlich verschiedene Berufsgruppen wie Mediziner:inen, Politiker:innen, Psycholog:innen oder Lehrpersonen dazu angehalten Evidenz, also aufbereitete Forschungsergebnisse, in ihrem professionellen Handeln zu berücksichtigen 
-- über die verschiedenen Berufsgruppen hinweg, bedeutet das immer die entsprechende vorhandene Evidenz als eine Informationsquelle zu nutzen, die aber auch mit der eigenen praktischen Expertise verknüpft wird
-- Fokus im heutigen Vortrag: Lehrpersonen
+- grundsätzlich verschiedene Berufsgruppen wie Mediziner:inen oder Lehrpersonen dazu angehalten Evidenz, also durch Wissenschaftler:innen generierte Forschungsergebnisse, in ihrem professionellen Handeln zu berücksichtigen 
+- über die verschiedenen Berufsgruppen hinweg, bedeutet das immer die entsprechende vorhandene Evidenz - z.B. Ergebnisse aus medizinischen Studien für evidenzbasierte Medizin oder aus Bildungsforschung für evidenzinformierte Schulpraxis - als eine Informationsquelle zu nutzen und diese mit der eigenen praktischen Expertise zu verknüpfen
 
+- Fokus im heutigen Vortrag: Lehrpersonen & evidenzinformierte Schulpraxis
 - Rezeption von Forschungsergebnissen für Laien häufig sehr herausfordernd
 - kognitive Arbeitsteilung: Lehrpersonen werden nicht als wissenschaftliche Expert:innen ausgebildet, sondern als Expert:innen für das Unterrichten
-- aber wir wollen nicht nur eine secondhand evaluation, also die Bewertung der Glaubwürdigkeit und Vertrauenswürdigkeit der Quelle, sondern, dass sie selbst in der Lage sind die Informationen zu bewerten
+- aber Lehrpersonen sollen nicht nur Glaubwürdigkeit und Vertrauenswürdigkeit einer Quelle, also second-hand evaluations bewerten können, sondern, auch die Information an sich
 - deshalb unterschiedliche Ansätze Lehrpersonen zu unterstützen - ein Ansatz ist die Gestaltung einer nutzerfreundlichen Wissenschaftskommunikation
 
 ::: 
+
+# Wissenschafts- <br> kommunikation {{< iconify fa6-solid ant-design:comment-outlined >}}
 
 ## Wissenschaftskommunikation {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
 
@@ -95,8 +99,9 @@ border: none !important;
 
 
 ::: notes
-- die Idee ist, dass nutzerfreundliche Aufbereitung Forschungsergebnisse verständlich, dennoch akkurat und trotzdem praktisch relevant präsentieren, um wissenschaftlichen Laien wie Lehrpersonen den Umgang 
-- Beispiele hierfür sind die immer prominentere werden Ansatz von Clearinghouses, aber auch Ansätze wie plain language summaries
+- die Idee nutzerfreundliche Aufbereitung von Forschungsergebnisse ist, dass die Ergebnisse verständlich, dennoch akkurat präsentiert werden und praktisch relevant erscheinen, um wissenschaftlichen Laien wie Lehrpersonen den Umgang zu erleichtern
+- Beispiele hierfür sind der immer prominenter werdende Ansatz von Clearinghouses
+- aber auch andere Ansätze wie plain language summaries sind hier zu nennen
 - häufig werden in solchen Ansätzen Forschungsergebnisse zusammengefasst, die mittels quantitativer Studien gewonnen wurden
 - Zusammenfassungen beinhalten also unterschiedliche quantitativ-methodische Informationen wie Studiendesings, Inferenzstatistik und Effektstärken
 
@@ -130,12 +135,12 @@ border: none !important;
 ::: notes
 
 warum genau Effektstärken?
-- aus methodischer Sicht kann man z.B. sagen, dass Effektstärken verstärkt vorgeschlagen wurden und werden, vor allem als Ergänzung Nullhypothesen Signifikanz tests, um bekannte und empirisch gut belegte Fehlkonzepte von statistischer Signifikant und p Werten zu reduzieren 
-- Kombi wird mittlerweile auch als best practice angesehen 
-- mit Blick auf das professionelle Handeln bieten Effektstärken auch eine Grundlage, um überhaupt die praktische Relevanz wissenschaftlicher Ergebnisse abzuleiten -> zwar nicht hinreichend aber eine zentrale Bedingung
+
+- aus methodischer Sicht: Effektstärken vor alle, als Ergänzungung zu NHST, um bekannte und empirisch gut belegte Fehlkonzepte von statistischer Signifikant und p Werten zu reduzieren 
+- mit Blick auf das professionelle Handeln bieten Effektstärken eine zentrale, wenn auch nicht hinreichende Bedingung, um überhaupt die praktische Relevanz wissenschaftlicher Ergebnisse abzuleiten
 
 - Effektstärken können sowohl textlich als auf visuell aufbereitet werden 
-- als ersten Eindruck - ohne nähere darauf einzugehen ä- Beispiele aus Clearing Houses im Bildungsbereich aus DE mitgebracht
+- als ersten Eindruck wie dies ausehen könnte Beispiele aus Clearing Houses im Bildungsbereich aus DE mitgebracht
    - Links eine textliche Aufbereitung des Clearinghouse Unterricht München und rechts die Visualisierung aus Tüdibase 
 ::: 
 
@@ -162,14 +167,12 @@ warum genau Effektstärken?
 
 ::: notes
 
-- erste empirische und experimentelle Forschung aus ganz verschiedenen Disziplinen - -  zur Kommunikation von Effektstärken vorhanden
-- diese zeigen, dass unterschiedliche Formate sowohl textlich als auch visuell die Wahrnehmung also z.B. wie informativ eine Aufbereitung wahrgenommen wird und das Verständnis - wie akkurat die Effektstärke interpretiert wird 
-- der Forschungsstand setzt sich aus Forschung verschiedener Disziplinen zusammen z.B. Psychologie, Informatik, Bildungswissenschaften, ist in seiner Anlage häufig eklektisch und es zeigen sich teilweise inkonsistente Ergebnisse
-- weshalb nur kurz aus der Metaperspektive zusammengefasst:
-  - unterschiedliche Bedingungen: Cohen's U3 
-  - unterschiedliche Operationalisierungen von AV und UV 
-- Vergleichbarkeit schwierig und keine eindeutige Tendenz, was grundsätzlich gut eignet
+- erste empirische Erkenntnisse aus experimentelle Forschung zur Kommunikation von Effektstärken vorhanden
+- diese zeigen, dass unterschiedliche Formate sowohl textlich als auch visuell die Wahrnehmung also z.B. wie informativ eine Aufbereitung wahrgenommen wird und das Verständnis - wie akkurat die Effektstärke interpretiert wird, beeinflussen
+- der Forschungsstand setzt sich aus Forschung verschiedener Disziplinen zusammen z.B. Psychologie, Informatik, Bildungswissenschaften, ist in seiner Anlage häufig eklektisch (verschiedene Vergleiche der Bedingungen, Operationalisierungen von AV und UV) und es zeigen sich teilweise inkonsistente Ergebnisse
+- weshalb Vergleichbarkeit der jeweiligen Experimente schwierig und keine eindeutige Tendenz, was sich übergreifend für eine nutzerfreundliche WK eignet
 
+- Daher in den folgenden Studien sowohl Formulierungen als auch Visualisierungen in den Blick genommen, und dabei entweder nur Formulierungen oder Visualisierungen verglichen und Text und Visualisierung einander gegenübergestellt
 
 
 Zusatz: 
@@ -178,8 +181,7 @@ Zusatz:
   - erste empirische Studien zeigen, dass Lehrpersonen die Informationen aus Effektstärkevisualisierungen sehr akkurat einschätzen, wenn Vergleichsplots vorhanden
   - z.B. Lehrpersonen Schwierigkeiten datengestütze Entscheidungnen anhand von Boxplots zu treffen (Pierce & Chick, 2013)
   
-  
-- Daher in den folgenden Studien sowohl Formulierungen als auch Visualisierungen in den Blick genommen
+
 
 :::
 
@@ -211,7 +213,7 @@ gemeinsam mit <br> Peter Edelsbrunner<sup>2</sup>, Tom Rosman<sup>3</sup> und Co
 ::: notes
 - in der ersten Studie den Fragen nachgegangen 
   - wie informativ Lehrpersonen verschiedene generische statistische Beschreibungen einschätzen
-  - erweiternd untersuchen, wie diese interpretiert werden und zwischen Inf und Eff unterscheiden, da Zweifel bestehen, ob wissenschaftliche Laien hierzu in der Lage sind (vgl. Goodman, 2008; Sotos et al., 2007)
+  -ie diese interpretiert werden und zwischen Inf und Eff unterscheiden, da Zweifel bestehen, ob wissenschaftliche Laien hierzu in der Lage sind (vgl. Goodman, 2008; Sotos et al., 2007)
   - verschiedene Hypothesen präregistriert, erst bei den Ergebnissdarstellung näher benennen
 ::: 
 
@@ -293,7 +295,6 @@ ergänzend:
   - ... Lehrpersonen anscheinend nicht zwischen Inferenzstatistik und Effektstärke unterscheiden: Mittelwerte liegen bei allen Beschreibungen nah beieinander, obwohl sie eigentlich (außer bei dem kombinierten Statement) stark auseinander liegen müssten weil sie eindeutig entweder inferenzstatistische oder Effektstärkemaße abbilden
   - Bayesianische messwiederholte ANOVA Modelle bieten starke Evidenz, dass Lehrpersonen bei allen statistischen Formulierungen gleich schwach zwischen Inf und Eff differenzieren, was nicht unserer Hypothese entsprach
 
-ergänzend:
 - noch etwas weiteres auffällig: Interpretationen bei Signifikanz als Effektstärke und bei Cohen’s U3 als Inferenzstatistik bimodal verteilt
   - z.B. manche die sich sicher waren, dass Signifikanz über Effektgröße informiert und andere die sicher waren, dass das falsch ist
   - Vermutung: unterschiedliche Interpretationstypen vorhanden, was wir mithilfe einer personenzentrierten Re-analyse auch bestätigen konnten
@@ -310,12 +311,14 @@ ergänzend:
 
 
 ::: notes
-- nicht ausführlich auf die Studie eingehen, aber Ihnen kurz zeigen, dass wir sowohl bei den Lehrpersonen, die statistische Signifikanz interpretierten als auch bei denjenigen, die Cohen's U3 interprtetierten 4 Profile fanden, die über beide Substichproben vergleichbar waren
+- nicht ausführlich auf die Studie eingehen, aber Ihnen kurz zeigen, dass wir sowohl bei den Lehrpersonen 4 Profile fanden, die überwiegend über beide Aussagen konsistent waren
 - es gab die Disentanglers (ca. 1/3), die die jeweiligen statistischen Aussagen korrekt interpretierten
 - aber 2/3 die die Aussagen fehlinterpretierten
-- entweder sie unterschieden nicht zwischen Inferenzstatistik und Effektstärke - Entanglers,
-- genau entgegen der korrekten Interpretation - misconceptualizers 
-- ein Profil mit nur wenig Personen unterschied sich bei beiden Gruppen: einmal eher verneint, dass U3 eine Aussage über Effektsicherheit und -größe bietet (refuters) und einmal die Mitte gewählt, was wir als die Unschlüssigen - indecisives bezeichnet haben
+  - entweder sie unterschieden nicht zwischen Inferenzstatistik und Effektstärke - Entanglers,
+  - genau entgegen der korrekten Interpretation (Signifikanz als Effektgröße, aber nicht Sicherheit)- misconceptualizers 
+  - ein Profil mit nur wenig Personen unterschied sich bei beiden Gruppen:
+    - Signifikanz: itte gewählt, was wir als die Unschlüssigen - indecisives bezeichnet haben
+    - U3: verneint, dass U3 eine Aussage über Effektsicherheit und -größe bietet (refuters)
 :::
 
 
@@ -334,6 +337,7 @@ gemeinsam mit <br> Jürgen Schneider<sup>2</sup> und Kristina Bohrer<sup>1</sup>
 ::: notes
 
 nun Fokus auf Effektstärkenvisualisierungen
+- ob vielleicht Visualisierungen beim Verständnis helfen könnten und dennoch informativ sind
 
 ::: 
 
@@ -366,6 +370,13 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 ::: notes
 
 - Fokus heute vor allem auf die Ergebnisse der konfirmatorischen Studie zur FF 3 
+
+- um die 3 Teilstudie zu verstehen, ist aber der Ablauf der vorherigen Studien wichtig 
+
+- Wenn es um das Erstellen von Visualisierungen geht, viele Freiheitsgrade
+- welchen Visualisierungstyp und wie man wiederum das Design dieser Visualisierung festlegt (z.B. Gruppen überlappend, nicht überlappend darstellen)
+- bisher wenig systematisch erforscht und Forschungsstand eher eklektisch, daher Delphi-Studie mit Visualisierungs- und Clearinghouse-Experten durchgeführt
+
 :::
 
 ## Studien 1 - 3 
@@ -374,9 +385,8 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 
 
 ::: notes
-- Wenn es um das Erstellen von Visualisierungen geht, viele Freiheitsgrade
-- welchen Visualisierungstyp und wie man wiederum das Design dieser Visualisierung festlegt (z.B. Gruppen überlappend, nicht überlappend darstellen)
-- bisher wenig systematisch erforscht und Forschungsstand eher eklektisch, daher Delphi-Studie mit Visualisierungs- und Clearinghouse-Experten durchgeführt
+
+
 - anschließend die Visualisierungen, die in einem mehrschrittigen Verfahren als am geeignetesten eingeschätzt wurden in explorative Studie eingeschlossen
 - um FF 1 - ob einen Einfluss - und FF 2 - welche Visualisierung am informativsten und akkuratesten - 
 
@@ -389,7 +399,7 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 
 ::: notes
 
-- ausgehend davon, dass halfeye plots -sowohl mit Gruppen auf x als auch y-Achse- am informativsten eingeschätzt wurden, und kaum Unterschiede in Akkuratheit zwischen den Visualisierungsarten zu finden waren
+- ausgehend davon, dass halfeye plots -sowohl mit Gruppen auf x als auch y-Achse- am informativsten eingeschätzt wurden, und sich die Verständnisratings zwischen den Visualisierungsarten kaum voneinander unterschieden
 - halfeye plots sowohl mit Gruppen auf x- und y-Achse in die konfirmatorische Studie eingeschlossen 
 - zusätzlich um Anreicherungen - signaling u3, signaling overlap oder benchmarks (FF 3) - erweitert
 
@@ -414,12 +424,59 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 
 
 
-## {.em08 background-iframe="https://graphs-2t-demo.formr.org" background-interactive="true"}
+## Design {.smaller}
+
+::: {style="font-size: 0.70em"} 
+4x4x16x2 between-between-within-within Design 
+
+- 1 Between-Faktor: Experimentalbedingung
+  - Kontrollgruppe
+  - Benchmark
+  - Signaling U3
+  - Signaling Overlap)
+- 2 Between-Faktor:
+  - Lesen auf Papier vs. Tablet <center> ![](img/study2_vignette.png){width=400} </center>
+  - Lernen anhand eines Live-Vortrags vs. Videos
+  - Lernen mittels Experimentieren vs. Computersimulation
+  - Lernen mittels Erklärvideo mit Untertitel vs. Erklärvideo ohne Untertitel
+- 3 Within-Faktor: präsentierte Effektstärke d ∈ {−.80; −.65; −.50; −.35; −.20; .20; .35; .50; .65; .80}
+- 4 Within-Faktor: Visualisierungsart
+  - halfeye plots mit Gruppen auf der x-Achse
+  - halfeye plots mit Gruppen auf der y-Achse
+
+::: 
 
 ::: notes
+- within-between Design
+
+
 - Lehrpersonen erhielten zunächst eine Studienvignette zu einem bildungswissenschaftlichen Thema, zufällig aus 4 verschiedenen Themen ausgewählt
   - hier Beispiel: XXX
 - diese Studienvignette kontextualisierte insgesamt 20 Effektstärke-Visualisierungen
+
+:::
+
+
+## Abhängige Variablen {.smaller}
+
+- Wahrgenommene Informativität
+<center> ![](img/study2_informativity.png){width=400} </center>
+- Verständnis
+  - abstrakte Metrik
+<center> ![](img/study2_am.png){width=400} </center>
+  - Cohen's U3 Metrik
+<center> ![](img/study2_u3.png){width=400} </center>
+- Cohen's U3 Fehlkonzept: Personen, die im Median keine plausiblen Cohen's U3 Ratings angeben (U3 Rating < 21.2% kleinster plausibler Wert, der d = −.8 entspricht)
+
+::: notes
+- AVs
+  - Informativität: wie informativ sie die Information in der Visualisierung fanden (7stufige Likertskala)
+  - Verständnis 
+    - abstrakte Metrik
+    - U3
+    - Fehlkonzept: Personen, die grundsätzlich im Median plausible U3 Ratings angaben (- U3 Fehlkonzept: Median des U3 Ratings kleiner als 21.2% (kleinster plausibler Wert, der d = −.8 entspricht)
+  
+
   - je nach zufälliger Gruppenzuteilung entweder: einer der drei Anreicherungen - hier Beispiel YYYY, oder Kontrollgruppe ohne Anreicherung
   - zusätzlich wurde die Größe des Effekts (within-person Faktor; d ∈ {−.80 - .80}) 
   - Darstellung (within-person Faktor) innerhalb der Person randomisiert
@@ -433,11 +490,10 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
     (U3-Metrik)
     - inhaltlich an die Themen angepasst
     
-  - wie informativ sie die Information in der Visualisierung fanden - 7stufige Likertskala
+
   
 
 ergänzende Info bei Rückfragen:
-
   - Thema variierte zwischen den Personen, um zusätzlichen kognitiven Load zu verringern
   - zu wieviel Prozent sich beide Gruppen überschneiden (Overlap-Metrik)
 
@@ -479,11 +535,10 @@ ergänzende Info bei Rückfragen:
 ::: notes
 
 - genau wie die Visualisierung zuvor, hier aber nicht abstrakte Metrik sondern U3
-- hier wurden nur Personen eingeschlossen, die grundsätzlich im Median plausible U3 Ratings angaben (- U3 Fehlkonzept: Median des U3 Ratings kleiner als 21.2% (kleinster plausibler Wert, der d = −.8 entspricht) -> n = XXX) 
+- erneut die Differenzvariable
+- hier wurden nur Personen ohne U3 Fehlkonzept eingeschlossen
 
-- Bayesianische Mehrebenenanalysen moderate bis starke Evidenz für keinen Unterschied zwischen signaling und Kontrollgruppe und benchmarking und Kontrollgruppe
-
-- Schaut man sich nur die Ergebnisse derjenigen ohne Fehlkonzept an, zwar weiterhin keine substanziellen Unterschiede zwischen den Visualisierungen, aber akkuratere Interpretationen; Bayesianische Analysen sprechen ebenfalls für die Nullhypothese
+- Bayesianische Mehrebenenanalysen sprechen ebenfalls für die Nullhypothese
 
 ::: 
 
@@ -493,7 +548,7 @@ ergänzende Info bei Rückfragen:
 
 ::: notes
 
-- Fehlkonzepte in U3 (n = 22), denn es gibt Personen, die konsequent unplausible U3-Werte angeben
+
 - x-Achse = Experimentalbedingungen
 - y-Achse = Anzahl an Persoenen mit U3 in hellgrün und Anzahl an Personen ohne U3 Fehlkonzept in Dunkelgrün
 - Anzahl an U3 Fehlkonzepten kann substantziell reduziert werden, wenn für U3 relevante Infos in der Visualisierung hervorgehoben werden
