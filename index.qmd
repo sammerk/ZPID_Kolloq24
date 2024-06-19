@@ -1,8 +1,8 @@
 ---
-title: "User-friendly <br> science communication"
-subtitle: "Communicating inferential uncertainty and effect sizes to laypeople"
-author: Samuel Merk und Kirstin Schmidt
-footer: "S. Merk und K. Schmidt | PH Karlsruhe"
+title: "Kommunikation von Effektstärken"
+subtitle: "und deren Unsicherheit an Lehrer:innen"
+author: Kirstin Schmidt und Samuel Merk
+footer: "Samuel M. und Kirstin S. | PH Karlsruhe"
 institute: Institut für Schul- und Unterrichtsentwicklung
 logo: img/PH_logo.png
 picture: img/KA.jpeg
