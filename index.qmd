@@ -2,7 +2,7 @@
 title: "Kommunikation von Effektstärken"
 subtitle: "und deren Unsicherheit an Lehrer:innen"
 author: Kirstin Schmidt und Samuel Merk
-footer: "Samuel M. und Kirstin S. | PH Karlsruhe"
+footer: "Kirstin S. und Samuel M. | PH Karlsruhe"
 institute: Institut für Schul- und Unterrichtsentwicklung
 logo: img/PH_logo.png
 picture: img/KA.jpeg
@@ -33,7 +33,7 @@ lightbox: true
 | {{< iconify fa6-solid comments >}}  | Wissenschaftskommunikation    |
 | {{< iconify fa6-solid file-lines >}} | Studie 1: Verbale Kommunikation Effektstärken und Inferenzstatistiken   |
 | {{< iconify fa6-solid chart-area >}}   | Studie 2: Visuelle Kommunikation von Effektstärken   |
-| {{< iconify fa6-solid file-lines >}} + {{< iconify fa6-solid chart-area >}}   | Studie 3: Grafische & verbale Kommunikation von Effektstärken   |
+| {{< iconify fa6-solid file-lines >}} + {{< iconify fa6-solid chart-area >}}   | Studie 3: Visuelle & verbale Kommunikation von Effektstärken   |
 
 : {#tbl-agenda tbl-colwidths="[15,85]"}
 
@@ -441,7 +441,7 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
   * Between-Faktor 2: Thema
     * Lesen auf Papier vs. Tablet
     * Lernen anhand eines Live-Vortrags vs. Video
-    * Lernen mittels Experimentieren vs. Computersimulatio
+    * Lernen mittels Experimentieren vs. Computersimulation
     * Lernen mittels Erklärvideo mit Untertitel vs. Erklärvideo ohne Untertitel
 
 <center> ![](img/study2_vignette.png){width=400 .lightbox} </center>
@@ -459,7 +459,7 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 
 :::
 
-## Design {{< iconify fa6-solid compass-drafting >}} {.smaller}
+## Design {{< iconify fa6-solid compass-drafting >}} 
 
 * 4x4x16x2 between-between-within-within Design 
   * Within-Faktor 3: präsentierte Effektstärke   
@@ -485,7 +485,7 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
   ![](img/study2_am.png){width=300 .lightbox} 
   - Cohen's *U<sub>3</sub>* Metrik  
   ![](img/study2_u3.png){width=300 .lightbox} 
-  - Cohen's *U<sub>3</sub>* Fehlkonzept: Median des *U<sub>3</sub>* Rating < 21.2% (kleinster plausibler Wert, der d = −.8 entspricht)
+  - Cohen's *U<sub>3</sub>* Fehlkonzept: Median des *U<sub>3</sub>* Rating < 21.2% (kleinster plausibler Wert, der *d* = −.8 entspricht)
 
 ::: notes
 - AVs
@@ -567,7 +567,7 @@ ergänzend:
 
 :::
 
-# [Studie 3: Cohen's $\operatorname{U}_3$ <br> Text {{< iconify fa6-solid file-lines >}} und Vis. {{< iconify fa6-solid chart-area >}} ]{style="font-size: .7em; display: block;"} {.center .center-x}
+# [Studie 3: Cohen's *U<sub>3</sub>* <br> Text {{< iconify fa6-solid file-lines >}} und Vis. {{< iconify fa6-solid chart-area >}} ]{style="font-size: .7em; display: block;"} {.center .center-x}
 
 <br>
 <center> 
@@ -580,7 +580,7 @@ ergänzend:
 
 ## Forschungsfragen {{< iconify fa6-solid circle-question >}} {.center}
 1) Wie genau (AV1), relevant (AV2), informativ (AV3) und schwierig
-(AV4) werden verbal und visuell dargestellte Effektgrößen (Cohen's U<sub>3</sub>) von Lehrer:innen wahrgenommen?
+(AV4) werden verbal und visuell dargestellte Effektstärken (Cohen's *U<sub>3</sub>*) von Lehrer:innen wahrgenommen?
 2) Gibt es Unterschiede zwischen den Präsentationsmodi bezüglich AV1-AV4?
 
 
