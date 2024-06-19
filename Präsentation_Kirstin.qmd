@@ -102,7 +102,7 @@ border: none !important;
 - die Idee nutzerfreundliche Aufbereitung von Forschungsergebnisse ist, dass die Ergebnisse verständlich, dennoch akkurat präsentiert werden und praktisch relevant erscheinen, um wissenschaftlichen Laien wie Lehrpersonen den Umgang zu erleichtern
 - Beispiele hierfür sind der immer prominenter werdende Ansatz von Clearinghouses
 - aber auch andere Ansätze wie plain language summaries sind hier zu nennen
-- häufig werden in solchen Ansätzen Forschungsergebnisse zusammengefasst, die mittels quantitativer Studien gewonnen wurden
+- häufig werden vor allem in CHs Forschungsergebnisse zusammengefasst, die mittels quantitativer Studien gewonnen wurden
 - Zusammenfassungen beinhalten also unterschiedliche quantitativ-methodische Informationen wie Studiendesings, Inferenzstatistik und Effektstärken
 
 ::: 
@@ -119,7 +119,10 @@ border: none !important;
   
 ::: notes
 
-- heute ausschließlich der Fokus auf die Aufbereitung von Effektstärken, also wie können Effektstärken verständlich, dennoch akkurat im statistischen Sinne und für die Praxis relevant - z.B. informativ - aufbereitet werden
+- heute ausschließlich der Fokus auf die Aufbereitung von Effektstärken
+
+Zusatz: 
+also wie können Effektstärken verständlich, dennoch akkurat im statistischen Sinne und für die Praxis relevant - z.B. informativ - aufbereitet werden
 
 :::
 
@@ -135,6 +138,7 @@ border: none !important;
 ::: notes
 
 warum genau Effektstärken?
+- verschiedene Argumente - zwei Beispiele
 
 - aus methodischer Sicht: Effektstärken vor alle, als Ergänzungung zu NHST, um bekannte und empirisch gut belegte Fehlkonzepte von statistischer Signifikant und p Werten zu reduzieren 
 - mit Blick auf das professionelle Handeln bieten Effektstärken eine zentrale, wenn auch nicht hinreichende Bedingung, um überhaupt die praktische Relevanz wissenschaftlicher Ergebnisse abzuleiten
@@ -170,7 +174,7 @@ warum genau Effektstärken?
 - erste empirische Erkenntnisse aus experimentelle Forschung zur Kommunikation von Effektstärken vorhanden
 - diese zeigen, dass unterschiedliche Formate sowohl textlich als auch visuell die Wahrnehmung also z.B. wie informativ eine Aufbereitung wahrgenommen wird und das Verständnis - wie akkurat die Effektstärke interpretiert wird, beeinflussen
 - der Forschungsstand setzt sich aus Forschung verschiedener Disziplinen zusammen z.B. Psychologie, Informatik, Bildungswissenschaften, ist in seiner Anlage häufig eklektisch (verschiedene Vergleiche der Bedingungen, Operationalisierungen von AV und UV) und es zeigen sich teilweise inkonsistente Ergebnisse
-- weshalb Vergleichbarkeit der jeweiligen Experimente schwierig und keine eindeutige Tendenz, was sich übergreifend für eine nutzerfreundliche WK eignet
+- nicht ausführlich zusammenfassen, aber kommentieren, dass Vergleichbarkeit der jeweiligen Experimente schwierig und keine eindeutige Tendenz, was sich übergreifend für eine nutzerfreundliche WK eignet
 
 - Daher in den folgenden Studien sowohl Formulierungen als auch Visualisierungen in den Blick genommen, und dabei entweder nur Formulierungen oder Visualisierungen verglichen und Text und Visualisierung einander gegenübergestellt
 
