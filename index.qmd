@@ -30,10 +30,10 @@ lightbox: true
 
 | {{< iconify fa6-solid diagram-project >}}  | Evidenzinformiertes Handeln    |
 |-------------------------------------------:|:---------------------------------
-| {{< iconify fa6-solid ant-design:comment-outlined >}}  | Wissenschaftskommunikation    |
-| {{< iconify fa6-solid mdi:text-box-outline >}} | Studie 1: Trennung Effektstärken und Inferenzstatistik   |
-| {{< iconify fa6-solid mdi:graph-box-outline >}}   | Studie 2: Grafische Kommuniaktion von Effektstärken   |
-| {{< iconify fa6-solid mdi:text-box-outline >}} + {{< iconify fa6-solid mdi:graph-box-outline >}}   | Studie 3: Grafische & verbale Kommunikation von Effektstärken   |
+| {{< iconify fa6-solid comments >}}  | Wissenschaftskommunikation    |
+| {{< iconify fa6-solid filter >}} | Studie 1: Trennung Effektstärken und Inferenzstatistik   |
+| {{< iconify fa6-solid chart-area >}}   | Studie 2: Grafische Kommuniaktion von Effektstärken   |
+| {{< iconify fa6-solid file-lines >}} + {{< iconify fa6-solid chart-area >}}   | Studie 3: Grafische & verbale Kommunikation von Effektstärken   |
 
 : {#tbl-agenda tbl-colwidths="[15,85]"}
 
@@ -50,11 +50,10 @@ border: none !important;
 }
 </style>
 
-<!-- @Samuel: bekommt man "Tabelle 1" irgendwie weg? --> 
 
 
 ::: footer
-{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://superkurzlink](https://superkurzlink)
+{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://bit.ly/merk133](https://bit.ly/merk133)
 :::
 
 ::: notes
@@ -87,9 +86,9 @@ border: none !important;
 
 ::: 
 
-# Wissenschafts- <br> kommunikation {{< iconify fa6-solid ant-design:comment-outlined >}}
+# Wissenschafts- <br> kommunikation {{< iconify fa6-solid comments >}}
 
-## Wissenschaftskommunikation {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
+## Wissenschaftskommunikation {{< iconify fa6-solid comments >}} {.smaller}
 
 - nutzerfreundliche Aufbereitung von Evidenz (z.B. clearing houses, plain language summaries), um wissenschaftlichen Laien den Umgang mit Evidenz zu erleichtern [@wadhwa2024; @higgins2022; @kerwer2021]
 - aufbereitete Evidenz basiert häufig auf quantitativen Studien, die verschiedene quantitativ-methodische Informationen enthalten
@@ -109,7 +108,7 @@ border: none !important;
 ::: 
 
 
-## Wissenschaftskommunikation {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
+## Wissenschaftskommunikation {{< iconify fa6-solid comments >}} {.smaller}
 
 - nutzerfreundliche Aufbereitung von Evidenz (z.B. clearing houses, plain language summaries), um wissenschaftlichen Laien den Umgang mit Evidenz zu erleichtern [@wadhwa2024; @higgins2022; @kerwer2021]
 - aufbereitete Evidenz basiert häufig auf quantitativen Studien, die verschiedene quantitativ-methodische Informationen enthalten
@@ -127,7 +126,7 @@ also wie können Effektstärken verständlich, dennoch akkurat im statistischen 
 
 :::
 
-## Kommunikation von Effektstärken {{< iconify fa6-solid ant-design:comment-outlined >}} {.smaller}
+## Kommunikation von Effektstärken {{< iconify fa6-solid comments >}} {.smaller}
 
 - Effektstärken informieren über die Größe z.B. eines Unterschieds oder Zusammenhangs
   - ergänzendes oder alternatives Maß zu statistischer Signifikanz und p Werten, um zahlreichen empirisch belegten Fehlkonzepten bezüglich statistischer Signifikanz und p Werten [@haller2002; @kühberger2015; @sotos2009] entgegenzuwirken [@coe2002; @kelley2012; @cumming2014]
@@ -150,7 +149,7 @@ warum genau Effektstärken?
    
 ::: 
 
-## Kommunikation von Effektstärken {{< iconify fa6-solid ant-design:comment-outlined >}}
+## Kommunikation von Effektstärken {{< iconify fa6-solid comments >}}
 
 ::: {style="font-size: 0.65em"} 
 - verschiedene textliche und visuelle Darstellungen können das Verständnis über und Wahrnehmung von Effektstärken bei wissenschaftlichen Laien beeinflussen 
@@ -194,7 +193,7 @@ Zusatz:
 
 
 
-# Studie 1: <br> Statistische Formulierungen {{< iconify fa6-solid mdi:text-box-outline >}} {.center .center-x}
+# Studie 1: <br> Statistische Formulierungen {{< iconify fa6-solid file-lines >}} {.center .center-x}
 
 <br>
 <br>
@@ -327,7 +326,7 @@ ergänzend:
 
 
 
-# Studie 2: Effektstärken- <br> visualisierungen {{< iconify fa6-solid mdi:graph-box-outline >}} {.center .center-x}
+# Studie 2: Effektstärken- <br> visualisierungen {{< iconify fa6-solid chart-area >}} {.center .center-x}
 
 <br>
 <br>
@@ -568,7 +567,7 @@ ergänzend:
 
 :::
 
-# [Studie 3: Cohen's $\operatorname{U}_3$ <br> Text {{< iconify fa6-solid mdi:text-box-outline >}} und Vis. {{< iconify fa6-solid chart-area >}} ]{style="font-size: .7em; display: block;"} {.center .center-x}
+# [Studie 3: Cohen's $\operatorname{U}_3$ <br> Text {{< iconify fa6-solid file-lines >}} und Vis. {{< iconify fa6-solid chart-area >}} ]{style="font-size: .7em; display: block;"} {.center .center-x}
 
 <br>
 <center> 
