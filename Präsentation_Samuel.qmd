@@ -83,18 +83,17 @@ would have a higher score in the reading test than a randomly selected person fr
     * Wahrg. Effektstärke  $\Rightarrow \delta = qnorm(PoS) \cdot \sqrt{2}$
 * Abgeleitete Variablen: 
     * Genauigkeit: falls korrekte Effektrichtung <br> *Wahre Effektstärke - Wahrg. Effektstärke*; sonst `NA`
-    * Relevanz: (Within-Person-Standardized Willingness to pay)
+    * Relevanz: Within-Person-Standardized Willingness to Pay
     
 ## Analyse {{< iconify fa6-solid laptop-code >}} {.smaller}
 * Modellparametrisierung:
     * Accuracy: Random-Intercept Model für heteroskedastische normalverteilte AV mit Dummyprädiktor 
     * Relevanz: Random-Intercept Model für normalverteilte AV mit Dummyprädiktor 
     * Likert-Items: Random-Intercept Cumulative Link Models [@burkner2019] mit Dummyprädiktor
-* Inferenzstatistik: HDI + ROPE Prozedur [@kruschke2018a]
+* Inferenzstatistik: CI + ROPE Prozedur [@kruschke2018a]
     * ROPE: -.1 < *d* < .1
-    * HDI: 95% HDI
-    * HMCMC: 4 Chains, 1k Warm-Up, 2k Interationen, 4k post-warm-up draws
-    * Konvergenz bei $\hat{R} < 1.05$ [@vehtari2021] und $ESS > 1000$ [@burkner2017]
+    * CI: 95% HDI
+    * HMCMC: 4 Chains, 1k Warm-Up, 2k Interationen, 4k post-warm-up draws, $\hat{R} < 1.05$ [@vehtari2021] und $ESS > 1000$ als Konvergenzkriterien [@burkner2017]
 
 
 ## Ergebnisse {{< iconify fa6-solid chart-line >}} {.smaller}
@@ -118,14 +117,15 @@ would have a higher score in the reading test than a randomly selected person fr
 
 ::::
 
+::: {.fragment}
 Alle HDI lagen zu 100% außerhalb der ROPE bis auf den Dispersionseffekt der Akkuratheit (75%).
-
+:::
 
 
 
 ## Take Home Messages {{< iconify fa6-solid lightbulb >}}
 * Effektstärke und Effektunsicherheit werden oft verwechselt
-* ***Common** Language Effect Size* $\nRightarrow$ ***Widly Understood** Effect Size*
+* ***Common** Language Effect Size* $\nRightarrow$ ***Widely Understood** Effect Size*
 * Effektstärken können unter geeigneten Bedingungen von Lehrer:innen sehr korrekt aus Grafiken rezipiert werden [@merk2023]
 * Annotation (Signaling) reduziert Fehlkonzepte deutlich
 * Text und Bild scheinen komplementäre Vor- und Nachteile zu haben

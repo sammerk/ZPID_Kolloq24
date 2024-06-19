@@ -439,7 +439,7 @@
 <li>Abgeleitete Variablen:
 <ul>
 <li>Genauigkeit: falls korrekte Effektrichtung <br> <em>Wahre Effektstärke - Wahrg. Effektstärke</em>; sonst <code>NA</code></li>
-<li>Relevanz: (Within-Person-Standardized Willingness to pay)</li>
+<li>Relevanz: Within-Person-Standardized Willingness to Pay</li>
 </ul></li>
 </ul>
 </section>
@@ -452,12 +452,11 @@
 <li>Relevanz: Random-Intercept Model für normalverteilte AV mit Dummyprädiktor</li>
 <li>Likert-Items: Random-Intercept Cumulative Link Models <span class="citation" data-cites="burkner2019">(<a href="#/literatur" role="doc-biblioref" onclick="">Bürkner &amp; Vuorre, 2019</a>)</span> mit Dummyprädiktor</li>
 </ul></li>
-<li>Inferenzstatistik: HDI + ROPE Prozedur <span class="citation" data-cites="kruschke2018a">(<a href="#/literatur" role="doc-biblioref" onclick="">Kruschke, 2018</a>)</span>
+<li>Inferenzstatistik: CI + ROPE Prozedur <span class="citation" data-cites="kruschke2018a">(<a href="#/literatur" role="doc-biblioref" onclick="">Kruschke, 2018</a>)</span>
 <ul>
 <li>ROPE: -.1 &lt; <em>d</em> &lt; .1</li>
-<li>HDI: 95% HDI</li>
-<li>HMCMC: 4 Chains, 1k Warm-Up, 2k Interationen, 4k post-warm-up draws</li>
-<li>Konvergenz bei <span class="math inline">\(\hat{R} &lt; 1.05\)</span> <span class="citation" data-cites="vehtari2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Vehtari et al., 2021</a>)</span> und <span class="math inline">\(ESS &gt; 1000\)</span> <span class="citation" data-cites="burkner2017">(<a href="#/literatur" role="doc-biblioref" onclick="">Bürkner, 2017</a>)</span></li>
+<li>CI: 95% HDI</li>
+<li>HMCMC: 4 Chains, 1k Warm-Up, 2k Interationen, 4k post-warm-up draws, <span class="math inline">\(\hat{R} &lt; 1.05\)</span> <span class="citation" data-cites="vehtari2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Vehtari et al., 2021</a>)</span> und <span class="math inline">\(ESS &gt; 1000\)</span> als Konvergenzkriterien <span class="citation" data-cites="burkner2017">(<a href="#/literatur" role="doc-biblioref" onclick="">Bürkner, 2017</a>)</span></li>
 </ul></li>
 </ul>
 </section>
@@ -476,13 +475,15 @@
 </ul>
 </div>
 </div>
+<div class="fragment">
 <p>Alle HDI lagen zu 100% außerhalb der ROPE bis auf den Dispersionseffekt der Akkuratheit (75%).</p>
+</div>
 </section>
 <section id="take-home-messages" class="slide level2">
 <h2>Take Home Messages <iconify-icon inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon></h2>
 <ul>
 <li>Effektstärke und Effektunsicherheit werden oft verwechselt</li>
-<li><em><strong>Common</strong> Language Effect Size</em> <span class="math inline">\(\nRightarrow\)</span> <em><strong>Widly Understood</strong> Effect Size</em></li>
+<li><em><strong>Common</strong> Language Effect Size</em> <span class="math inline">\(\nRightarrow\)</span> <em><strong>Widely Understood</strong> Effect Size</em></li>
 <li>Effektstärken können unter geeigneten Bedingungen von Lehrer:innen sehr korrekt aus Grafiken rezipiert werden <span class="citation" data-cites="merk2023">(<a href="#/literatur" role="doc-biblioref" onclick="">Merk et al., 2023</a>)</span></li>
 <li>Annotation (Signaling) reduziert Fehlkonzepte deutlich</li>
 <li>Text und Bild scheinen komplementäre Vor- und Nachteile zu haben</li>
@@ -978,7 +979,7 @@ Vehtari, A., Gelman, A., Simpson, D., Carpenter, B., &amp; Bürkner, P.-C. (2021
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false});
+    <script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
