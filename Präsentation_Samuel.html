@@ -431,11 +431,14 @@
 <section id="datenaufbereitung" class="slide level2">
 <h2>Datenaufbereitung <iconify-icon inline="" icon="fa6-solid:database" aria-label="Icon database from fa6-solid Iconify.design set." title="Icon database from fa6-solid Iconify.design set."></iconify-icon></h2>
 <ul>
-<li>Exklusionskriterien: Nichtbestehen beider Attentionchecks oder straightlining <span class="citation" data-cites="stosic2024">(<a href="#/literatur" role="doc-biblioref" onclick="">Stosic et al., 2024</a>)</span></li>
-<li>Transformationen: Wahrg. Effektstärke <span class="math inline">\(\Rightarrow \delta = qnorm(PoS) \cdot \sqrt{2}\)</span> (für Linearität)</li>
+<li>Exklusionskriterien: Nichtbestehen beider Attentionchecks oder Straightlining <span class="citation" data-cites="stosic2024">(<a href="#/literatur" role="doc-biblioref" onclick="">Stosic et al., 2024</a>)</span></li>
+<li>Transformationen:
+<ul>
+<li>Wahrg. Effektstärke <span class="math inline">\(\Rightarrow \delta = qnorm(PoS) \cdot \sqrt{2}\)</span></li>
+</ul></li>
 <li>Abgeleitete Variablen:
 <ul>
-<li>Genauigkeit (falls korrekte Effektrichtung: <span class="math inline">\(\operatorname{Wahre\;Effektstärke} -  \operatorname{Wahrg.\;Effektstärke}\)</span>, sonst: <code>NA</code>)</li>
+<li>Genauigkeit: falls korrekte Effektrichtung <br> <em>Wahre Effektstärke - Wahrg. Effektstärke</em>; sonst <code>NA</code></li>
 <li>Relevanz: (Within-Person-Standardized Willingness to pay)</li>
 </ul></li>
 </ul>
@@ -475,8 +478,30 @@
 </div>
 <p>Alle HDI lagen zu 100% außerhalb der ROPE bis auf den Dispersionseffekt der Akkuratheit (75%).</p>
 </section>
-<section id="diskussion" class="slide level2 smaller">
-<h2>Diskussion <iconify-icon inline="" icon="fa6-solid:comments" aria-label="Icon comments from fa6-solid Iconify.design set." title="Icon comments from fa6-solid Iconify.design set."></iconify-icon></h2>
+<section id="take-home-messages" class="slide level2">
+<h2>Take Home Messages <iconify-icon inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon></h2>
+<ul>
+<li>Effektstärke und Effektunsicherheit werden oft verwechselt</li>
+<li><em><strong>Common</strong> Language Effect Size</em> <span class="math inline">\(\nRightarrow\)</span> <em><strong>Widly Understood</strong> Effect Size</em></li>
+<li>Effektstärken können unter geeigneten Bedingungen von Lehrer:innen sehr korrekt aus Grafiken rezipiert werden <span class="citation" data-cites="merk2023">(<a href="#/literatur" role="doc-biblioref" onclick="">Merk et al., 2023</a>)</span></li>
+<li>Annotation (Signaling) reduziert Fehlkonzepte deutlich</li>
+<li>Text und Bild haben komplentäre Vor- und Nachteile</li>
+</ul>
+</section>
+<section id="implikationen" class="slide level2">
+<h2>Implikationen <iconify-icon inline="" icon="fa6-solid:comments" aria-label="Icon comments from fa6-solid Iconify.design set." title="Icon comments from fa6-solid Iconify.design set."></iconify-icon></h2>
+<div class="fragment strike">
+<p><iconify-icon inline="" icon="fa6-solid:thumbs-down" aria-label="Icon thumbs-down from fa6-solid Iconify.design set." title="Icon thumbs-down from fa6-solid Iconify.design set."></iconify-icon> <em>»Unsere Studie zeigten einen signifikanten Effekt«</em><br>
+<iconify-icon inline="" icon="fa6-solid:thumbs-down" aria-label="Icon thumbs-down from fa6-solid Iconify.design set." title="Icon thumbs-down from fa6-solid Iconify.design set."></iconify-icon> <em>»Unsere Studie zeigte A &gt; B«</em><br>
+<iconify-icon inline="" icon="fa6-solid:thumbs-down" aria-label="Icon thumbs-down from fa6-solid Iconify.design set." title="Icon thumbs-down from fa6-solid Iconify.design set."></iconify-icon> <em>»Unsere Studie zeigte, dass A mit B assoziiert ist«</em><br>
+<iconify-icon inline="" icon="fa6-solid:thumbs-down" aria-label="Icon thumbs-down from fa6-solid Iconify.design set." title="Icon thumbs-down from fa6-solid Iconify.design set."></iconify-icon> Unkommentierter Rohdatenplot</p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><iconify-icon inline="" icon="fa6-solid:thumbs-up" aria-label="Icon thumbs-up from fa6-solid Iconify.design set." title="Icon thumbs-up from fa6-solid Iconify.design set."></iconify-icon> <em>Irgendeine</em> Common Language Effect Size verwenden <span class="citation" data-cites="michal2024">(<a href="#/literatur" role="doc-biblioref" onclick="">Michal &amp; Shah, 2024</a>)</span><br>
+<iconify-icon inline="" icon="fa6-solid:thumbs-up" aria-label="Icon thumbs-up from fa6-solid Iconify.design set." title="Icon thumbs-up from fa6-solid Iconify.design set."></iconify-icon> Direkt <em>annotierte</em> Grafiken nutzen <span class="citation" data-cites="franconeri2021">(<a href="#/literatur" role="doc-biblioref" onclick="">Franconeri et al., 2021</a>)</span><br>
+<iconify-icon inline="" icon="fa6-solid:thumbs-up" aria-label="Icon thumbs-up from fa6-solid Iconify.design set." title="Icon thumbs-up from fa6-solid Iconify.design set."></iconify-icon> Text &amp; Plot diaktisch kombinieren/auswählen</p>
+</div>
 </section>
 <section id="literatur" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
@@ -500,6 +525,9 @@ Bürkner, P.-C. (2017). Brms: An R Package for Bayesian Multilevel Models Using 
 <div id="ref-burkner2019" class="csl-entry" role="listitem">
 Bürkner, P.-C., &amp; Vuorre, M. (2019). Ordinal <span>Regression Models</span> in <span>Psychology</span>: <span>A Tutorial</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>2</em>(1), 77–101. <a href="https://doi.org/10.1177/2515245918823199">https://doi.org/10.1177/2515245918823199</a>
 </div>
+<div id="ref-franconeri2021" class="csl-entry" role="listitem">
+Franconeri, S. L., Padilla, L. M., Shah, P., Zacks, J. M., &amp; Hullman, J. (2021). The Science of Visual Data Communication: <span>What</span> Works. <em>Psychological Science in the Public Interest</em>, <em>22</em>(3), 110–161. <a href="https://doi.org/10.1177/15291006211051956">https://doi.org/10.1177/15291006211051956</a>
+</div>
 <div id="ref-hullman2015" class="csl-entry" role="listitem">
 Hullman, J., Resnick, P., &amp; Adar, E. (2015). Hypothetical Outcome Plots Outperform Error Bars and Violin Plots for Inferences about Reliability of Variable Ordering. <em>PLOS ONE</em>, <em>10</em>(11), e0142444. <a href="https://doi.org/10.1371/journal.pone.0142444">https://doi.org/10.1371/journal.pone.0142444</a>
 </div>
@@ -511,6 +539,9 @@ Kim, Y.-S. (2019). <em>Effectively Communicating Effect Sizes</em>.
 </div>
 <div id="ref-kruschke2018a" class="csl-entry" role="listitem">
 Kruschke, J. K. (2018). Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>1</em>(2), 270–280. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>
+</div>
+<div id="ref-merk2023" class="csl-entry" role="listitem">
+Merk, S., Groß Ophoff, J., &amp; Kelava, A. (2023). Rich Data, Poor Information? <span>Teachers</span>’ Perceptions of Mean Differences in Graphical Feedback from Statewide Tests. <em>Learning and Instruction</em>, <em>84</em>, 101717. <a href="https://doi.org/10.1016/j.learninstruc.2022.101717">https://doi.org/10.1016/j.learninstruc.2022.101717</a>
 </div>
 <div id="ref-michal2024" class="csl-entry" role="listitem">
 Michal, A. L., &amp; Shah, P. (2024). A <span>Practical Significance Bias</span> in <span>Laypeople</span>’s <span>Evaluation</span> of <span>Scientific Findings</span>. <em>Psychological Science</em>, 09567976241231506. <a href="https://doi.org/10.1177/09567976241231506">https://doi.org/10.1177/09567976241231506</a>
@@ -920,7 +951,7 @@ Vehtari, A., Gelman, A., Simpson, D., Carpenter, B., &amp; Bürkner, P.-C. (2021
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+    <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;

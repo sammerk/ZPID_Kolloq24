@@ -78,10 +78,11 @@ would have a higher score in the reading test than a randomly selected person fr
 * Schwierigkeit [@schmidt2024]
 
 ## Datenaufbereitung {{< iconify fa6-solid database >}}
-* Exklusionskriterien: Nichtbestehen beider Attentionchecks oder straightlining [@stosic2024]
-* Transformationen: Wahrg. Effektstärke  $\Rightarrow \delta = qnorm(PoS) \cdot \sqrt{2}$ (für Linearität)
+* Exklusionskriterien: Nichtbestehen beider Attentionchecks oder Straightlining [@stosic2024]
+* Transformationen: 
+    * Wahrg. Effektstärke  $\Rightarrow \delta = qnorm(PoS) \cdot \sqrt{2}$
 * Abgeleitete Variablen: 
-    * Genauigkeit (falls korrekte Effektrichtung: $\operatorname{Wahre\;Effektstärke} -  \operatorname{Wahrg.\;Effektstärke}$, sonst: `NA`)
+    * Genauigkeit: falls korrekte Effektrichtung <br> *Wahre Effektstärke - Wahrg. Effektstärke*; sonst `NA`
     * Relevanz: (Within-Person-Standardized Willingness to pay)
     
 ## Analyse {{< iconify fa6-solid laptop-code >}} {.smaller}
@@ -97,7 +98,6 @@ would have a higher score in the reading test than a randomly selected person fr
 
 
 ## Ergebnisse {{< iconify fa6-solid chart-line >}} {.smaller}
-
 :::: {.columns}
 
 ::: {.column width='50%'}
@@ -121,7 +121,35 @@ would have a higher score in the reading test than a randomly selected person fr
 Alle HDI lagen zu 100% außerhalb der ROPE bis auf den Dispersionseffekt der Akkuratheit (75%).
 
 
-## Diskussion {{< iconify fa6-solid comments >}} {.smaller}
+
+
+## Take Home Messages {{< iconify fa6-solid lightbulb >}}
+* Effektstärke und Effektunsicherheit werden oft verwechselt
+* ***Common** Language Effect Size* $\nRightarrow$ ***Widly Understood** Effect Size*
+* Effektstärken können unter geeigneten Bedingungen von Lehrer:innen sehr korrekt aus Grafiken rezipiert werden [@merk2023]
+* Annotation (Signaling) reduziert Fehlkonzepte deutlich
+* Text und Bild scheinen komplementäre Vor- und Nachteile zu haben
+
+
+## Implikationen {{< iconify fa6-solid comments >}}
+
+::: {.fragment .strike}
+{{< iconify fa6-solid thumbs-down >}} *»Unsere Studie zeigten einen signifikanten Effekt«*  
+{{< iconify fa6-solid thumbs-down >}} *»Unsere Studie zeigte A > B«*  
+{{< iconify fa6-solid thumbs-down >}} *»Unsere Studie zeigte, dass A mit B assoziiert ist«*  
+{{< iconify fa6-solid thumbs-down >}} Unkommentierter Rohdatenplot
+:::
+<br>
+
+::: {.fragment}
+{{< iconify fa6-solid thumbs-up >}}  *Irgendeine* Common Language Effect Size verwenden [@michal2024]  
+{{< iconify fa6-solid thumbs-up >}}  Direkt *annotierte* Grafiken nutzen [@franconeri2021]  
+{{< iconify fa6-solid thumbs-up >}}  Text & Plot didaktisch kombinieren/auswählen
+:::
+
+## Diskussion {{< iconify fa6-solid comments >}}
+* Methodische Limitationen
+    * Remote Onlineexperimente »professioneller« Proband:innen zeigen akzeptable Treatmentadherence [@]
 
 ## Literatur
 ::: footer
