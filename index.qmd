@@ -205,6 +205,11 @@ gemeinsam mit <br> Peter Edelsbrunner<sup>2</sup>, Tom Rosman<sup>3</sup> und Co
 <sup>3</sup> ZPID Trier
 <sup>4</sup> Eberhard Karls Universität Tübingen
 
+::: footer
+[Link zum Paper](https://doi.org/10.1016/j.tate.2023.104134)
+:::
+
+
 
 ## Forschungsfragen {{< iconify fa6-solid circle-question >}} {.center}
 1) Nehmen Lehrpersonen unterschiedliche statistische Beschreibungen unterschiedlich informativ wahr?
@@ -336,6 +341,10 @@ gemeinsam mit <br> Jürgen Schneider<sup>2</sup> und Kristina Bohrer<sup>1</sup>
 
 <sup>1</sup> Pädagogische Hochschule Karlsruhe
 <sup>2</sup> DIPF Frankfurt
+
+::: footer
+`r xfun::embed_file("img/preprint_studie3.pdf", "preprint_studie2.pdf", "Link zum Preprint")`  
+:::
 
 ::: notes
 
@@ -577,6 +586,9 @@ ergänzend:
 [<sup>1</sup> Pädagogische Hochschule Karlsruhe]{style="font-size: .7em; display: block;"}
 [<sup>3</sup> DIPF Frankfurt]{style="font-size: .7em; display: block;"}
 
+::: footer
+`r xfun::embed_file("img/preprint_studie3.pdf", "preprint_studie3.pdf", "Link zum Preprint")`  
+:::
 
 ## Forschungsfragen {{< iconify fa6-solid circle-question >}} {.center}
 1) Wie genau (AV1), relevant (AV2), informativ (AV3) und schwierig
