@@ -31,8 +31,8 @@ lightbox: true
 | {{< iconify fa6-solid diagram-project >}}  | Evidenzinformiertes Handeln    |
 |-------------------------------------------:|:---------------------------------
 | {{< iconify fa6-solid comments >}}  | Wissenschaftskommunikation    |
-| {{< iconify fa6-solid filter >}} | Studie 1: Trennung Effektstärken und Inferenzstatistik   |
-| {{< iconify fa6-solid chart-area >}}   | Studie 2: Grafische Kommuniaktion von Effektstärken   |
+| {{< iconify fa6-solid file-lines >}} | Studie 1: Verbale Kommunikation Effektstärken und Inferenzstatistiken   |
+| {{< iconify fa6-solid chart-area >}}   | Studie 2: Visuelle Kommunikation von Effektstärken   |
 | {{< iconify fa6-solid file-lines >}} + {{< iconify fa6-solid chart-area >}}   | Studie 3: Grafische & verbale Kommunikation von Effektstärken   |
 
 : {#tbl-agenda tbl-colwidths="[15,85]"}
@@ -152,7 +152,7 @@ warum genau Effektstärken?
 ## Kommunikation von Effektstärken {{< iconify fa6-solid comments >}}
 
 ::: {style="font-size: 0.65em"} 
-- verschiedene textliche und visuelle Darstellungen können das Verständnis über und Wahrnehmung von Effektstärken bei wissenschaftlichen Laien beeinflussen 
+- verschiedene textliche und visuelle Darstellungen können das Verständnis über und die Wahrnehmung von Effektstärken bei wissenschaftlichen Laien beeinflussen 
 - ABER ...
   - ... teilweise inkonsistente Ergebnisse z.B. Diskrepanz zwischen Visualisierungen, die eine akkurate Interpretation fördern und solchen, die korrekte Entscheidungen fördern
   - ... eklektische Forschungsansätze [@hanel2019b; @lortie2021; @kim2022; @merk2023; @kale2021; @hanel2019a]
@@ -433,7 +433,7 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 ::: {style="font-size: 0.70em"} 
 * 4x4x16x2 between-between-within-within Design 
   * Between-Faktor 1: Experimentalbedingung
-    * Kontrollgrupp
+    * Kontrollgruppe
     * Benchmark 
     * Signaling Cohen's *U<sub>3</sub>* 
     * Signaling Overlap  
