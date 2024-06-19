@@ -74,8 +74,8 @@ lightbox: true
 * Wahrg. Effektstärke: *»How many times out of 100 do you estimate that a randomly selected member of the AI tutor group
 would have a higher score in the reading test than a randomly selected person from the teacher feedback group?«* [@kale2020; @michal2024; @hullman2015]
 * Relevanz:  *»How much money are you willing to spend on an AI reading tutor license for a class of 30 students for one year?«* [@kim2019a]
-* Informativität [@schmidt2024]
-* Schwierigkeit [@schmidt2024]
+* Informativität [@schmidt2024a]
+* Schwierigkeit [@schmidt2024a]
 
 ## Datenaufbereitung {{< iconify fa6-solid database >}}
 * Exklusionskriterien: Nichtbestehen beider Attentionchecks oder Straightlining [@stosic2024]
@@ -142,15 +142,22 @@ Alle HDI lagen zu 100% außerhalb der ROPE bis auf den Dispersionseffekt der Akk
 <br>
 
 ::: {.fragment}
-{{< iconify fa6-solid thumbs-up >}}  *Irgendeine* Common Language Effect Size verwenden [@michal2024]  
-{{< iconify fa6-solid thumbs-up >}}  Direkt *annotierte* Grafiken nutzen [@franconeri2021]  
-{{< iconify fa6-solid thumbs-up >}}  Text & Plot didaktisch kombinieren/auswählen
+{{< iconify fa6-solid thumbs-up >}} *Irgendeine* Common Language Effect Size verwenden [@michal2024]  
+{{< iconify fa6-solid thumbs-up >}} *Direkt annotierte* Grafiken nutzen [@franconeri2021]  
+{{< iconify fa6-solid thumbs-up >}} Text & Plot didaktisch kombinieren/auswählen
 :::
 
-## Diskussion {{< iconify fa6-solid comments >}}
-* Methodische Limitationen
-    * Remote Onlineexperimente »professioneller« Proband:innen zeigen akzeptable Treatmentadherence [@]
-
+## Diskussion {{< iconify fa6-solid comments >}} {.smaller}
+* Methodische Limitationen (u.a)
+    * Remote Onlineexperimente »professioneller« Proband:innen zeigen akzeptable Treatmentadherence [@douglas2023], sicher aber mehr Careless Responding als im Labor [@stosic2024]  
+    $\Rightarrow$ Unterschätzung der Akkuratheit und der Unterschiede
+    * Viele Freiheitsgrade bei der Auswahl der Materialien und eine schwache theoretische Fundierung erhöhen a priori die falsch-positiv Rate [@ioannidis2005]
+* Kommunikationsziel:
+    * Effektstärken relativieren können  
+    $\Rightarrow$ Verwendung standardisierter Effektstärken 
+    * Effektstärken absolut einschätzen können  
+    $\Rightarrow$ Verwendung »natürlich metrischer« Effektstärken
+    
 ## Literatur
 ::: footer
 <!-- Leerer footer - sonst überlagern nsich floating refernces und der footer  -->
