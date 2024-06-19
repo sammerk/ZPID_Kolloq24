@@ -374,6 +374,7 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 ::: notes
 
 - Fokus heute vor allem auf die Ergebnisse der konfirmatorischen Studie zur FF 3 
+- wie Anreicherungen konkret aussehen, zeige ich später
 
 - um die 3 Teilstudie zu verstehen, ist aber der Ablauf der vorherigen Studien wichtig 
 
@@ -431,70 +432,60 @@ __3. Beeinflussen Visualisierungen mit Anreicherungen (Signaling und Benchmarks)
 ## Design {.smaller}
 
 ::: {style="font-size: 0.70em"} 
-4x4x16x2 between-between-within-within Design 
+* 4x4x16x2 between-between-within-within Design 
+  * Between-Faktor 1: Experimentalbedingung
+    * Kontrollgrupp
+    * Benchmark ![](img/benchmarking.jpg){width=30 .lightbox}
+    * Signaling Cohen's *U<sub>3</sub>* ![](img/signaling_CohensU3.jpg){width=50 .lightbox}
+    * Signaling Overlap ![](img/signaling_Overlap.jpg){width=50 .lightbox}
+  * Between-Faktor 2: Thema
+    * Lesen auf Papier vs. Tablet
+    * Lernen anhand eines Live-Vortrags vs. Video
+    * Lernen mittels Experimentieren vs. Computersimulatio
+    * Lernen mittels Erklärvideo mit Untertitel vs. Erklärvideo ohne Untertitel
 
-- 1 Between-Faktor: Experimentalbedingung
-  - Kontrollgruppe
-  - Benchmark
-  - Signaling U3
-  - Signaling Overlap)
-- 2 Between-Faktor:
-  - Lesen auf Papier vs. Tablet <center> ![](img/study2_vignette.png){width=400} </center>
-  - Lernen anhand eines Live-Vortrags vs. Videos
-  - Lernen mittels Experimentieren vs. Computersimulation
-  - Lernen mittels Erklärvideo mit Untertitel vs. Erklärvideo ohne Untertitel
-- 3 Within-Faktor: präsentierte Effektstärke d ∈ {−.80; −.65; −.50; −.35; −.20; .20; .35; .50; .65; .80}
-- 4 Within-Faktor: Visualisierungsart
-  - halfeye plots mit Gruppen auf der x-Achse
-  - halfeye plots mit Gruppen auf der y-Achse
+<center> ![](img/study2_vignette.png){width=400 .lightbox} </center>
 
-::: 
+:::
 
 ::: notes
 - within-between Design
+- 4 Faktoren: zwei between, zwei within
+- within auf der nächsten Folie
 
-
-- Lehrpersonen erhielten zunächst eine Studienvignette zu einem bildungswissenschaftlichen Thema, zufällig aus 4 verschiedenen Themen ausgewählt
-  - hier Beispiel: XXX
+- Lehrpersonen erhielten eine Studienvignette zu einem bildungswissenschaftlichen Thema, zufällig aus 4 verschiedenen Themen ausgewählt: Beispiel Lesen auf Tablet vs. Paper
 - diese Studienvignette kontextualisierte insgesamt 20 Effektstärke-Visualisierungen
 
 :::
 
+## Design {.smaller}
+
+* 4x4x16x2 between-between-within-within Design 
+  * Within-Faktor 3: präsentierte Effektstärke d ∈ {−.80; −.65; −.50; −.35; −.20; .20; .35; .50; .65; .80}
+  * Within-Faktor 4: Visualisierungsart
+    * halfeye plots mit Gruppen auf der x-Achse
+    * halfeye plots mit Gruppen auf der y-Achse
+
+
+
+
 
 ## Abhängige Variablen {.smaller}
 
-- Wahrgenommene Informativität
-<center> ![](img/study2_informativity.png){width=400} </center>
+- Wahrgenommene Informativität ![](img/study2_informativity.png){width=400 .lightbox} 
 - Verständnis
-  - abstrakte Metrik
-<center> ![](img/study2_am.png){width=400} </center>
-  - Cohen's U3 Metrik
-<center> ![](img/study2_u3.png){width=400} </center>
-- Cohen's U3 Fehlkonzept: Personen, die im Median keine plausiblen Cohen's U3 Ratings angeben (U3 Rating < 21.2% kleinster plausibler Wert, der d = −.8 entspricht)
+  - abstrakte Metrik ![](img/study2_am.png){width=400 .lightbox} 
+  - Cohen's *U<sub>3</sub>* Metrik ![](img/study2_u3.png){width=400 .lightbox} 
+  - Cohen's *U<sub>3</sub>* Fehlkonzept: Median des *U<sub>3</sub>* Rating < 21.2% (kleinster plausibler Wert, der d = −.8 entspricht)
 
 ::: notes
 - AVs
   - Informativität: wie informativ sie die Information in der Visualisierung fanden (7stufige Likertskala)
-  - Verständnis 
-    - abstrakte Metrik
-    - U3
-    - Fehlkonzept: Personen, die grundsätzlich im Median plausible U3 Ratings angaben (- U3 Fehlkonzept: Median des U3 Ratings kleiner als 21.2% (kleinster plausibler Wert, der d = −.8 entspricht)
-  
-
-  - je nach zufälliger Gruppenzuteilung entweder: einer der drei Anreicherungen - hier Beispiel YYYY, oder Kontrollgruppe ohne Anreicherung
-  - zusätzlich wurde die Größe des Effekts (within-person Faktor; d ∈ {−.80 - .80}) 
-  - Darstellung (within-person Faktor) innerhalb der Person randomisiert
-- nach jeder Visualisierung verschiedene Fragen gestellt
-  - für heute wichtig:
-    - abstrakt
   - Verständnis wurde zufällig nach den ersten 10 oder letzten 10 Visualisierung mit folgenden drei Fragen operationalisiert. Aber heute nur zwei relevant:
-    - wie stark sich die Gruppen auf einer Skala von -1 bis +1 unterscheiden (abstrakte Metrik)
-      - 1 die Gruppe Video ohne Untertitel +1 Gruppe mit Untertitel komplett überlegen
-    - wie viel Prozent der einen Gruppe über dem Mittelwert der anderen Gruppe liegt
+    - abstrakte Metrik: wie stark sich die Gruppen auf einer Skala von -1 bis +1 unterscheiden (abstrakte Metrik); -1 die Gruppe Video ohne Untertitel +1 Gruppe mit Untertitel komplett überlegen
+    - U3: wie viel Prozent der einen Gruppe über dem Mittelwert der anderen Gruppe liegt
     (U3-Metrik)
-    - inhaltlich an die Themen angepasst
-    
-
+    - Fehlkonzept: Personen, die grundsätzlich im Median plausible U3 Ratings angaben (- U3 Fehlkonzept: Median des U3 Ratings kleiner als 21.2% (kleinster plausibler Wert, der d = −.8 entspricht)
   
 
 ergänzende Info bei Rückfragen:
